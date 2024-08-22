@@ -47,12 +47,12 @@ The base builder interface defines all possible construction steps, and concrete
 The Builder pattern lets you construct products step-by-step. You could defer execution of some steps without breaking the final product. You can even call steps recursively, which comes in handy when you need to build an object tree.
 A builder doesn’t expose the unfinished product while running construction steps. This prevents the client code from fetching an incomplete result.
 
-Pros:
+Pros
 1) You can construct objects step-by-step, defer construction steps or run steps recursively.
 2) You can reuse the same construction code when building various representations of products.
 3) Single Responsibility Principle. You can isolate complex construction code from the business logic of the product.
 
-Cons:
+Cons
 1) The overall complexity of the code increases since the pattern requires creating multiple new classes.
 
 Relations with Other Patterns
