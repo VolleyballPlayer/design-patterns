@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.isort",
+        "ms-python.black-formatter",
+        "ms-python.pylint",
+        "github.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "ms-toolsai.jupyter",
+        "tamasfe.even-better-toml",
+        "streetsidesoftware.code-spell-checker",
+        "techer.open-in-browser",
+        "qwtel.sqlite-viewer"
+    ]
+}
