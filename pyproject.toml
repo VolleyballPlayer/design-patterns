@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "designpatterns"
+dynamic = ["version"]
+authors = [{name = 'Volleyball Player', email="volleyball@player.com"},]
+description = "A Python package with description and examples of Gang of Four design patterns."
+dependencies = []
+
+[project.scripts]
+designpattern = "designpatterns.__main__:main"
+
+[tool.setuptools.package-data]
+
+[project.optional-dependencies]
+dev = ["pylint", "toml"]
+docs = ["Sphinx"]
+test = ["pytest",
+"pytest-cov",
+"pytest_mock"]
+
+[tool.pytest.ini_options]
+
+[tool.coverage.run]
+
+[tool.pylint.format]
