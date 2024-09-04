@@ -25,13 +25,17 @@ jobs:
     tests:
         runs-on:
             ubuntu-latest
+
+        container:
+            python 3.12
+            
         steps:
             - uses: actions/checkout@v4
               with:
                 fetch-depth: 0
                 
             - name: Install package and dependencies for testing
-              run: pip install .
+              run: pip install .[test]
             
             - name: Run tests
               shell: bash
