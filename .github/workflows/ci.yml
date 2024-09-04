@@ -31,7 +31,7 @@ jobs:
                 fetch-depth: 0
                 
             - name: Install package and dependencies for testing
-              run: python3 -m pip install .[test]
+              run: pip install .
             
             - name: Run tests
               shell: bash
