@@ -22,6 +22,8 @@ test = ["pytest",
 "pytest_mock"]
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov --cov-report=term-missing --color=yes"
 
 [tool.coverage.run]
 
