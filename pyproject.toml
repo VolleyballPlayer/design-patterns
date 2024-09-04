@@ -7,7 +7,7 @@ name = "designpatterns"
 dynamic = ["version"]
 authors = [{name = 'Volleyball Player', email="volleyball@player.com"},]
 description = "A Python package with description and examples of Gang of Four design patterns."
-dependencies = []
+dependencies = ["Click"]
 
 [project.scripts]
 designpattern = "designpatterns.__main__:main"
