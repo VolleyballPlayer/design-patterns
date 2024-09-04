@@ -22,13 +22,12 @@ jobs:
               run: |
                 ls ${{ github.workspace }}
             - run: echo "This job status is ${{ job.status }}"
-    tests:
+
+    run-tests:
         runs-on:
             ubuntu-latest
-
         container:
-            python 3.12
-            
+            image: python:3.12
         steps:
             - uses: actions/checkout@v4
               with:
