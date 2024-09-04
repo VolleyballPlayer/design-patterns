@@ -27,7 +27,7 @@ jobs:
         runs-on:
             ubuntu-latest
         container:
-            image: python:3.12
+            image: python:latest
         steps:
             - uses: actions/checkout@v4
               with:
