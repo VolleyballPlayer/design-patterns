@@ -1,9 +1,18 @@
 {
+    "version": "o.2.0",
     "configurations": [
-        { "name": "Python Debugger: Current File",
-        "type": "debugpy",
-        "request": "launch",
-        "program": "${file}",
-        "console": "integratedTerminal" }
+        {
+            "name": "Python: Debug Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}",
+            "purpose": ["debug-test"],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [ "--help" ],
+            "env":{
+                "PYTEST_ADDOPTS": "--no-cov"
+            },
+        },
     ]
 }

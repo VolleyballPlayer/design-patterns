@@ -23,7 +23,7 @@ test = ["pytest",
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov --cov-report=term-missing --color=yes"
+addopts = "--cov=src --cov-report=html --cov-report=term-missing --color=yes"
 
 [tool.coverage.run]
 
