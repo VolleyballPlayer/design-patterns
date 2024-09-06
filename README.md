@@ -1,6 +1,6 @@
 # design-patterns
 
-## Project Status
+###### Project Status
 
 ![CI](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/ci.yml/badge.svg)
 
