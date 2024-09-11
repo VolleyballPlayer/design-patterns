@@ -12,6 +12,7 @@
         "tamasfe.even-better-toml",
         "streetsidesoftware.code-spell-checker",
         "techer.open-in-browser",
-        "qwtel.sqlite-viewer"
+        "qwtel.sqlite-viewer",
+        "george-alisson.html-preview-vscode"
     ]
 }
