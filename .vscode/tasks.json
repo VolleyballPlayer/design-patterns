@@ -14,13 +14,21 @@
                 "cwd": "${workspaceFolder}"
             },
             "command": "/usr/bin/python3.11",
-            "args": ["-m", "venv", ".venv"],
+            "args": [
+                "-m",
+                "venv",
+                ".venv"
+            ]
         },
         {
             "label": "pip list",
             "hide": false,
             "command": "${command:python.interpreterPath}",
-            "args": ["-m", "pip", "list"],
+            "args": [
+                "-m",
+                "pip",
+                "list"
+            ],
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -31,7 +39,14 @@
             "label": "pip upgrade",
             "hide": false,
             "command": "${command:python.interpreterPath}",
-            "args": ["-m", "pip", "install", "--upgrade", "pip", "setuptools"],
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "--upgrade",
+                "pip",
+                "setuptools"
+            ],
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -43,30 +58,42 @@
             "type": "shell",
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "command": "${command:python.interpreterPath}",
-            "args": ["-m", "pip", "install", "-ve", ".[dev, test, docs]"],
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "-ve",
+                ".[dev, test, docs]"
+            ],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared",
                 "clear": false
-            }
+            },
+            "problemMatcher": [ ]
         },
         {
             "label": "Sphinx: HTML",
             "type": "shell",
             "command": "${command:python.interpreterPath}",
-            "args": ["-m", "sphinx", "-b", "html", "-E", "source", "html"],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "args": [
+                "-m",
+                "sphinx",
+                "-b",
+                "html",
+                "-E",
+                "source",
+                "html"
+            ],
+            "group": "build",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
@@ -77,6 +104,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/docs"
             },
+            "problemMatcher": [ ]
         }
     ]
 }

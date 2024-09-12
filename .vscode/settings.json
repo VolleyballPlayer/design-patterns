@@ -42,7 +42,6 @@
     //if enable preview is false, files will always open in a new tab
     "workbench.editor.enablePreview": false,
     //if auto reveal is false, explorer will not automatically scroll to or highlight files when they are open
-    "explorer.autoReveal": false
-
-
+    "explorer.autoReveal": false,
+    "html.suggest.html5": true
 }

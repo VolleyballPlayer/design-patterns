@@ -15,11 +15,17 @@ designpattern = "designpatterns.__main__:main"
 [tool.setuptools.package-data]
 
 [project.optional-dependencies]
-dev = ["pylint", "toml"]
-docs = ["Sphinx"]
+dev = ["pylint",
+    "toml"
+]
+docs = ["Sphinx",
+    "sphinx-autodoc-typehints",
+    "sphinx-rtd-theme>=2.0.0" #error with version 0.5.1
+]
 test = ["pytest",
-"pytest-cov",
-"pytest_mock"]
+    "pytest-cov",
+    "pytest_mock"
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

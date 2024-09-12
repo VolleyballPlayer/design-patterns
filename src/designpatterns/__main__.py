@@ -1,7 +1,7 @@
 
 from designpatterns.utils.package_resources import PackageResources
 
-def builder():
+def builder() -> None:
     """
     Run builder example.
 
@@ -9,7 +9,7 @@ def builder():
     """
     print("This is builder pattern")
 
-def singleton():
+def singleton() -> None:
     """
     Run singleton example.
 
@@ -17,9 +17,8 @@ def singleton():
     """
     print("This is singleton pattern")
 
-def main():
+def main() -> None:
     print(f"Using design pattern package version {PackageResources.get_package_version()}")
-    builder()
     singleton()
 
 if __name__ == "__main__":

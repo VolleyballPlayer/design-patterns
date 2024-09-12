@@ -21,7 +21,10 @@ release = '0.0.0'
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.autodoc',
+    'sphinx_autodoc_typehints'
 ]
+
+always_document_param_types = True
 
 templates_path = ['_templates']
 
@@ -30,5 +33,5 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'haiku'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
