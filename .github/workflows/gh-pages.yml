@@ -34,7 +34,7 @@ jobs:
       shell: bash
       working-directory: ./docs
       run: |
-        sphinx -b html -E source html
+        sphinx-build -b html -E source html
 
     - name: Deploy
       if: (github.event_name == 'release' && github.event.release.target_commitish == 'main') || (github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || github.event_name == 'push'))
