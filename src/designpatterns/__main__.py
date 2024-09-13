@@ -1,5 +1,5 @@
 
-from designpatterns.utils.package_resources import PackageResources
+from designpatterns.utilities.package_resources import PackageResources
 
 def builder() -> None:
     """

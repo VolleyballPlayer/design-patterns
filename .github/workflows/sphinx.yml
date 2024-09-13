@@ -1,0 +1,46 @@
+name: github pages
+
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: 
+      ubuntu-latest
+    container:
+      image: python:latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+      
+    - name: Install package and dependencies for building the documentation
+      shell: bash
+      run: pip install -e .[docs]
+
+    - name: Call sphinx-apidoc for automatic API documentation
+      shell: bash
+      run: source docs/source/call_sphinx_apidoc.sh
+
+    - name: Build documentation
+      shell: bash
+      working-directory: ./docs
+      run: |
+        sphinx -b html -E source html
+
+    - name: Deploy
+      if: (github.event_name == 'release' && github.event.release.target_commitish == 'main') || (github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || github.event_name == 'push'))
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/html
+
+    
