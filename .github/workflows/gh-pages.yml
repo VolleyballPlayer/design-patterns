@@ -18,6 +18,9 @@ jobs:
       image: python:latest
 
     steps:
+    - name: Set ownership
+      run: chown -R $(id -u):$(id -g) $PWD
+      
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
