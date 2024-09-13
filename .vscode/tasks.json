@@ -103,7 +103,7 @@
             },
             "options": {
                 "cwd": "${workspaceFolder}/docs",
-            "dependsOn": [ "Sphinx-ApiDoc"]
+            "dependsOn": [ "Sphinx-ApiDoc" ]
             },
             "problemMatcher": [ ]
         },
@@ -127,13 +127,13 @@
                 "panel": "shared",
                 "clear": false
                 },
-            "dependsOn": "Clear Sphinx-ApiDoc Output"    
+            "dependsOn": [ "Clear Sphinx-ApiDoc Output" ]    
         },
         {
             "label": "Clear Sphinx-ApiDoc Output",
             "type": "shell",
             "command": "rm",
-            "args": ["-r", "docs/source/technical_documentation/autodoc"]
+            "args":  ["-r", "docs/source/technical_documentation/autodoc" ]
         }
     ]
 }
