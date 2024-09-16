@@ -111,7 +111,7 @@
             "label": "Sphinx-ApiDoc",
             "type": "shell",
             "command": "${command:python.interpreterPath}",
-            "args": [ "-m", "sphinx.ext.apidoc", "-o", "docs/source/technical_documentation/autodoc", "-f", "src/designpatterns"],
+            "args": [ "-m", "sphinx-apidoc", "-o", "-f", "docs/source/technical_documentation/autodoc", "src/designpatterns"],
             "group": {
                 "kind": "build",
                 "isDefault": false
