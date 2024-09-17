@@ -9,6 +9,7 @@ designpatterns.creational\_patterns.builder module
 
 .. automodule:: designpatterns.creational_patterns.builder
    :members:
+   :undoc-members:
    :show-inheritance:
 
 Module contents
@@ -16,4 +17,5 @@ Module contents
 
 .. automodule:: designpatterns.creational_patterns
    :members:
+   :undoc-members:
    :show-inheritance:

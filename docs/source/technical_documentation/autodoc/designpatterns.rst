@@ -15,4 +15,5 @@ Module contents
 
 .. automodule:: designpatterns
    :members:
+   :undoc-members:
    :show-inheritance:

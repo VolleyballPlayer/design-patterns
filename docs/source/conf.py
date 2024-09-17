@@ -20,7 +20,9 @@ release = '0.0.0'
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.autodoc',
-] # 'sphinx_autodoc_typehints'
+    'sphinx_autodoc_typehints',
+    'sphinx.ext.coverage'
+]
 
 
 always_document_param_types = True

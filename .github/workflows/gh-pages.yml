@@ -38,6 +38,11 @@ jobs:
       run: |
         sphinx-build -b html -E source html
 
+    - name: Documentation coverage
+      shell: bash
+      run: |
+        sphinx-build -M coverage ./docs/source ./docs/coverage
+
     - name: Deploy
       if: (github.event_name == 'release' && github.event.release.target_commitish == 'main') || (github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || github.event_name == 'push'))
       uses: peaceiris/actions-gh-pages@v3
