@@ -15,6 +15,12 @@ I have created this project to document my knowledge on design patterns, create 
 
 #### Installation
 
+##### Install with developer dependencies
+
+``` shell
+pip install -e .[dev]
+```
+
 When creating virtual environment by Visual Studio Code and tasks.json, it is assumed that local Python version can be found under /usr/bin/python3.11. Else, one can replace this path.
 
 #### See also
