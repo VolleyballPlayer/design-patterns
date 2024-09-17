@@ -15,13 +15,35 @@ I have created this project to document my knowledge on design patterns, create 
 
 #### Installation
 
+When creating virtual environment by Visual Studio Code and tasks.json, it is assumed that local Python version can be found under /usr/bin/python3.11. Else, one can replace this path.
+
 ##### Install with developer dependencies
 
 ``` shell
 pip install -e .[dev]
 ```
 
-When creating virtual environment by Visual Studio Code and tasks.json, it is assumed that local Python version can be found under /usr/bin/python3.11. Else, one can replace this path.
+#### Tests
+
+##### Install required dependencies for testing
+
+``` shell
+pip install -e .[test]
+```
+
+Once dependencies are installed, you can run the tests from the package root folder via
+
+``` shell
+pytest
+```
+
+Conventionally, name of the test script should be defined by adding test_ prefix to script name it is testing.
+
+#### Build documentation
+
+``` shell
+pip install -e .[docs]
+```
 
 #### See also
 
