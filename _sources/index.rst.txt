@@ -8,7 +8,7 @@ design-patterns: Documentation and User Guide
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents
+   :numbered:
 
    pattern_description/pattern_description.rst
    user_guide/user_guide.rst

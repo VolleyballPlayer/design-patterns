@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Builder Pattern &mdash; design-patterns 0.0.0 documentation</title>
+  <title>1.1. Builder Pattern &mdash; design-patterns 0.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="User Guide" href="../user_guide/user_guide.html" />
-    <link rel="prev" title="Description of patterns" href="pattern_description.html" /> 
+    <link rel="next" title="2. User Guide" href="../user_guide/user_guide.html" />
+    <link rel="prev" title="1. Description of patterns" href="pattern_description.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,14 +44,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="pattern_description.html">Description of patterns</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Builder Pattern</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pattern_description.html">1. Description of patterns</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Builder Pattern</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../technical_documentation/technical_documentation.html">Technical documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">2. User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical_documentation/technical_documentation.html">3. Technical documentation</a></li>
 </ul>
 
         </div>
@@ -68,8 +67,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="pattern_description.html">Description of patterns</a></li>
-      <li class="breadcrumb-item active">Builder Pattern</li>
+          <li class="breadcrumb-item"><a href="pattern_description.html"><span class="section-number">1. </span>Description of patterns</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.1. </span>Builder Pattern</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/pattern_description/builder.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -80,15 +79,15 @@
            <div itemprop="articleBody">
              
   <section id="builder-pattern">
-<h1>Builder Pattern<a class="headerlink" href="#builder-pattern" title="Link to this heading"></a></h1>
+<h1><span class="section-number">1.1. </span>Builder Pattern<a class="headerlink" href="#builder-pattern" title="Link to this heading"></a></h1>
 <p>Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.</p>
-<p>:( Problem</p>
+<p><strong>:( Problem</strong></p>
 <p>Imagine a complex object that requires laborious, step-by-step initialization of many fields and nested objects. Such initialization code is usually buried inside a monstrous constructor with lots of parameters. Or even worse: scattered all over the client code.</p>
 <p>For example, let’s think about how to create a House object. To build a simple house, you need to construct four walls and a floor, install a door, fit a pair of windows, and build a roof. But what if you want a bigger, brighter house, with a backyard and other goodies (like a heating system, plumbing, and electrical wiring)?</p>
 <p>The simplest solution is to extend the base House class and create a set of subclasses to cover all combinations of the parameters. But eventually you’ll end up with a considerable number of subclasses. Any new parameter, such as the porch style, will require growing this hierarchy even more.</p>
 <p>There’s another approach that doesn’t involve breeding subclasses. You can create a giant constructor right in the base House class with all possible parameters that control the house object. While this approach indeed eliminates the need for subclasses, it creates another problem.</p>
 <p>In most cases most of the parameters will be unused, making the constructor calls pretty ugly. For instance, only a fraction of houses have swimming pools, so the parameters related to swimming pools will be useless nine times out of ten.</p>
-<p>:) Solution</p>
+<p><strong>:) Solution</strong></p>
 <p>The Builder pattern suggests that you extract the object construction code out of its own class and move it to separate objects called builders.</p>
 <p>The pattern organizes object construction into a set of steps (buildWalls, buildDoor, etc.). To create an object, you execute a series of these steps on a builder object. The important part is that you don’t need to call all of the steps. You can call only those steps that are necessary for producing a particular configuration of an object.</p>
 <p>Some of the construction steps might require different implementation when you need to build various representations of the product. For example, walls of a cabin may be built of wood, but the castle walls must be built with stone.</p>
@@ -98,35 +97,53 @@
 <p>Having a director class in your program isn’t strictly necessary. You can always call the building steps in a specific order directly from the client code. However, the director class might be a good place to put various construction routines so you can reuse them across your program.</p>
 <p>In addition, the director class completely hides the details of product construction from the client code. The client only needs to associate a builder with a director, launch the construction with the director, and get the result from the builder.</p>
 <p>Using the Builder pattern makes sense only when your products are quite complex and require extensive configuration.</p>
-<p>Applicability</p>
-<p>1) Use the Builder pattern to get rid of a “telescoping constructor”.
-Say you have a constructor with ten optional parameters. Calling such a beast is very inconvenient; therefore, you overload the constructor and create several shorter versions with fewer parameters. These constructors still refer to the main one, passing some default values into any omitted parameters.
-2) Use the Builder pattern when you want your code to be able to create different representations of some product (for example, stone and wooden houses).
-The Builder pattern can be applied when construction of various representations of the product involves similar steps that differ only in the details.
-The base builder interface defines all possible construction steps, and concrete builders implement these steps to construct particular representations of the product. Meanwhile, the director class guides the order of construction.
-3) Use the Builder to construct Composite trees or other complex objects.
-The Builder pattern lets you construct products step-by-step. You could defer execution of some steps without breaking the final product. You can even call steps recursively, which comes in handy when you need to build an object tree.
-A builder doesn’t expose the unfinished product while running construction steps. This prevents the client code from fetching an incomplete result.</p>
-<p>Pros
-1) You can construct objects step-by-step, defer construction steps or run steps recursively.
-2) You can reuse the same construction code when building various representations of products.
-3) Single Responsibility Principle. You can isolate complex construction code from the business logic of the product.</p>
-<p>Cons
-1) The overall complexity of the code increases since the pattern requires creating multiple new classes.</p>
-<p>Relations with Other Patterns
-1) Many designs start by using Factory Method (less complicated and more customizable via subclasses) and evolve toward Abstract Factory, Prototype, or Builder (more flexible, but more complicated).
-2) Builder focuses on constructing complex objects step by step. Abstract Factory specializes in creating families of related objects. Abstract Factory returns the product immediately, whereas Builder lets you run some additional construction steps before fetching the product.
-3) You can use Builder when creating complex Composite trees because you can program its construction steps to work recursively.
-4) You can combine Builder with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
-5) Abstract Factories, Builders and Prototypes can all be implemented as Singletons.</p>
+<p><strong>Applicability</strong></p>
+<ul class="simple">
+<li><p>Use the Builder pattern to get rid of a “telescoping constructor”. Say you have a constructor with ten optional
+parameters. Calling such a beast is very inconvenient; therefore, you overload the constructor and create several
+shorter versions with fewer parameters. These constructors still refer to the main one, passing some default values
+into any omitted parameters.</p></li>
+<li><p>Use the Builder pattern when you want your code to be able to create different representations of some product (for
+example, stone and wooden houses). The Builder pattern can be applied when construction of various representations of
+the product involves similar steps that differ only in the details. The base builder interface defines all possible
+construction steps, and concrete builders implement these steps to construct particular representations of the
+product. Meanwhile, the director class guides the order of construction.</p></li>
+<li><p>Use the Builder to construct Composite trees or other complex objects. The Builder pattern lets you construct
+products step-by-step. You could defer execution of some steps without breaking the final product. You can even call
+steps recursively, which comes in handy when you need to build an object tree. A builder doesn’t expose the
+unfinished product while running construction steps. This prevents the client code from fetching an incomplete result.</p></li>
+</ul>
+<p><strong>Pros</strong></p>
+<ul class="simple">
+<li><p>You can construct objects step-by-step, defer construction steps or run steps recursively.</p></li>
+<li><p>You can reuse the same construction code when building various representations of products.</p></li>
+<li><p>Single Responsibility Principle. You can isolate complex construction code from the business logic of the product.</p></li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul class="simple">
+<li><p>The overall complexity of the code increases since the pattern requires creating multiple new classes.</p></li>
+</ul>
+<p><strong>Relations with Other Patterns</strong></p>
+<ul class="simple">
+<li><p>Many designs start by using Factory Method (less complicated and more customizable via subclasses) and evolve toward
+Abstract Factory, Prototype, or Builder (more flexible, but more complicated).</p></li>
+<li><p>Builder focuses on constructing complex objects step by step. Abstract Factory specializes in creating families of
+related objects. Abstract Factory returns the product immediately, whereas Builder lets you run some additional
+construction steps before fetching the product.</p></li>
+<li><p>You can use Builder when creating complex Composite trees because you can program its construction steps to work
+recursively.</p></li>
+<li><p>You can combine Builder with Bridge: the director class plays the role of the abstraction, while different builders
+act as implementations.</p></li>
+<li><p>Abstract Factories, Builders and Prototypes can all be implemented as Singletons.</p></li>
+</ul>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pattern_description.html" class="btn btn-neutral float-left" title="Description of patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../user_guide/user_guide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pattern_description.html" class="btn btn-neutral float-left" title="1. Description of patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../user_guide/user_guide.html" class="btn btn-neutral float-right" title="2. User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
