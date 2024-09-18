@@ -13,7 +13,7 @@ class PackageResources:
         Get project root directory.
         """
         return Path(__file__).parent.parent
-    
+
     @staticmethod
     def get_package_version() -> str:
         """

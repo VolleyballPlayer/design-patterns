@@ -48,6 +48,6 @@
     "explorer.autoReveal": false,
     "html.suggest.html5": true,
     "cSpell.words": [
-        "creational", "designpatterns"
+        "creational", "designpatterns", "creationalpatterns", "structuralpatterns"
     ]
 }
