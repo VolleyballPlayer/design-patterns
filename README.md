@@ -11,7 +11,7 @@ Documentation can be found here: https://volleyballplayer.github.io/design-patte
 
 #### About project
 
-I have created this project to document my knowledge on design patterns, create my examples and go back to summaries when using design patterns in other projects. This repository is work in progress also related to different topics where I am enriching and demostrating my know-how related to Python packages, tests, documentation, git workflows, Docker etc.
+I have created this project to document knowledge on design patterns, create examples and go back to summaries when using design patterns in other projects. This repository is work in progress also related to different topics where I am enriching and demonstrating my know-how related to Python packages, tests, documentation, git workflows, Docker etc.
 
 #### Installation
 

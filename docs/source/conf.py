@@ -21,7 +21,8 @@ extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.autodoc',
     'sphinx_autodoc_typehints',
-    'sphinx.ext.coverage'
+    'sphinx.ext.coverage',
+    'sphinx_click'
 ]
 
 

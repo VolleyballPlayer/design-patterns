@@ -10,7 +10,7 @@ description = "A Python package with description and examples of Gang of Four de
 dependencies = ["Click"]
 
 [project.scripts]
-designpattern = "designpatterns.__main__:main"
+creationalpatterns = "designpatterns.cli.creational_patterns:cli"
 
 [tool.setuptools.package-data]
 
@@ -19,6 +19,7 @@ dev = ["pylint",
     "toml"
 ]
 docs = ["Sphinx",
+    "sphinx-click",
     "sphinx-autodoc-typehints",
     "sphinx-rtd-theme>=2.0.0" #error with version 0.5.1
 ]
