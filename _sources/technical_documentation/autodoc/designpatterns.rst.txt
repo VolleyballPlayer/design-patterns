@@ -10,6 +10,16 @@ Subpackages
    designpatterns.creational_patterns
    designpatterns.utilities
 
+Submodules
+----------
+
+designpatterns.logger module
+----------------------------
+
+.. automodule:: designpatterns.logger
+   :members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
