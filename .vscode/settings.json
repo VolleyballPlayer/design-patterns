@@ -27,6 +27,7 @@
     "editor.rulers": [
         120
     ],
+    "pylint.args": [ "--max-line-length=120" ],
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     //pylint is a tool that checks for errors in Python code, enforces a coding standard, 
     //and checks for bad code smell, giving us immediate feedback about our code. 
@@ -45,5 +46,8 @@
     "workbench.editor.enablePreview": false,
     //if auto reveal is false, explorer will not automatically scroll to or highlight files when they are open
     "explorer.autoReveal": false,
-    "html.suggest.html5": true
+    "html.suggest.html5": true,
+    "cSpell.words": [
+        "creational", "designpatterns"
+    ]
 }
