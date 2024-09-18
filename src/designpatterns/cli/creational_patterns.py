@@ -1,12 +1,13 @@
 import click
 from designpatterns.utilities.package_resources import PackageResources
+from designpatterns.logger import logger
 
 @click.group()
 def cli():
     """
     Run creational patterns.
     """
-    click.echo(f"Using design pattern package version {PackageResources.get_package_version()}")
+    logger.info(f"Using design pattern package version {PackageResources.get_package_version()}")
 
 @cli.command()
 def run_builder() -> None:
@@ -15,7 +16,7 @@ def run_builder() -> None:
 
     This function calls builder module to run an example of creational design pattern called builder.
     """
-    click.echo("This is builder pattern")
+    logger.info("This is builder pattern")
 
 @cli.command()
 def run_singleton() -> None:
@@ -24,7 +25,7 @@ def run_singleton() -> None:
 
     This function calls singleton module to run an example of creational design pattern called singleton.
     """
-    click.echo("This is singleton pattern")
+    logger.info("This is singleton pattern")
 
 if __name__ == "__main__":
     cli()

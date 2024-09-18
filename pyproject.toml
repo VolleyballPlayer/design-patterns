@@ -39,4 +39,5 @@ addopts = "--cov=src --cov-report=html --cov-report=term-missing --color=yes"
 max-line-length = 120
 disable = [
     "C0114", # (missing-module-docstring)
+    "W1203", # (logging-fstring-interpolation)
 ]

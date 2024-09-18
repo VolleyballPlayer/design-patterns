@@ -17,3 +17,6 @@ __pycache__/
 # Sphinx documentation
 docs/html/
 docs/coverage/
+
+# Log
+output.log
