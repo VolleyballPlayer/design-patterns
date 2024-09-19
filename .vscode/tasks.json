@@ -158,6 +158,23 @@
                 "cwd": "${workspaceFolder}",
             },
             "dependsOn": [ "Sphinx: HTML" ]
+        },
+        {
+            "label": "Run pylint",
+            "type": "shell",
+            "command": "pylint",
+            "args": ["designpatterns"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
         }
     ]
 }

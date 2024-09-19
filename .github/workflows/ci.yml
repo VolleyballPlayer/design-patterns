@@ -35,6 +35,9 @@ jobs:
                 
             - name: Install package and dependencies for testing
               run: pip install .[test]
+
+            - name: Run linter
+              run: pylint designpatterns
             
             - name: Run tests
               shell: bash
