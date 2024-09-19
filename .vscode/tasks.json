@@ -175,6 +175,23 @@
                 "panel": "shared",
                 "clear": false
                 }
+        },
+        {
+            "label": "Run pylint-pytest",
+            "type": "shell",
+            "command": "pylint",
+            "args": [ "--load-plugins", "pylint_pytest", "src/tests"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
         }
     ]
 }
