@@ -1,4 +1,4 @@
 def test():
-    """
-    test
-    """
+	"""
+	test
+	"""

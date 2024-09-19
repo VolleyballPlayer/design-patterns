@@ -44,6 +44,9 @@ disable = [
     "W1203", # (logging-fstring-interpolation)
 ]
 
+[tool.ruff]
+line-length = 120
+
 [tool.ruff.lint]
 select = [
     # pycodestyle
@@ -59,3 +62,8 @@ select = [
     # isort
     "I",
 ]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
