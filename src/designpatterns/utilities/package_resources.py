@@ -19,4 +19,4 @@ class PackageResources:
         """
         Get latest version of package.
         """
-        return metadata.version('designpatterns')
+        return metadata.version("designpatterns")

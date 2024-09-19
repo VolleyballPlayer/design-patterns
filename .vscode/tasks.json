@@ -194,10 +194,27 @@
                 }
         },
         {
-            "label": "Run ruff",
+            "label": "Run ruff check",
             "type": "shell",
             "command": "ruff",
             "args": [ "check"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
+        },
+        {
+            "label": "Run ruff format",
+            "type": "shell",
+            "command": "ruff",
+            "args": [ "format"],
             "group": {
                 "kind": "build",
                 "isDefault": false
