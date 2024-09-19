@@ -3,37 +3,10 @@
     //with editor.formatOnSave everytime you save, the code will be automatically formatted.
     "editor.formatOnSave": true,
     "output.smartScroll.enabled": true,
-    "[python]": {
-        //black is a great tool for formatting your Python code automatically according to PEP8, 
-        //while you give full attention to the logic of the code.
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit",
-            "source.unusedImports": "explicit"
-        },
-    },
-    //isort is Python library to sort imports. Use of profile black configures isort to be
-    //compatible with black, if it is used.
-    "isort.args": [
-        "--profile",
-        "black"
-    ],
-    //basic type checking performed by Python Language Server such as checking the types of 
-    //values assigned to variables
-    "python.analysis.typeCheckingMode": "basic",
-    "black-formatter.args": [
-        "--line-length=120",
-    ],
     "editor.rulers": [
         120
     ],
-    "pylint.args": [ "--max-line-length=120" ],
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-    //pylint is a tool that checks for errors in Python code, enforces a coding standard, 
-    //and checks for bad code smell, giving us immediate feedback about our code. 
-    "pylint.path": [
-        "${workspaceFolder}/.venv/bin/pylint"
-    ],
     "python.envFile": "${workspaceFolder}/.env",
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,

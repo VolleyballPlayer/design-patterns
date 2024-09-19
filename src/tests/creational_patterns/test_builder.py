@@ -1,4 +1,2 @@
-def test():
-	"""
-	test
-	"""
+def test_builder() -> None:
+    """Test."""

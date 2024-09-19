@@ -16,8 +16,7 @@ structuralpatterns = "designpatterns.cli.structural_patterns:cli"
 [tool.setuptools.package-data]
 
 [project.optional-dependencies]
-dev = ["pylint",
-    "toml",
+dev = ["toml",
     "ruff"
 ]
 docs = ["Sphinx",
@@ -28,7 +27,6 @@ docs = ["Sphinx",
 test = ["pytest",
     "pytest-cov",
     "pytest_mock",
-    "pylint-pytest"
 ]
 
 [tool.pytest.ini_options]
@@ -36,14 +34,6 @@ testpaths = ["tests"]
 addopts = "--cov=src --cov-report=html --cov-report=term-missing --color=yes"
 
 [tool.coverage.run]
-
-[tool.pylint]
-max-line-length = 120
-disable = [
-    "C0114", # (missing-module-docstring)
-    "W1203", # (logging-fstring-interpolation)
-    "W0311", # (Bad indentation.) Overlaps with Ruff
-]
 
 [tool.ruff]
 line-length = 120
@@ -62,9 +52,64 @@ select = [
     "SIM",
     # isort
     "I",
+    # annotations
+    "ANN",
+    # documenation
+    "D",
+    # pep8-naming
+    "N",
+    # comprehensions
+    "C4",
+    # datetime
+    "DTZ",
+    # pyi
+    "PYI",
+    # pytest
+    "PT",
+    # return
+    "RET",
+    # private member accessed
+    "SLF",
+    # unused arguments
+    "ARG",
+    # paths
+    "PTH",
+    # todo
+    "TD",
+    # fixme
+    "FIX",
+    # commment out code
+    "ERA",
+    # pandas
+    "PD",
+    # error
+    "E",
+    # try
+    "TRY",
+    # numpy
+    "NPY",
+    # refurb
+    "FURB"
 ]
+ignore = [ 
+    # undocumented-public-module 
+    "D100",
+    # Missing docstring in public package
+    "D104",
+    # Docstring should be indented with spaces, not tabs
+    "D206",
+    # no-blank-line-before-class
+    "D211",
+    # multi-line-summary-second-line
+    "D213",
+    # one-blank-line-before-class
+    "D203"
+     ]
 
 [tool.ruff.format]
 quote-style = "single"
-indent-style = "tab"
-docstring-code-format = true
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+force-wrap-aliases = true
+combine-as-imports = true

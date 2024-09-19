@@ -3,8 +3,8 @@
 #### Project Status
 
 [![CI](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/ci.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/ci.yml)
-[![Lint](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linters.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linters.yml)
-[![gh-pages](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml)
+[![Lint](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linter.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linter.yml)
+[![Documentation](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml)
 
 #### Documentation
 
@@ -27,15 +27,9 @@ pip install -e .[dev]
 Project can be lint via
 
 ``` shell
-pylint designpatterns
-```
-
-``` shell
 ruff check
 ruff format
 ```
-
-Additionally, Pylance can be installed as VS Code extension.
 
 #### Tests
 

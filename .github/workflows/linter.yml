@@ -23,9 +23,7 @@ jobs:
               run: |
                 pip install .[dev]
 
-            - name: Run linters
+            - name: Run linter
               shell: bash
               run: |
-                pylint designpatterns
-                pylint --load-plugins pylint_pytest src/tests
-                ruff check
+                ruff check --output-format=github .

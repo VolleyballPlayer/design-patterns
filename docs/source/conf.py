@@ -3,8 +3,8 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import sys
 from pathlib import Path
+import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'src'))
 # -- Project information -----------------------------------------------------
@@ -19,11 +19,11 @@ release = '0.0.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-	'sphinx.ext.duration',
-	'sphinx.ext.autodoc',
-	'sphinx_autodoc_typehints',
-	'sphinx.ext.coverage',
-	'sphinx_click',
+    'sphinx.ext.duration',
+    'sphinx.ext.autodoc',
+    'sphinx_autodoc_typehints',
+    'sphinx.ext.coverage',
+    'sphinx_click',
 ]
 
 
