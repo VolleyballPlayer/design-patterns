@@ -23,6 +23,12 @@ When creating virtual environment by Visual Studio Code and tasks.json, it is as
 pip install -e .[dev]
 ```
 
+Project can be lint via
+
+``` shell
+pylint designpatterns
+```
+
 #### Tests
 
 ##### Install required dependencies for testing
