@@ -37,7 +37,7 @@ Once dependencies are installed, you can run the tests from the package root fol
 pytest
 ```
 
-Conventionally, name of the test script should be defined by adding test_ prefix to script name it is testing. The name of the test itself should also start with test_ prefix such that test can be identified. Each test script starts with a class whose name starts with Test. Tests names follow convention: test_StateUnderTest_ExpectedBehaviour e.g. test_IsPackageBuilt_True()
+Conventionally, the name of the test script should be defined by adding *test_* prefix to script name it is testing. The name of the test itself should also start with *test_* prefix such that test can be identified. Each test script starts with a class whose name starts with *Test*. Test names follow convention: *test_StateUnderTest_ExpectedBehaviour* e.g. *test_IsPackageBuilt_True()*
 
 #### Build documentation
 
