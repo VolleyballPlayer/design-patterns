@@ -35,7 +35,7 @@ jobs:
                 
             - name: Install package and dependencies for testing and linting
               run: |
-                pip install .[dev, test]
+                pip install -ve .[dev, test]
 
             - name: Run linters
               run: |
