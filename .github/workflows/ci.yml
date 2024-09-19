@@ -34,10 +34,12 @@ jobs:
                 fetch-depth: 0
                 
             - name: Install package and dependencies for testing and linting
+              shell: bash
               run: |
                 pip install -ve .[dev, test]
 
             - name: Run linters
+              shell: bash
               run: |
                 pylint designpatterns
                 pylint --load-plugins pylint_pytest src/tests
