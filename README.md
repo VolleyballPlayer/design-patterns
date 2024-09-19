@@ -3,6 +3,7 @@
 #### Project Status
 
 ![CI](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/ci.yml/badge.svg)
+![Lint](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linters.yml/badge.svg)
 ![gh-pages](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml/badge.svg)
 
 #### Documentation
