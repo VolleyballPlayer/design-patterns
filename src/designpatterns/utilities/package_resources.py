@@ -1,5 +1,5 @@
-from pathlib import Path
 from importlib import metadata
+from pathlib import Path
 
 
 class PackageResources:

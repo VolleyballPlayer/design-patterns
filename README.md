@@ -29,6 +29,12 @@ Project can be lint via
 ``` shell
 pylint designpatterns
 ```
+
+``` shell
+ruff check
+ruff format
+```
+
 Additionally, Pylance can be installed as VS Code extension.
 
 #### Tests

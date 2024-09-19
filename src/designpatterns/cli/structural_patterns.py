@@ -1,6 +1,7 @@
 import click
-from designpatterns.utilities.package_resources import PackageResources
+
 from designpatterns.logger import logger
+from designpatterns.utilities.package_resources import PackageResources
 
 
 @click.group()
