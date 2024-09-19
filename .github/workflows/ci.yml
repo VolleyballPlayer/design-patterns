@@ -37,7 +37,9 @@ jobs:
               run: pip install .[test]
 
             - name: Run linter
-              run: pylint designpatterns
+              run: |
+                pip install pylint
+                pylint designpatterns
             
             - name: Run tests
               shell: bash

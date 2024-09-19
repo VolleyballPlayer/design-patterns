@@ -26,7 +26,8 @@ docs = ["Sphinx",
 ]
 test = ["pytest",
     "pytest-cov",
-    "pytest_mock"
+    "pytest_mock",
+    "pylint-pytest"
 ]
 
 [tool.pytest.ini_options]
