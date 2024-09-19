@@ -17,7 +17,8 @@ structuralpatterns = "designpatterns.cli.structural_patterns:cli"
 
 [project.optional-dependencies]
 dev = ["pylint",
-    "toml"
+    "toml",
+    "ruff"
 ]
 docs = ["Sphinx",
     "sphinx-click",
@@ -41,4 +42,20 @@ max-line-length = 120
 disable = [
     "C0114", # (missing-module-docstring)
     "W1203", # (logging-fstring-interpolation)
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
 ]
