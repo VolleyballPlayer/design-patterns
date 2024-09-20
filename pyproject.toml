@@ -9,6 +9,9 @@ authors = [{name = 'Volleyball Player', email="volleyball@player.com"},]
 description = "A Python package with description and examples of Gang of Four design patterns."
 dependencies = ["Click"]
 
+[tool.setuptools.dynamic]
+version = {attr = "designpatterns.__version__"}
+
 [project.scripts]
 creationalpatterns = "designpatterns.cli.creational_patterns:cli"
 structuralpatterns = "designpatterns.cli.structural_patterns:cli"
@@ -37,6 +40,7 @@ addopts = "--cov=src --cov-report=html --cov-report=term-missing --color=yes"
 
 [tool.ruff]
 line-length = 120
+target-version = "py311"
 
 [tool.ruff.lint]
 select = [
