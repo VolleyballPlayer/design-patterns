@@ -1,48 +1,48 @@
 name: CI
 
 on:
-    workflow_dispatch:
-    push:
-        branches: [ main ]
-    pull_request:
-        branches: [ '*' ]
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ '*' ]
 
 jobs:
-    github-setup-info:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "This job was automatically triggered by a ${{ github.event_name }} event"
-            - run: echo "This job is now running on a ${{ runner.os }}" server hosted by GitHub
-            - run: echo "The name of your branch is ${{ github.ref }}" and your repository is ${{ github.repository}}
-            - name: Check out repository code
-              uses: actions/checkout@v4
-            - run: echo "The ${{ github.repository }} has been cloned to the runner."
-            - run: echo "The workflow is now ready to test your code on the runner"
-            - name: List files in the repository
-              run: |
-                ls ${{ github.workspace }}
-            - run: echo "This job status is ${{ job.status }}"
+  github-setup-info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job was automatically triggered by a ${{ github.event_name }} event"
+      - run: echo "This job is now running on a ${{ runner.os }}" server hosted by GitHub
+      - run: echo "The name of your branch is ${{ github.ref }}" and your repository is ${{ github.repository}}
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "The ${{ github.repository }} has been cloned to the runner."
+      - run: echo "The workflow is now ready to test your code on the runner"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "This job status is ${{ job.status }}"
 
-    run-tests:
-        runs-on:
-            ubuntu-latest
-        container:
-            image: python:latest
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                fetch-depth: 0
+  run-tests:
+    runs-on:
+      ubuntu-latest
+    container:
+      image: python:latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
                 
-            - name: Install package and dependencies for testing
-              shell: bash
-              run: |
-                pip install .[test]
+      - name: Install package and dependencies for testing
+        shell: bash
+        run: |
+          pip install .[test]
             
-            - name: Run tests
-              shell: bash
-              run: pytest --cov=src --cov-report=term-missing --cov-report=html --color=yes
+      - name: Run tests
+        shell: bash
+        run: pytest --cov=src --cov-report=term-missing --cov-report=html --color=yes
 
-            - name: Test CLI
-              run: |
-                creationalpatterns --help
-                structuralpatterns --help
+      - name: Test CLI
+        run: |
+          creationalpatterns --help
+          structuralpatterns --help

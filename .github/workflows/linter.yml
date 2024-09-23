@@ -1,29 +1,30 @@
 name: Lint
 
 on:
-    workflow_dispatch:
-    push:
-        branches: [ main ]
-    pull_request:
-        branches: [ '*' ]
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ '*' ]
 
 jobs:
-    lint:
-        runs-on:
-            ubuntu-latest
-        container:
-            image: python:latest
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                fetch-depth: 0
-                
-            - name: Install package and dependencies for linting
-              shell: bash
-              run: |
-                pip install .[dev]
+  lint:
+    runs-on:
+      ubuntu-latest
+    container:
+      image: python:latest
+        
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+                    
+      - name: Install package and dependencies for linting
+        shell: bash
+        run: |
+          pip install .[dev]
 
-            - name: Run linter
-              shell: bash
-              run: |
-                ruff check --output-format=github .
+      - name: Run linter
+        shell: bash
+        run: |
+          ruff check --output-format=github .
