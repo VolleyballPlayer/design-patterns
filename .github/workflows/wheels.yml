@@ -1,0 +1,35 @@
+name: Wheels
+
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  release:
+    types:
+    - published
+
+jobs:
+  build_sdist:
+    name: Build SDist
+    runs-on: 
+      ubuntu-latest
+    container:
+      image: python:latest
+
+    steps:      
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add $HOME/.local/bin to PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Build SDist
+        run: pipx run build --sdist
+
+      - name: Check metadata
+        run: pipx run twine check dist/*
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/*.tar.gz
