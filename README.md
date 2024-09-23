@@ -56,7 +56,7 @@ pip install -e .[docs]
 
 #### Software versioning
 
-Ubuntu approach is being used. Version numbers are defined as the year and the month of the release (YY.MM).
+Ubuntu approach is being used. Version numbers are defined as the year and the month of the release (YY.M).
 
 #### See also
 
