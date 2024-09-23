@@ -33,6 +33,47 @@ jobs:
       - name: Check metadata
         run: pipx run twine check dist/*
         
-      - uses: actions/upload-artifact@v3
+      - name: Upload SDist
+        uses: actions/upload-artifact@v3
         with:
           path: dist/*.tar.gz
+
+  build_wheels:
+    name: Build wheel
+    runs-on: 
+      ubuntu-latest
+    container:
+      image: python-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add $HOME/.local/bin to PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+      
+      - name: Install pipx
+        run: pip install pipx
+
+      - name: Build wheel
+        run: pipx run build --wheel
+      
+      - name: Verify clean directory
+        run: git diff --exit-code
+        shell: bash
+      
+      - name: Upload wheel
+        uses: actions/upload-artifact@v3
+        with:
+          path: dist/*.whl
+        
+  check_distribution_builds:
+    if: always()
+    runs-on: ubuntu-latest
+    name: Check distribution building process
+    needs: [build_sdist, build_wheels]
+    steps:
+      - run: exit 1
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+    
