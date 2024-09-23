@@ -54,6 +54,10 @@ Conventionally, the name of the test script should be defined by adding *test_* 
 pip install -e .[docs]
 ```
 
+#### Software versioning
+
+Ubuntu approach is being used. Version numbers are defined as the year and the month of the release (YY.MM).
+
 #### See also
 
 Explanations taken from https://refactoring.guru/design-patterns/

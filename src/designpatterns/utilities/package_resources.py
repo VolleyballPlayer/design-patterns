@@ -1,3 +1,4 @@
+import datetime
 from importlib import metadata
 from pathlib import Path
 
@@ -19,14 +20,11 @@ class PackageResources:
         return metadata.version(PackageResources.__PACKAGE_NAME)
 
     @staticmethod
-    def increment_package_version() -> None:
+    def create_package_version() -> None:
         """Get next package version for build."""
-        __version__ = metadata.version(PackageResources.__PACKAGE_NAME)
-        __version__ = __version__.split('.')
-
-        increment = str(int(__version__[2]) + 1)
-
-        __version__ = f'{__version__[0]}.{__version__[1]}.{increment}'
+        current_month = datetime.datetime.now(tz=datetime.UTC).month
+        current_year = datetime.datetime.now(tz=datetime.UTC).strftime('%y')
+        __version__ = f'{current_year}.{current_month}'
 
         with Path.open(PackageResources.__PACKAGE_PATH / '__init__.py', 'w') as file:
             file.write(f"__version__ = '{__version__}'")
