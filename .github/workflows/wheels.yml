@@ -43,7 +43,7 @@ jobs:
     runs-on: 
       ubuntu-latest
     container:
-      image: python-latest
+      image: python:latest
 
     steps:
       - uses: actions/checkout@v4
