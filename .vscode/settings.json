@@ -22,5 +22,7 @@
     "html.suggest.html5": true,
     "cSpell.words": [
         "creational", "designpatterns", "creationalpatterns", "structuralpatterns"
-    ]
+    ],
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
 }
