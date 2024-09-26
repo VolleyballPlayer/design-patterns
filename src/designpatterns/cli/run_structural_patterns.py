@@ -11,7 +11,7 @@ def cli() -> None:
 
 
 @cli.command()
-def run_adapter() -> None:
+def adapter() -> None:
     """Run adapter example.
 
     This function calls adapter module to run an example of structural design pattern called adapter.

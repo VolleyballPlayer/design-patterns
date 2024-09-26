@@ -163,7 +163,7 @@
             "label": "Run ruff check",
             "type": "shell",
             "command": "ruff",
-            "args": [ "check", "--select", "I", "--fix" ],
+            "args": [ "check" ], //"--select", "I", "--fix"
             "group": {
                 "kind": "build",
                 "isDefault": false
