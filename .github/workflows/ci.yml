@@ -44,5 +44,5 @@ jobs:
 
       - name: Test CLI
         run: |
-          run-creational-patterns --help
-          run-structural-patterns --help
+          run-creational-pattern --help
+          run-structural-pattern --help
