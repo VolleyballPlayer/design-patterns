@@ -15,6 +15,7 @@ version = {attr = "designpatterns.__version__"}
 [project.scripts]
 run-creational-pattern = "designpatterns.cli.run_creational_patterns:cli"
 run-structural-pattern = "designpatterns.cli.run_structural_patterns:cli"
+run-behavioral-pattern = "designpatterns.cli.run_behavioral_patterns:cli"
 
 [tool.setuptools.package-data]
 
