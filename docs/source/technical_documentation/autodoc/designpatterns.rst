@@ -14,14 +14,6 @@ Subpackages
 Submodules
 ----------
 
-designpatterns.create\_package\_version module
-----------------------------------------------
-
-.. automodule:: designpatterns.create_package_version
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 designpatterns.logger module
 ----------------------------
 
