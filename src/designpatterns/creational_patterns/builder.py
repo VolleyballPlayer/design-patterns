@@ -13,12 +13,10 @@ class CoffeeBuilder(ABC):
     @abstractmethod
     def cup(self) -> None:
         """Set clean state (empty cup) for making coffee."""
-        raise NotImplementedError
 
     @abstractmethod
     def select_coffee_amount(self) -> None:
         """Specify coffee amount to be used for coffee drink."""
-        raise NotImplementedError
 
     def add_milk(self) -> None:
         """Specify milk amount to be used for coffee drink."""

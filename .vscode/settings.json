@@ -21,7 +21,7 @@
     "explorer.autoReveal": false,
     "html.suggest.html5": true,
     "cSpell.words": [
-        "creational", "designpatterns", "creationalpatterns", "structuralpatterns"
+        "creational", "designpatterns", "creationalpatterns", "structuralpatterns", "caplog"
     ],
     "editor.tabSize": 4,
     "editor.detectIndentation": false

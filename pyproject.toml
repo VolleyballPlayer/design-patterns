@@ -38,6 +38,10 @@ testpaths = ["tests"]
 addopts = "--cov=src --cov-report=html --cov-report=term-missing --color=yes"
 
 [tool.coverage.run]
+omit = [
+    "src/designpatterns/utilities/package_resources.py",
+    "src/tests/*"
+]
 
 [tool.ruff]
 line-length = 120
@@ -117,6 +121,10 @@ ignore = [
 
 [tool.ruff.format]
 quote-style = "single"
+
+[tool.ruff.lint.per-file-ignores]
+# Ignore all directories named `tests`.
+"src/tests/**" = ["D"]
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
