@@ -46,3 +46,4 @@ jobs:
         run: |
           run-creational-pattern --help
           run-structural-pattern --help
+          run-behavioral-pattern --help
