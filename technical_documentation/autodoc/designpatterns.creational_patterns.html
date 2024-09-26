@@ -21,7 +21,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.1.1.1.2. designpatterns.utilities package" href="designpatterns.utilities.html" />
+    <link rel="next" title="3.1.1.1.2. designpatterns.helpers package" href="designpatterns.helpers.html" />
     <link rel="prev" title="3.1.1. designpatterns package" href="designpatterns.html" /> 
 </head>
 
@@ -97,6 +97,368 @@
 </section>
 <section id="module-designpatterns.creational_patterns.builder">
 <span id="designpatterns-creational-patterns-builder-module"></span><h2><span class="section-number">3.1.1.1.1.2. </span>designpatterns.creational_patterns.builder module<a class="headerlink" href="#module-designpatterns.creational_patterns.builder" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Cappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Cappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Get final cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Cappuccino.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Cappuccino.add" title="Link to this definition"></a></dt>
+<dd><p>Add coffee content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>part</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Cappuccino.list_contents">
+<span class="sig-name descname"><span class="pre">list_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Cappuccino.list_contents" title="Link to this definition"></a></dt>
+<dd><p>List final cappuccino coffee drink contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">CappuccinoBuilder</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.builder.CoffeeBuilder" title="designpatterns.creational_patterns.builder.CoffeeBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoffeeBuilder</span></code></a></p>
+<p>Provides specific implementations of the building steps of Cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.add_chocolate">
+<span class="sig-name descname"><span class="pre">add_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.add_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Specify chocolate to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.add_milk">
+<span class="sig-name descname"><span class="pre">add_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.add_milk" title="Link to this definition"></a></dt>
+<dd><p>Specify milk amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.add_milk_foam">
+<span class="sig-name descname"><span class="pre">add_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.add_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Specify milk foam amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.cup">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.creational_patterns.builder.Cappuccino" title="designpatterns.creational_patterns.builder.Cappuccino"><span class="pre">Cappuccino</span></a></em><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.cup" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank cappuccino coffee drink after returning the end result to the client.</p>
+<p>This makes it possible to have the builder instance ready to start producing another cup.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.reset" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank cappuccino coffee drink in fresh builder instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CappuccinoBuilder.select_coffee_amount">
+<span class="sig-name descname"><span class="pre">select_coffee_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CappuccinoBuilder.select_coffee_amount" title="Link to this definition"></a></dt>
+<dd><p>Specify coffee amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">CoffeeBuilder</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Coffee interface specifies methods for selecting contents of coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder.add_chocolate">
+<span class="sig-name descname"><span class="pre">add_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder.add_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Specify chocolate amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder.add_milk">
+<span class="sig-name descname"><span class="pre">add_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder.add_milk" title="Link to this definition"></a></dt>
+<dd><p>Specify milk amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder.add_milk_foam">
+<span class="sig-name descname"><span class="pre">add_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder.add_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Specify milk foam amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder.cup">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder.cup" title="Link to this definition"></a></dt>
+<dd><p>Set clean state (empty cup) for making coffee.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.CoffeeBuilder.select_coffee_amount">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">select_coffee_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.CoffeeBuilder.select_coffee_amount" title="Link to this definition"></a></dt>
+<dd><p>Specify coffee amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Director">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">Director</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Director" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Execute the building steps in a particular sequence according to standard coffee drinks mixtures.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Director.build_cappuccino">
+<span class="sig-name descname"><span class="pre">build_cappuccino</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Director.build_cappuccino" title="Link to this definition"></a></dt>
+<dd><p>Construct cappuccino.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Director.build_espresso">
+<span class="sig-name descname"><span class="pre">build_espresso</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Director.build_espresso" title="Link to this definition"></a></dt>
+<dd><p>Construct espresso.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Director.build_latte">
+<span class="sig-name descname"><span class="pre">build_latte</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Director.build_latte" title="Link to this definition"></a></dt>
+<dd><p>Construct latte.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Director.builder">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">builder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.creational_patterns.builder.CoffeeBuilder" title="designpatterns.creational_patterns.builder.CoffeeBuilder"><span class="pre">CoffeeBuilder</span></a></em><a class="headerlink" href="#designpatterns.creational_patterns.builder.Director.builder" title="Link to this definition"></a></dt>
+<dd><p>Get to director any builder provided by client as director can work with any of them (and new ones).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Espresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">Espresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Espresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Get final espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Espresso.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Espresso.add" title="Link to this definition"></a></dt>
+<dd><p>Add coffee content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>part</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Espresso.list_contents">
+<span class="sig-name descname"><span class="pre">list_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Espresso.list_contents" title="Link to this definition"></a></dt>
+<dd><p>List final espresso coffee drink contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.EspressoBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">EspressoBuilder</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.EspressoBuilder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.builder.CoffeeBuilder" title="designpatterns.creational_patterns.builder.CoffeeBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoffeeBuilder</span></code></a></p>
+<p>Provides specific implementations of the building steps of Espresso coffee drink.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.EspressoBuilder.cup">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.creational_patterns.builder.Espresso" title="designpatterns.creational_patterns.builder.Espresso"><span class="pre">Espresso</span></a></em><a class="headerlink" href="#designpatterns.creational_patterns.builder.EspressoBuilder.cup" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank espresso coffee drink after returning the end result to the client.</p>
+<p>This makes it possible to have the builder instance ready to start producing another cup.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.EspressoBuilder.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.EspressoBuilder.reset" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank espresso coffee drink in fresh builder instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.EspressoBuilder.select_coffee_amount">
+<span class="sig-name descname"><span class="pre">select_coffee_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.EspressoBuilder.select_coffee_amount" title="Link to this definition"></a></dt>
+<dd><p>Specify coffee amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Latte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">Latte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Latte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Get final latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Latte.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Latte.add" title="Link to this definition"></a></dt>
+<dd><p>Add coffee content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>part</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Latte.list_contents">
+<span class="sig-name descname"><span class="pre">list_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Latte.list_contents" title="Link to this definition"></a></dt>
+<dd><p>List final latte coffee drink contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">LatteBuilder</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.builder.CoffeeBuilder" title="designpatterns.creational_patterns.builder.CoffeeBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoffeeBuilder</span></code></a></p>
+<p>Provides specific implementations of the building steps of Latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder.add_milk">
+<span class="sig-name descname"><span class="pre">add_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder.add_milk" title="Link to this definition"></a></dt>
+<dd><p>Specify milk amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder.add_milk_foam">
+<span class="sig-name descname"><span class="pre">add_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder.add_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Specify milk foam amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder.cup">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.creational_patterns.builder.Latte" title="designpatterns.creational_patterns.builder.Latte"><span class="pre">Latte</span></a></em><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder.cup" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank latte coffee drink after returning the end result to the client.</p>
+<p>This makes it possible to have the builder instance ready to start producing another cup.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder.reset" title="Link to this definition"></a></dt>
+<dd><p>Reset to blank latte coffee drink in fresh builder instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.LatteBuilder.select_coffee_amount">
+<span class="sig-name descname"><span class="pre">select_coffee_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.builder.LatteBuilder.select_coffee_amount" title="Link to this definition"></a></dt>
+<dd><p>Specify coffee amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-designpatterns.creational_patterns">
 <span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.3. </span>Module contents<a class="headerlink" href="#module-designpatterns.creational_patterns" title="Link to this heading"></a></h2>
@@ -108,7 +470,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="designpatterns.html" class="btn btn-neutral float-left" title="3.1.1. designpatterns package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="designpatterns.utilities.html" class="btn btn-neutral float-right" title="3.1.1.1.2. designpatterns.utilities package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="designpatterns.helpers.html" class="btn btn-neutral float-right" title="3.1.1.1.2. designpatterns.helpers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

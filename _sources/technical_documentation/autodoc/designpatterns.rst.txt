@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    designpatterns.creational_patterns
+   designpatterns.helpers
    designpatterns.utilities
 
 Submodules

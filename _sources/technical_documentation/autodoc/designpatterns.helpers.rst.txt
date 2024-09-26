@@ -1,0 +1,19 @@
+designpatterns.helpers package
+==============================
+
+Submodules
+----------
+
+designpatterns.helpers.receipts module
+--------------------------------------
+
+.. automodule:: designpatterns.helpers.receipts
+   :members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: designpatterns.helpers
+   :members:
+   :show-inheritance:
