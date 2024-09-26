@@ -36,6 +36,7 @@ def builder() -> None:
     director.build_espresso()
     builder.cup.list_contents()
 
+
 @cli.command()
 def singleton() -> None:
     """Run singleton example.
