@@ -61,3 +61,7 @@ Ubuntu approach is being used. Version numbers are defined as the year and the m
 #### See also
 
 Explanations taken from https://refactoring.guru/design-patterns/
+
+##### UML
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
+https://plantuml.com/class-diagram

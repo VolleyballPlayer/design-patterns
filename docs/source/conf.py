@@ -3,6 +3,7 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
 from pathlib import Path
 import sys
 
@@ -24,6 +25,7 @@ extensions = [
     'sphinx_autodoc_typehints',
     'sphinx.ext.coverage',
     'sphinx_click',
+    'sphinxcontrib.plantuml',
 ]
 
 
@@ -38,3 +40,10 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Install Java
+# Install Graphviz
+# Download plantuml.jar file from https://sourceforge.net/projects/plantuml/
+# Set PLANTUML_JAR, JAVA_HOME and GRAPHVIZ_DOT env variables in .bashrc
+plantuml_jar = os.getenv('PLANTUML_JAR')
+plantuml = f'java -jar {plantuml_jar}'

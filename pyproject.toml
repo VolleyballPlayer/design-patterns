@@ -26,6 +26,7 @@ dev = ["toml",
 docs = ["Sphinx",
     "sphinx-click",
     "sphinx-autodoc-typehints",
+    "sphinxcontrib-plantuml",
     "sphinx-rtd-theme>=2.0.0" #error with version 0.5.1
 ]
 test = ["pytest",

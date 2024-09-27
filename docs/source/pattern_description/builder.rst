@@ -89,3 +89,79 @@ Using the Builder pattern makes sense only when your products are quite complex 
 * The client code creates both the builder and the director objects. Before construction starts, the client must pass a builder object to the director. Usually, the client does this only once, via parameters of the director’s class constructor. The director uses the builder object in all further construction. There’s an alternative approach, where the builder is passed to a specific product construction method of the director.
 
 * The construction result can be obtained directly from the director only if all products follow the same interface. Otherwise, the client should fetch the result from the builder.
+
+
+.. uml:: 
+   
+      @startuml
+
+      skinparam classAttributeIconSize 0
+
+      Director <-- client
+      CoffeeBuilder <-- Director
+      CoffeeBuilder <|.. CappuccinoBuilder
+      CoffeeBuilder <|.. EspressoBuilder
+      CoffeeBuilder <|.. LatteBuilder
+      Cappuccino <-- CappuccinoBuilder
+      Espresso <-- EspressoBuilder
+      Latte <-- LatteBuilder
+      CappuccinoBuilder <.. client
+      EspressoBuilder <.. client
+      LatteBuilder <.. client
+
+      class Director {
+        + builder
+        + build_cappuccino()
+        + build_latte()
+        + build_espresso()
+      }
+
+      abstract class CoffeeBuilder {
+      + cup
+      + select_coffee_amount()
+      + add_milk()
+      + add_milk_foam()
+      + add_chocolate()
+      }
+
+      class CappuccinoBuilder {
+      + cup
+      + reset()
+      + select_coffee_amount()
+      + add_milk()
+      + add_milk_foam()
+      + add_chocolate()
+      }
+
+      class EspressoBuilder {
+      + cup
+      + reset()
+      + select_coffee_amount()
+      }
+
+      class LatteBuilder {
+      + cup
+      + reset()
+      + select_coffee_amount()
+      + add_milk()
+      + add_milk_foam()
+      }
+
+      class Cappuccino {
+      + add()
+      + list_contents()
+      }
+
+      class Espresso {
+      + add()
+      + list_contents()
+      }
+
+      class Latte {
+      + add()
+      + list_contents()
+      }
+
+      hide client circle
+
+      @enduml
