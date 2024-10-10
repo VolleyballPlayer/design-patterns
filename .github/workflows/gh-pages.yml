@@ -28,10 +28,6 @@ jobs:
       shell: bash
       run: pip install -e .[docs]
 
-    - name: Clear Sphinx-ApiDoc Output
-      shell: bash
-      run: rm -r docs/source/technical_documentation/autodoc
-
     - name: Call sphinx-apidoc for automatic API documentation
       shell: bash
       run: source docs/source/call_sphinx_apidoc.sh

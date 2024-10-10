@@ -6,3 +6,5 @@ Description of patterns
    :caption: Contents
 
    builder.rst
+   singleton.rst
+   prototype.rst
