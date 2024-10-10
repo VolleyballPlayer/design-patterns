@@ -90,6 +90,7 @@ Using the Builder pattern makes sense only when your products are quite complex 
 
 * The construction result can be obtained directly from the director only if all products follow the same interface. Otherwise, the client should fetch the result from the builder.
 
+**UML of the example implemented in this repository**
 
 .. uml:: 
    

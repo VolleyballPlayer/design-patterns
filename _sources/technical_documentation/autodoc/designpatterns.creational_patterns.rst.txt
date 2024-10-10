@@ -11,6 +11,13 @@ designpatterns.creational\_patterns.builder module
    :members:
    :show-inheritance:
 
+designpatterns.creational\_patterns.singleton module
+----------------------------------------------------
+
+.. automodule:: designpatterns.creational_patterns.singleton
+   :members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

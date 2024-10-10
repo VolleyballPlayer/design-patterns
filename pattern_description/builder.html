@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,22 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1.1. Builder Pattern &mdash; design-patterns 0.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7026087e"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7026087e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. User Guide" href="../user_guide/user_guide.html" />
+    <link rel="next" title="1.2. Singleton Pattern" href="singleton.html" />
     <link rel="prev" title="1. Description of patterns" href="pattern_description.html" /> 
 </head>
 
@@ -47,6 +45,8 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="pattern_description.html">1. Description of patterns</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Builder Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singleton.html">1.2. Singleton Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html">1.3. Prototype Pattern</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">2. User Guide</a></li>
@@ -146,6 +146,7 @@ act as implementations.</p></li>
 <li><p>The client code creates both the builder and the director objects. Before construction starts, the client must pass a builder object to the director. Usually, the client does this only once, via parameters of the director’s class constructor. The director uses the builder object in all further construction. There’s an alternative approach, where the builder is passed to a specific product construction method of the director.</p></li>
 <li><p>The construction result can be obtained directly from the director only if all products follow the same interface. Otherwise, the client should fetch the result from the builder.</p></li>
 </ul>
+<p><strong>UML of the example implemented in this repository</strong></p>
 </section>
 
 
@@ -153,7 +154,7 @@ act as implementations.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pattern_description.html" class="btn btn-neutral float-left" title="1. Description of patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../user_guide/user_guide.html" class="btn btn-neutral float-right" title="2. User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="singleton.html" class="btn btn-neutral float-right" title="1.2. Singleton Pattern" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
