@@ -14,6 +14,7 @@
         "qwtel.sqlite-viewer",
         "george-alisson.html-preview-vscode",
         "buenon.scratchpads",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "ms-azuretools.vscode-docker"
     ]
 }

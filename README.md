@@ -17,7 +17,7 @@ This project was created to document knowledge on design patterns, create exampl
 
 #### Installation
 
-When creating virtual environment by Visual Studio Code and tasks.json, it is assumed that local Python version can be found under /usr/bin/python3.11. Else, one can replace this path.
+When creating virtual environment by Visual Studio Code and tasks.json, it is assumed that local Python version can be found under /usr/bin/python3. Else, one can replace this path.
 
 ##### Install with developer dependencies
 
@@ -30,6 +30,15 @@ Project can be lint via
 ``` shell
 ruff check
 ruff format
+```
+
+#### Docker
+
+Use docker container via docker-compose file:
+
+``` shell
+docker-compose -f design-patterns-docker-compose.yaml up
+docker-compose -f design-patterns-docker-compose.yaml down
 ```
 
 #### Tests

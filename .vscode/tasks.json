@@ -13,7 +13,7 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "command": "/usr/bin/python3.11",
+            "command": "/usr/bin/python3",
             "args": [
                 "-m",
                 "venv",

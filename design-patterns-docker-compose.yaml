@@ -1,0 +1,5 @@
+services:
+  python:
+    image: python
+  java:
+    image: plantuml/plantuml
