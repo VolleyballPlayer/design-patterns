@@ -26,7 +26,8 @@ jobs:
       shell: bash
       run: |
         docker --version
-        docker-compose -f design-patterns-docker-compose.yaml up -d
+        docker-compose --version
+        docker-compose -f design-patterns-docker-compose.yaml up
       
     - name: Install package and dependencies for building the documentation
       shell: bash
