@@ -25,7 +25,7 @@ jobs:
         fetch-depth: 0
 
     - name: Start container
-      run: docker-compose -f design-patterns-docker-compose.yaml up
+      run: docker compose -f design-patterns-docker-compose.yaml up
       
     - name: Install package and dependencies for building the documentation
       shell: bash
@@ -55,6 +55,6 @@ jobs:
 
     - name: Stop container
       if: always()
-      run: docker-compose -f design-patterns-docker-compose.yaml down
+      run: docker compose -f design-patterns-docker-compose.yaml down
 
     
