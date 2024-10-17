@@ -1,5 +1,7 @@
 services:
   python:
     image: python
+    environment:
+      - PLANTUML_JAR=/opt/plantuml.jar
   java:
     image: plantuml/plantuml
