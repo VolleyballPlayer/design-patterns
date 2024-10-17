@@ -30,6 +30,7 @@ jobs:
         chmod +x /usr/local/bin/docker-compose
         docker-compose --version
         docker-compose -f design-patterns-docker-compose.yaml up
+        docker ps -a
       
     - name: Install package and dependencies for building the documentation
       shell: bash
