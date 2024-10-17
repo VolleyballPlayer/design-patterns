@@ -35,7 +35,7 @@ jobs:
     - name: Install package and dependencies for building the documentation
       shell: bash
       run: |
-        pip --version
+        python3 -m pip install --upgrade pip
         pip install -e .[docs]
 
     - name: Call sphinx-apidoc for automatic API documentation
