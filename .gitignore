@@ -20,3 +20,6 @@ docs/coverage/
 
 # Log
 output.log
+
+# Docker
+.DS_Store

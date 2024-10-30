@@ -25,12 +25,9 @@ jobs:
     - name: Start container
       shell: bash
       run: |
-        docker --version
         curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         chmod +x /usr/local/bin/docker-compose
-        docker-compose --version
-        docker-compose -f design-patterns-docker-compose.yaml up
-        docker ps -a
+        docker-compose -f docker-compose-py-java.yaml up
       
     - name: Install package and dependencies for building the documentation
       shell: bash
@@ -46,6 +43,7 @@ jobs:
       shell: bash
       working-directory: ./docs
       run: |
+        rm -r html
         sphinx-build -b html -E source html
 
     - name: Documentation coverage
@@ -62,6 +60,6 @@ jobs:
 
     - name: Stop container
       if: always()
-      run: docker-compose -f design-patterns-docker-compose.yaml down
+      run: docker-compose -f docker-compose-py-java.yaml down
 
     
