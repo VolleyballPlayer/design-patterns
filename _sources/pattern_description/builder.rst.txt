@@ -94,75 +94,75 @@ Using the Builder pattern makes sense only when your products are quite complex 
 
 .. uml:: 
    
-      @startuml
+    @startuml
 
-      skinparam classAttributeIconSize 0
+        skinparam classAttributeIconSize 0
 
-      Director <-- client
-      CoffeeBuilder <-- Director
-      CoffeeBuilder <|.. CappuccinoBuilder
-      CoffeeBuilder <|.. EspressoBuilder
-      CoffeeBuilder <|.. LatteBuilder
-      Cappuccino <-- CappuccinoBuilder
-      Espresso <-- EspressoBuilder
-      Latte <-- LatteBuilder
-      CappuccinoBuilder <.. client
-      EspressoBuilder <.. client
-      LatteBuilder <.. client
+        Director <-- client
+        CoffeeBuilder <-- Director
+        CoffeeBuilder <|.. CappuccinoBuilder
+        CoffeeBuilder <|.. EspressoBuilder
+        CoffeeBuilder <|.. LatteBuilder
+        Cappuccino <-- CappuccinoBuilder
+        Espresso <-- EspressoBuilder
+        Latte <-- LatteBuilder
+        CappuccinoBuilder <.. client
+        EspressoBuilder <.. client
+        LatteBuilder <.. client
 
-      class Director {
-        + builder
-        + build_cappuccino()
-        + build_latte()
-        + build_espresso()
-      }
+        class Director {
+            + builder
+            + build_cappuccino()
+            + build_latte()
+            + build_espresso()
+        }
 
-      abstract class CoffeeBuilder {
-      + cup
-      + select_coffee_amount()
-      + add_milk()
-      + add_milk_foam()
-      + add_chocolate()
-      }
+        abstract class CoffeeBuilder {
+        + cup
+        + select_coffee_amount()
+        + add_milk()
+        + add_milk_foam()
+        + add_chocolate()
+        }
 
-      class CappuccinoBuilder {
-      + cup
-      + reset()
-      + select_coffee_amount()
-      + add_milk()
-      + add_milk_foam()
-      + add_chocolate()
-      }
+        class CappuccinoBuilder {
+        + cup
+        + reset()
+        + select_coffee_amount()
+        + add_milk()
+        + add_milk_foam()
+        + add_chocolate()
+        }
 
-      class EspressoBuilder {
-      + cup
-      + reset()
-      + select_coffee_amount()
-      }
+        class EspressoBuilder {
+        + cup
+        + reset()
+        + select_coffee_amount()
+        }
 
-      class LatteBuilder {
-      + cup
-      + reset()
-      + select_coffee_amount()
-      + add_milk()
-      + add_milk_foam()
-      }
+        class LatteBuilder {
+        + cup
+        + reset()
+        + select_coffee_amount()
+        + add_milk()
+        + add_milk_foam()
+        }
 
-      class Cappuccino {
-      + add()
-      + list_contents()
-      }
+        class Cappuccino {
+        + add()
+        + list_contents()
+        }
 
-      class Espresso {
-      + add()
-      + list_contents()
-      }
+        class Espresso {
+        + add()
+        + list_contents()
+        }
 
-      class Latte {
-      + add()
-      + list_contents()
-      }
+        class Latte {
+        + add()
+        + list_contents()
+        }
 
-      hide client circle
+        hide client circle
 
-      @enduml
+    @enduml
