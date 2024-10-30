@@ -43,7 +43,6 @@ jobs:
       shell: bash
       working-directory: ./docs
       run: |
-        rm -r ./docs/html
         sphinx-build -b html -E source html
 
     - name: Documentation coverage
