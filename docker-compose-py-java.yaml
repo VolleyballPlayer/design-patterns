@@ -1,7 +1,8 @@
+x-common-variables: &common-variables
+  PLANTUML_JAR: /opt/plantuml.jar
+
 services:
   python:
     image: python
-    environment:
-      - PLANTUML_JAR=/opt/plantuml.jar
   java:
     image: plantuml/plantuml
