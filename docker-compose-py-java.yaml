@@ -4,5 +4,7 @@ x-common-variables: &common-variables
 services:
   python:
     image: python
+    environment: *common-variables
   java:
     image: plantuml/plantuml
+    environment: *common-variables
