@@ -1,9 +1,5 @@
 services:
   python:
-    image: python
-    environment:
-      PLANTUML_JAR: /opt/plantuml.jar
+    image: python:latest
   java:
-    image: plantuml/plantuml
-    environment:
-      PLANTUML_JAR: /opt/plantuml.jar
+    build: ./docker_plantuml
