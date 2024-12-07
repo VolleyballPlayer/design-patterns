@@ -25,17 +25,8 @@ jobs:
     - name: Start container
       shell: bash
       run: |
-        which java
-        echo "Java home env variable is set to $JAVA_HOME"
-        which python
-        cd /
-        find . -name "plantuml.jar"
-        curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-        chmod +x /usr/local/bin/docker-compose
-        docker-compose -f docker-compose-py-java.yaml build --no-cache
-        docker-compose -f docker-compose-py-java.yaml up
-        echo "Plantuml jar env variable is set to $PLANTUML_JAR"
-        echo "GRAPHVIZ_DOT env variable is set to $GRAPHVIZ_DOT"
+        docker build -t volleyballplayer/design-patterns:1.0 . --progress=plain --no-cache
+        docker run -it --name design-patterns volleyballplayer/design-patterns:1.0
       
     - name: Install package and dependencies for building the documentation
       shell: bash
@@ -67,6 +58,7 @@ jobs:
 
     - name: Stop container
       if: always()
-      run: docker-compose -f docker-compose-py-java.yaml down
+      run: docker-compose -f docker-compose-py-java.yaml down  
+
 
     
