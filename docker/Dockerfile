@@ -14,6 +14,8 @@ RUN apt-get -y update; \
     apt-get -y install pipx; \
     apt-get -y install git; \
     git clone https://github.com/VolleyballPlayer/design-patterns.git && cd design-patterns; \
-    python3 -m venv .venv && chmod +x .venv/bin/activate && . .venv/bin/activate && pip install -e .[dev,docs,test]
+    python3 -m venv .venv && chmod +x .venv/bin/activate && . .venv/bin/activate && pip install -e .[dev,docs,test]; \
+    . ./docs/source/call_sphinx_apidoc.sh; \
+    cd docs; sphinx-build -b html -E source html
 
 ENTRYPOINT [ "/bin/bash" ]
