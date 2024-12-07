@@ -39,12 +39,6 @@ jobs:
       shell: bash
       run: source docs/source/call_sphinx_apidoc.sh
 
-    - name: Build documentation
-      shell: bash
-      working-directory: ./docs
-      run: |
-        sphinx-build -b html -E source html
-
     - name: Documentation coverage
       shell: bash
       run: |
@@ -56,10 +50,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/html
-
-    - name: Stop container
-      if: always()
-      run: docker-compose -f docker-compose-py-java.yaml down  
 
 
     
