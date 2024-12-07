@@ -4,8 +4,6 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-arm64
 ENV GRAPHVIZ_DOT=/usr/bin/dot
 ENV PLANTUML_JAR=/opt/plantuml.jar
 
-WORKDIR root
-
 RUN apt-get -y update; \
     apt-get install -y default-jre; \
     apt-get install -y graphviz; \
@@ -19,7 +17,5 @@ RUN apt-get -y update; \
     python3 -m venv .venv && chmod +x .venv/bin/activate && . .venv/bin/activate && pip install -e .[dev,docs,test]; \
     . ./docs/source/call_sphinx_apidoc.sh; \
     cd docs; sphinx-build -b html -E source html
-
-COPY ./design-patterns/docs/html /home/runner/work/design-patterns/design-patterns/docs
 
 ENTRYPOINT [ "/bin/bash" ]
