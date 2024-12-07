@@ -32,15 +32,6 @@ ruff check
 ruff format
 ```
 
-#### Docker
-
-Use docker container via docker-compose file:
-
-``` shell
-docker-compose -f design-patterns-docker-compose.yaml up
-docker-compose -f design-patterns-docker-compose.yaml down
-```
-
 #### Tests
 
 ##### Install required dependencies for testing
@@ -62,6 +53,14 @@ Conventionally, the name of the test script should be defined by adding *test_* 
 ``` shell
 pip install -e .[docs]
 ```
+
+#### Or install with Docker
+
+``` shell
+docker build -t volleyballplayer/design-patterns:1.0 . --progress=plain --no-cache
+docker run -it --name design-patterns volleyballplayer/design-patterns:1.0
+```
+Container has already installed design-patterns package. Source virtual environment to run CLIs.
 
 #### Software versioning
 
