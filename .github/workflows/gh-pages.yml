@@ -25,6 +25,7 @@ jobs:
     - name: Start container
       shell: bash
       run: |
+        pwd
         docker build -t volleyballplayer/design-patterns:1.0 . --progress=plain --no-cache
         docker run -it --name design-patterns volleyballplayer/design-patterns:1.0
       
