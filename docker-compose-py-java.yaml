@@ -1,5 +1,0 @@
-services:
-  python:
-    image: python:latest
-  java:
-    build: ./docker_plantuml
