@@ -147,6 +147,80 @@ act as implementations.</p></li>
 <li><p>The construction result can be obtained directly from the director only if all products follow the same interface. Otherwise, the client should fetch the result from the builder.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-dedba05ffc8a92486fb4c9301d2b5236d0c56023.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Director &lt;-- client
+    CoffeeBuilder &lt;-- Director
+    CoffeeBuilder &lt;|.. CappuccinoBuilder
+    CoffeeBuilder &lt;|.. EspressoBuilder
+    CoffeeBuilder &lt;|.. LatteBuilder
+    Cappuccino &lt;-- CappuccinoBuilder
+    Espresso &lt;-- EspressoBuilder
+    Latte &lt;-- LatteBuilder
+    CappuccinoBuilder &lt;.. client
+    EspressoBuilder &lt;.. client
+    LatteBuilder &lt;.. client
+
+    class Director {
+        + builder
+        + build_cappuccino()
+        + build_latte()
+        + build_espresso()
+    }
+
+    abstract class CoffeeBuilder {
+    + cup
+    + select_coffee_amount()
+    + add_milk()
+    + add_milk_foam()
+    + add_chocolate()
+    }
+
+    class CappuccinoBuilder {
+    + cup
+    + reset()
+    + select_coffee_amount()
+    + add_milk()
+    + add_milk_foam()
+    + add_chocolate()
+    }
+
+    class EspressoBuilder {
+    + cup
+    + reset()
+    + select_coffee_amount()
+    }
+
+    class LatteBuilder {
+    + cup
+    + reset()
+    + select_coffee_amount()
+    + add_milk()
+    + add_milk_foam()
+    }
+
+    class Cappuccino {
+    + add()
+    + list_contents()
+    }
+
+    class Espresso {
+    + add()
+    + list_contents()
+    }
+
+    class Latte {
+    + add()
+    + list_contents()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
