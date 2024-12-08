@@ -4,7 +4,7 @@ from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
 
 
 class TestSingleton:
-    def test_count(self, caplog: pytest.LogCaptureFixture) -> None:
+    def test__count__get_logs_per_number(self, caplog: pytest.LogCaptureFixture) -> None:
         s1 = CountCoffeeSingleton()
         s2 = CountCoffeeSingleton()
 
