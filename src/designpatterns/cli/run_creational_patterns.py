@@ -1,6 +1,7 @@
 import click
 
 from designpatterns.creational_patterns.builder import CappuccinoBuilder, Director, EspressoBuilder, LatteBuilder
+from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
 
@@ -44,6 +45,14 @@ def singleton() -> None:
     This function calls singleton module to run an example of creational design pattern called singleton.
     """
     logger.info('Starting singleton pattern run')
+
+    s1 = CountCoffeeSingleton().count()
+    s2 = CountCoffeeSingleton().count()
+
+    if id(s1) == id(s2):
+        logger.info('Prepared coffees are counted by the same singleton instance.')
+    else:
+        logger.info('Singleton failed, variables contain different instances.')
 
 
 if __name__ == '__main__':

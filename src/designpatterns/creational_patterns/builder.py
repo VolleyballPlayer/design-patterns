@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
+from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
 from designpatterns.helpers.receipts import cappuccino_receipt, espresso_receipt, latte_receipt
 from designpatterns.logger import logger
 
@@ -185,6 +186,8 @@ class Director:
     @builder.setter
     def builder(self, builder: CoffeeBuilder) -> None:
         self._builder = builder
+
+        CountCoffeeSingleton().count()
 
     def build_latte(self) -> None:
         """Construct latte."""
