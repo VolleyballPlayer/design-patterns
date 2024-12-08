@@ -127,6 +127,7 @@ Using the Builder pattern makes sense only when your products are quite complex 
 
         class CappuccinoBuilder {
         + cup
+        + receipt
         + reset()
         + select_coffee_amount()
         + add_milk()
@@ -136,12 +137,14 @@ Using the Builder pattern makes sense only when your products are quite complex 
 
         class EspressoBuilder {
         + cup
+        + receipt
         + reset()
         + select_coffee_amount()
         }
 
         class LatteBuilder {
         + cup
+        + receipt
         + reset()
         + select_coffee_amount()
         + add_milk()
@@ -149,16 +152,19 @@ Using the Builder pattern makes sense only when your products are quite complex 
         }
 
         class Cappuccino {
+        + receipt
         + add()
         + list_contents()
         }
 
         class Espresso {
+        + receipt
         + add()
         + list_contents()
         }
 
         class Latte {
+        + receipt
         + add()
         + list_contents()
         }

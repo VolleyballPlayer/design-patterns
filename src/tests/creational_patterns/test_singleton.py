@@ -12,5 +12,5 @@ class TestSingleton:
         s2.count()
 
         assert id(s1) == id(s2)
-        assert '4. coffee is being prepared' in caplog.text
         assert '5. coffee is being prepared' in caplog.text
+        assert '6. coffee is being prepared' in caplog.text

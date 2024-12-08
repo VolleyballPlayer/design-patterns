@@ -58,7 +58,7 @@ class TestBuilder:
         director.build_espresso()
         builder.cup.list_contents()
 
-        assert 'Your espresso is made of 1 cup coffee.' in caplog.text
+        assert 'Your espresso is made of 1 shot coffee.' in caplog.text
 
     def test__latte_builder_add_milk__no_milk(self) -> None:
         builder = TestBuilder.TestCoffeeBuilder()

@@ -17,6 +17,7 @@ This project was created to document knowledge on design patterns, create exampl
 
 <span style="color:lightblue">Builder pattern</span> is used to prepare different types of coffees: Latte, Cappuccino or Espresso.
 <span style="color:lightblue">Singleton pattern</span> is counting number of prepared coffees and is applied in the builder, too.
+<span style="color:lightblue">Prototype pattern</span> is creating prototype for double espresso coffee using existing espresso coffee class.
 
 #### Installation
 

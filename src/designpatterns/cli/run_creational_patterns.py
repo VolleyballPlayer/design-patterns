@@ -1,7 +1,9 @@
 import click
 
 from designpatterns.creational_patterns.builder import CappuccinoBuilder, Director, EspressoBuilder, LatteBuilder
+from designpatterns.creational_patterns.prototype import DoubleEspressoBuilderPrototype
 from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
+from designpatterns.helpers.receipts import triple_espresso_receipt
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
 
@@ -53,6 +55,41 @@ def singleton() -> None:
         logger.info('Prepared coffees are counted by the same singleton instance.')
     else:
         logger.info('Singleton failed, variables contain different instances.')
+
+
+@cli.command
+def prototype() -> None:
+    """Run prototype example.
+
+    This function calls prototype module to run an example of creational design pattern called prototype.
+    """
+    logger.info('Starting prototype pattern run')
+
+    director = Director()
+
+    logger.info('Running cloned double espresso builder prototype')
+    double_espresso_builder_clone = DoubleEspressoBuilderPrototype().clone()
+    director.builder = double_espresso_builder_clone
+    director.build_espresso()
+    double_espresso_builder_clone.cup.list_contents()
+
+    logger.info('Running original double espresso builder prototype without clone using triple espresso receipt')
+    builder = DoubleEspressoBuilderPrototype()
+    builder.receipt = triple_espresso_receipt
+    director.builder = builder
+    director.build_espresso()
+    builder.cup.list_contents()
+
+    logger.info('Running cloned double espresso builder prototype again - no impact of previous triple espresso run')
+    director.builder = double_espresso_builder_clone
+    director.build_espresso()
+    double_espresso_builder_clone.cup.list_contents()
+
+    logger.info('Running cloned espresso builder - no impact of prototypes')
+    builder = EspressoBuilder()
+    director.builder = builder
+    director.build_espresso()
+    builder.cup.list_contents()
 
 
 if __name__ == '__main__':

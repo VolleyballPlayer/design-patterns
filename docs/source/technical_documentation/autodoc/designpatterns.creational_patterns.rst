@@ -12,6 +12,14 @@ designpatterns.creational\_patterns.builder module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.creational\_patterns.prototype module
+----------------------------------------------------
+
+.. automodule:: designpatterns.creational_patterns.prototype
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.creational\_patterns.singleton module
 ----------------------------------------------------
 

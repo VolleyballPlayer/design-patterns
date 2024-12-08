@@ -3,7 +3,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
-from designpatterns.helpers.receipts import cappuccino_receipt, espresso_receipt, latte_receipt
+from designpatterns.helpers.receipts import Receipt, cappuccino_receipt, espresso_receipt, latte_receipt
 from designpatterns.logger import logger
 
 
@@ -14,6 +14,16 @@ class CoffeeBuilder(ABC):
     @abstractmethod
     def cup(self) -> None:
         """Set clean state (empty cup) for making coffee."""
+
+    @property
+    def receipt(self) -> Receipt:
+        """Get receipt attribute."""
+        return self._receipt
+
+    @receipt.setter
+    def receipt(self, new_receipt: Receipt) -> Receipt:
+        """Set receipt attribute."""
+        self._receipt = new_receipt
 
     @abstractmethod
     def select_coffee_amount(self) -> None:
@@ -37,6 +47,7 @@ class LatteBuilder(CoffeeBuilder):
 
     def __init__(self) -> None:
         self.reset()
+        self._receipt = latte_receipt
 
     def reset(self) -> None:
         """Reset to blank latte coffee drink in fresh builder instance."""
@@ -54,15 +65,15 @@ class LatteBuilder(CoffeeBuilder):
 
     def select_coffee_amount(self) -> None:
         """Specify coffee amount to be used for latte coffee drink."""
-        self._cup.add(latte_receipt.coffee)
+        self._cup.add(self._receipt.coffee)
 
     def add_milk(self) -> None:
         """Specify milk amount to be used for latte coffee drink."""
-        self._cup.add(latte_receipt.milk)
+        self._cup.add(self._receipt.milk)
 
     def add_milk_foam(self) -> None:
         """Specify milk foam amount to be used for latte coffee drink."""
-        self._cup.add(latte_receipt.milk_foam)
+        self._cup.add(self._receipt.milk_foam)
 
 
 class Latte:
@@ -70,6 +81,17 @@ class Latte:
 
     def __init__(self) -> None:
         self.contents = []
+        self._receipt = latte_receipt
+
+    @property
+    def receipt(self) -> Receipt:
+        """Get receipt attribute."""
+        return self._receipt
+
+    @receipt.setter
+    def receipt(self, new_receipt: Receipt) -> Receipt:
+        """Set receipt attribute."""
+        self._receipt = new_receipt
 
     def add(self, part: str) -> None:
         """Add coffee content."""
@@ -77,7 +99,7 @@ class Latte:
 
     def list_contents(self) -> None:
         """List final latte coffee drink contents."""
-        logger.info(f"Your latte is made of {', '.join(self.contents)}.")
+        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
 
 
 class CappuccinoBuilder(CoffeeBuilder):
@@ -85,6 +107,7 @@ class CappuccinoBuilder(CoffeeBuilder):
 
     def __init__(self) -> None:
         self.reset()
+        self._receipt = cappuccino_receipt
 
     def reset(self) -> None:
         """Reset to blank cappuccino coffee drink in fresh builder instance."""
@@ -102,19 +125,19 @@ class CappuccinoBuilder(CoffeeBuilder):
 
     def select_coffee_amount(self) -> None:
         """Specify coffee amount to be used for cappuccino coffee drink."""
-        self._cup.add(cappuccino_receipt.coffee)
+        self._cup.add(self._receipt.coffee)
 
     def add_milk(self) -> None:
         """Specify milk amount to be used for cappuccino coffee drink."""
-        self._cup.add(cappuccino_receipt.milk)
+        self._cup.add(self._receipt.milk)
 
     def add_chocolate(self) -> None:
         """Specify chocolate to be used for cappuccino coffee drink."""
-        self._cup.add(cappuccino_receipt.chocolate)
+        self._cup.add(self._receipt.chocolate)
 
     def add_milk_foam(self) -> None:
         """Specify milk foam amount to be used for cappuccino coffee drink."""
-        self._cup.add(cappuccino_receipt.milk_foam)
+        self._cup.add(self._receipt.milk_foam)
 
 
 class Cappuccino:
@@ -122,6 +145,17 @@ class Cappuccino:
 
     def __init__(self) -> None:
         self.contents = []
+        self._receipt = cappuccino_receipt
+
+    @property
+    def receipt(self) -> Receipt:
+        """Get receipt attribute."""
+        return self._receipt
+
+    @receipt.setter
+    def receipt(self, new_receipt: Receipt) -> Receipt:
+        """Set receipt attribute."""
+        self._receipt = new_receipt
 
     def add(self, part: str) -> None:
         """Add coffee content."""
@@ -129,7 +163,7 @@ class Cappuccino:
 
     def list_contents(self) -> None:
         """List final cappuccino coffee drink contents."""
-        logger.info(f"Your cappuccino is made of {', '.join(self.contents)}.")
+        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
 
 
 class EspressoBuilder(CoffeeBuilder):
@@ -137,6 +171,7 @@ class EspressoBuilder(CoffeeBuilder):
 
     def __init__(self) -> None:
         self.reset()
+        self._receipt = espresso_receipt
 
     def reset(self) -> None:
         """Reset to blank espresso coffee drink in fresh builder instance."""
@@ -154,7 +189,7 @@ class EspressoBuilder(CoffeeBuilder):
 
     def select_coffee_amount(self) -> None:
         """Specify coffee amount to be used for espresso coffee drink."""
-        self._cup.add(espresso_receipt.coffee)
+        self._cup.add(self._receipt.coffee)
 
 
 class Espresso:
@@ -162,6 +197,17 @@ class Espresso:
 
     def __init__(self) -> None:
         self.contents = []
+        self._receipt = espresso_receipt
+
+    @property
+    def receipt(self) -> Receipt:
+        """Get receipt attribute."""
+        return self._receipt
+
+    @receipt.setter
+    def receipt(self, new_receipt: Receipt) -> Receipt:
+        """Set receipt attribute."""
+        self._receipt = new_receipt
 
     def add(self, part: str) -> None:
         """Add coffee content."""
@@ -169,7 +215,7 @@ class Espresso:
 
     def list_contents(self) -> None:
         """List final espresso coffee drink contents."""
-        logger.info(f"Your espresso is made of {', '.join(self.contents)}.")
+        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
 
 
 class Director:
@@ -186,7 +232,6 @@ class Director:
     @builder.setter
     def builder(self, builder: CoffeeBuilder) -> None:
         self._builder = builder
-
         CountCoffeeSingleton().count()
 
     def build_latte(self) -> None:
