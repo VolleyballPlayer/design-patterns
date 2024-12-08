@@ -68,3 +68,26 @@ Note that you can always adjust this limitation and allow creating any number of
 * Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.
 
 **UML of the example implemented in this repository**
+
+.. uml:: 
+   
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        CountCoffeeSingleton <-- client
+        SingletonMeta <|-- CountCoffeeSingleton
+
+        class SingletonMeta {
+            - instances
+            - __call__()
+        }
+
+        class CountCoffeeSingleton {
+        - ids
+        + count()
+        }
+
+        hide client circle
+
+    @enduml
