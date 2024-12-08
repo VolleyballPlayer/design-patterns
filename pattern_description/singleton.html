@@ -140,6 +140,28 @@
 <li><p>Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-780e4b52a5b6ccff31c9c3c15118f289eaed6d83.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    CountCoffeeSingleton &lt;-- client
+    SingletonMeta &lt;|-- CountCoffeeSingleton
+
+    class SingletonMeta {
+        - instances
+        - __call__()
+    }
+
+    class CountCoffeeSingleton {
+    - ids
+    + count()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
