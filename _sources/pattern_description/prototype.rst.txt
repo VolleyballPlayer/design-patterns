@@ -67,3 +67,31 @@ Analogy is the process of mitotic cell division (biology, remember?). After mito
 * Optionally, create a centralized prototype registry to store a catalog of frequently used prototypes. You can implement the registry as a new factory class or put it in the base prototype class with a static method for fetching the prototype. This method should search for a prototype based on search criteria that the client code passes to the method. The criteria might either be a simple string tag or a complex set of search parameters. After the appropriate prototype is found, the registry should clone it and return the copy to the client. Finally, replace the direct calls to the subclasses’ constructors with calls to the factory method of the prototype registry.
 
 **UML of the example implemented in this repository**
+
+.. uml:: 
+   
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        DoubleEspressoBuilderPrototype <-- client
+        EspressoBuilder <|-- DoubleEspressoBuilderPrototype
+
+        class EspressoBuilder {
+        + cup
+        + receipt
+        + reset()
+        + select_coffee_amount()
+        }
+
+        class DoubleEspressoBuilderPrototype {
+        + cup
+        + receipt
+        + reset()
+        + select_coffee_amount()
+        + clone()
+        }
+
+        hide client circle
+
+    @enduml

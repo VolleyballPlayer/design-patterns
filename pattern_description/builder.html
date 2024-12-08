@@ -150,7 +150,7 @@ act as implementations.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
 <p class="plantuml">
-<img src="../_images/plantuml-dedba05ffc8a92486fb4c9301d2b5236d0c56023.png" alt="&#64;startuml
+<img src="../_images/plantuml-2844be5aa4bbf0a8dbf57bf9d3a4e0fb5233772b.png" alt="&#64;startuml
 
     skinparam classAttributeIconSize 0
 
@@ -183,6 +183,7 @@ act as implementations.</p></li>
 
     class CappuccinoBuilder {
     + cup
+    + receipt
     + reset()
     + select_coffee_amount()
     + add_milk()
@@ -192,12 +193,14 @@ act as implementations.</p></li>
 
     class EspressoBuilder {
     + cup
+    + receipt
     + reset()
     + select_coffee_amount()
     }
 
     class LatteBuilder {
     + cup
+    + receipt
     + reset()
     + select_coffee_amount()
     + add_milk()
@@ -205,16 +208,19 @@ act as implementations.</p></li>
     }
 
     class Cappuccino {
+    + receipt
     + add()
     + list_contents()
     }
 
     class Espresso {
+    + receipt
     + add()
     + list_contents()
     }
 
     class Latte {
+    + receipt
     + add()
     + list_contents()
     }
