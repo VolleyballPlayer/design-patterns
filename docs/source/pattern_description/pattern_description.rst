@@ -8,5 +8,5 @@ Description of patterns
    builder.rst
    singleton.rst
    prototype.rst
-   factory.rst
+   factory_method.rst
    abstract_factory.rst
