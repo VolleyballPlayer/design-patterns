@@ -1,6 +1,12 @@
 import click
 
 from designpatterns.creational_patterns.builder import CappuccinoBuilder, Director, EspressoBuilder, LatteBuilder
+from designpatterns.creational_patterns.factory_method import (
+    CappuccinoCreator,
+    EspressoCreator,
+    LatteCreator,
+    client_code,
+)
 from designpatterns.creational_patterns.prototype import DoubleEspressoBuilderPrototype
 from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
 from designpatterns.helpers.receipts import triple_espresso_receipt
@@ -90,6 +96,18 @@ def prototype() -> None:
     director.builder = builder
     director.build_espresso()
     builder.cup.list_contents()
+
+@cli.command()
+def factory_method() -> None:
+    """Run factory method example.
+
+    This function calls factory method module to run an example of creational design pattern called factory method.
+    """
+    logger.info('Starting factory method pattern run: your ordered coffees are about to be prepared.')
+
+    client_code(LatteCreator())
+    client_code(CappuccinoCreator())
+    client_code(EspressoCreator())
 
 
 if __name__ == '__main__':

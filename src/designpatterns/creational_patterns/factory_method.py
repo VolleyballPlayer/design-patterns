@@ -109,9 +109,3 @@ def client_code(creator: CoffeeCreator) -> None:
     Client: I'm not aware of the creator's class, but it still works.
     """
     creator.prepare()
-
-
-if __name__ == '__main__':
-    client_code(LatteCreator())
-    client_code(CappuccinoCreator())
-    client_code(EspressoCreator())
