@@ -31,15 +31,15 @@ class CoffeeBuilder(ABC):
 
     def add_milk(self) -> None:
         """Specify milk amount to be used for coffee drink."""
-        self._cup.add('No milk')
+        self._cup.add(None)
 
     def add_milk_foam(self) -> None:
         """Specify milk foam amount to be used for coffee drink."""
-        self._cup.add('No milk foam')
+        self._cup.add(None)
 
     def add_chocolate(self) -> None:
         """Specify chocolate amount to be used for coffee drink."""
-        self._cup.add('No chocolate')
+        self._cup.add(None)
 
 
 class LatteBuilder(CoffeeBuilder):

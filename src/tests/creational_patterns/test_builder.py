@@ -63,14 +63,14 @@ class TestBuilder:
     def test__latte_builder_add_milk__no_milk(self) -> None:
         builder = TestBuilder.TestCoffeeBuilder()
         builder.add_milk()
-        assert builder.cup.contents == ['No milk']
+        assert builder.cup.contents == [None]
 
     def test__latte_builder_add_milk_foam__no_milk_foam(self) -> None:
         builder = TestBuilder.TestCoffeeBuilder()
         builder.add_milk_foam()
-        assert builder.cup.contents == ['No milk foam']
+        assert builder.cup.contents == [None]
 
     def test__latte_builder_add_chocolate__no_chocolate(self) -> None:
         builder = TestBuilder.TestCoffeeBuilder()
         builder.add_chocolate()
-        assert builder.cup.contents == ['No chocolate']
+        assert builder.cup.contents == [None]
