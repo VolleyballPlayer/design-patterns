@@ -16,11 +16,9 @@ The Factory Method pattern suggests that you replace direct object construction 
 
 **Applicability**
 
-* Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
-The Factory Method separates product construction code from the code that actually uses the product. Therefore it’s easier to extend the product construction code independently from the rest of the code. For example, to add a new product type to the app, you’ll only need to create a new creator subclass and override the factory method in it.
+* Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with. The Factory Method separates product construction code from the code that actually uses the product. Therefore it’s easier to extend the product construction code independently from the rest of the code. For example, to add a new product type to the app, you’ll only need to create a new creator subclass and override the factory method in it.
 
-* Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
- Inheritance is probably the easiest way to extend the default behavior of a library or framework. But how would the framework recognize that your subclass should be used instead of a standard component?
+* Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components. Inheritance is probably the easiest way to extend the default behavior of a library or framework. But how would the framework recognize that your subclass should be used instead of a standard component?
 
 The solution is to reduce the code that constructs components across the framework into a single factory method and let anyone override this method in addition to extending the component itself.
 
@@ -89,3 +87,61 @@ For instance, imagine that you have the following hierarchy of classes: the base
 * If, after all of the extractions, the base factory method has become empty, you can make it abstract. If there’s something left, you can make it a default behavior of the method.
 
 **UML of the example implemented in this repository**
+
+.. uml:: 
+   
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        CoffeeCreator <.. client
+        Product <.. CoffeeCreator
+        CoffeeCreator <|-- CappuccinoCreator
+        CoffeeCreator <|-- EspressoCreator
+        CoffeeCreator <|-- LatteCreator
+        Product <|-- CappuccinoProduct
+        Product <|-- EspressoProduct
+        Product <|-- LatteProduct
+
+        abstract class CoffeeCreator {
+        + select_coffee()
+        + prepare()
+        }
+
+        class CappuccinoCreator {
+        + select_coffee()
+        }
+
+        class EspressoCreator {
+        + select_coffee()
+        }
+
+        class LatteCreator {
+        + select_coffee()
+        }
+
+        class Product {
+        + get_receipt()
+        }
+
+        class CappuccinoProduct {
+        + contents
+        - receipt
+        + get_receipt()
+        }
+
+        class EspressoProduct {
+        + contents
+        - receipt
+        + get_receipt()
+        }
+
+        class LatteProduct {
+        + contents
+        - receipt
+        + get_receipt()
+        }
+
+        hide client circle
+
+    @enduml
