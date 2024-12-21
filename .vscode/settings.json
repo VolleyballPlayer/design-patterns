@@ -14,7 +14,7 @@
     //ignore files like .gitignore or .ignore will not be in search results
     "search.useIgnoreFiles": true,
     //do not show files from .gitignore in vs code explorer
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     //if enable preview is false, files will always open in a new tab
     "workbench.editor.enablePreview": false,
     //if auto reveal is false, explorer will not automatically scroll to or highlight files when they are open
