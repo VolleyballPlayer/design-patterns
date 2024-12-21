@@ -21,7 +21,7 @@ class Receipt:
             if field != 'name' and value is not None:
                 fields.append(value)
         return fields
-    
+
     def get_coffee(self, ingredients: list[str] = None) -> str:
         """Get which coffee is made with which ingredients."""
         if ingredients is None:

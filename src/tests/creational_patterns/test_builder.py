@@ -81,19 +81,19 @@ class TestBuilder:
     def test__latte_builder__set_receipt(self) -> None:
         builder = LatteBuilder()
         builder.receipt = latte_receipt
-        assert builder.receipt.name == "latte"
+        assert builder.receipt.name == 'latte'
 
     def test__latte__set_receipt(self) -> None:
         builder = Latte()
         builder.receipt = latte_receipt
-        assert builder.receipt.name == "latte"
+        assert builder.receipt.name == 'latte'
 
     def test__cappuccino__set_receipt(self) -> None:
         builder = Cappuccino()
         builder.receipt = cappuccino_receipt
-        assert builder.receipt.name == "cappuccino"
-    
+        assert builder.receipt.name == 'cappuccino'
+
     def test__espresso__set_receipt(self) -> None:
         builder = Espresso()
         builder.receipt = espresso_receipt
-        assert builder.receipt.name == "espresso"
+        assert builder.receipt.name == 'espresso'

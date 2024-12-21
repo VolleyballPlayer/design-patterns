@@ -25,6 +25,7 @@ class CoffeeCreator(ABC):
         product = self.select_coffee().get_receipt()
         product.get_coffee()
 
+
 class LatteCreator(CoffeeCreator):
     """The signature of the method still uses the abstract product type, even though the concrete product is returned.
 

@@ -100,6 +100,7 @@ class Latte:
         """List final latte coffee drink contents."""
         self._receipt.get_coffee(ingredients=self.contents)
 
+
 class CappuccinoBuilder(CoffeeBuilder):
     """Provides specific implementations of the building steps of Cappuccino coffee drink."""
 
@@ -162,6 +163,7 @@ class Cappuccino:
     def list_contents(self) -> None:
         """List final cappuccino coffee drink contents."""
         self._receipt.get_coffee(ingredients=self.contents)
+
 
 class EspressoBuilder(CoffeeBuilder):
     """Provides specific implementations of the building steps of Espresso coffee drink."""
