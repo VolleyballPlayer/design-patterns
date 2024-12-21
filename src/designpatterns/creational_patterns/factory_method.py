@@ -3,7 +3,6 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 from designpatterns.helpers.receipts import Receipt, cappuccino_receipt, espresso_receipt, latte_receipt
-from designpatterns.logger import logger
 
 
 class CoffeeCreator(ABC):
@@ -15,7 +14,6 @@ class CoffeeCreator(ABC):
     @abstractmethod
     def select_coffee(self) -> Product:
         """May also provide some default implementation of the factory method."""
-        pass
 
     def prepare(self) -> None:
         """Despite its name, the Creator's primary responsibility is not creating products.
@@ -25,10 +23,7 @@ class CoffeeCreator(ABC):
         type of product from it.
         """
         product = self.select_coffee().get_receipt()
-        contents = product.get_field_values()
-
-        logger.info(f"Your {product.name} is made of {', '.join(contents)}.")
-
+        product.get_coffee()
 
 class LatteCreator(CoffeeCreator):
     """The signature of the method still uses the abstract product type, even though the concrete product is returned.
@@ -63,7 +58,6 @@ class Product(ABC):
     @abstractmethod
     def get_receipt(self) -> str:
         """Get receipt to be used for coffee drink."""
-        pass
 
 
 class LatteProduct(Product):

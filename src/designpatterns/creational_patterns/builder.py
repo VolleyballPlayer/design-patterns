@@ -4,7 +4,6 @@ from abc import ABC, abstractmethod
 
 from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
 from designpatterns.helpers.receipts import Receipt, cappuccino_receipt, espresso_receipt, latte_receipt
-from designpatterns.logger import logger
 
 
 class CoffeeBuilder(ABC):
@@ -99,8 +98,7 @@ class Latte:
 
     def list_contents(self) -> None:
         """List final latte coffee drink contents."""
-        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
-
+        self._receipt.get_coffee(ingredients=self.contents)
 
 class CappuccinoBuilder(CoffeeBuilder):
     """Provides specific implementations of the building steps of Cappuccino coffee drink."""
@@ -163,8 +161,7 @@ class Cappuccino:
 
     def list_contents(self) -> None:
         """List final cappuccino coffee drink contents."""
-        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
-
+        self._receipt.get_coffee(ingredients=self.contents)
 
 class EspressoBuilder(CoffeeBuilder):
     """Provides specific implementations of the building steps of Espresso coffee drink."""
@@ -215,7 +212,7 @@ class Espresso:
 
     def list_contents(self) -> None:
         """List final espresso coffee drink contents."""
-        logger.info(f"Your {self._receipt.name} is made of {', '.join(self.contents)}.")
+        self._receipt.get_coffee(ingredients=self.contents)
 
 
 class Director:

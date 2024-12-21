@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from designpatterns.logger import logger
+
 
 @dataclass
 class Receipt:
@@ -11,7 +13,7 @@ class Receipt:
     milk_foam: str = None
     chocolate: str = None
 
-    def get_field_values(self) -> list[str]:
+    def get_ingredients(self) -> list[str]:
         """Get all data class fields but name with a value different than None."""
         fields = []
         for field in self.__dataclass_fields__:
@@ -19,6 +21,14 @@ class Receipt:
             if field != 'name' and value is not None:
                 fields.append(value)
         return fields
+    
+    def get_coffee(self, ingredients: list[str] = None) -> str:
+        """Get which coffee is made with which ingredients."""
+        if ingredients is None:
+            ingredients = self.get_ingredients()
+        msg = f"Your {self.name} is made of {', '.join(ingredients)}."
+        logger.info(msg)
+        return msg
 
 
 latte_receipt = Receipt(

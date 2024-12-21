@@ -1,13 +1,16 @@
 import pytest
 
 from designpatterns.creational_patterns.builder import (
+    Cappuccino,
     CappuccinoBuilder,
     CoffeeBuilder,
     Director,
+    Espresso,
     EspressoBuilder,
     Latte,
     LatteBuilder,
 )
+from designpatterns.helpers.receipts import cappuccino_receipt, espresso_receipt, latte_receipt
 
 
 class TestBuilder:
@@ -74,3 +77,23 @@ class TestBuilder:
         builder = TestBuilder.TestCoffeeBuilder()
         builder.add_chocolate()
         assert builder.cup.contents == [None]
+
+    def test__latte_builder__set_receipt(self) -> None:
+        builder = LatteBuilder()
+        builder.receipt = latte_receipt
+        assert builder.receipt.name == "latte"
+
+    def test__latte__set_receipt(self) -> None:
+        builder = Latte()
+        builder.receipt = latte_receipt
+        assert builder.receipt.name == "latte"
+
+    def test__cappuccino__set_receipt(self) -> None:
+        builder = Cappuccino()
+        builder.receipt = cappuccino_receipt
+        assert builder.receipt.name == "cappuccino"
+    
+    def test__espresso__set_receipt(self) -> None:
+        builder = Espresso()
+        builder.receipt = espresso_receipt
+        assert builder.receipt.name == "espresso"
