@@ -97,6 +97,7 @@ def prototype() -> None:
     director.build_espresso()
     builder.cup.list_contents()
 
+
 @cli.command()
 def factory_method() -> None:
     """Run factory method example.

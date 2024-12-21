@@ -15,8 +15,8 @@ Documentation can be found here: https://volleyballplayer.github.io/design-patte
 
 This project was created to document knowledge on design patterns, create examples and go back to summaries when using design patterns in other projects. This repository is work in progress also related to different topics with the goal of enriching and demonstrating the know-how related to Python packages, tests, documentation, git workflows, Docker etc.
 
-<span style="color:lightblue">Builder pattern</span> is used to prepare different types of coffees: Latte, Cappuccino or Espresso.
-<span style="color:lightblue">Singleton pattern</span> is counting number of prepared coffees and is applied in the builder, too.
+<span style="color:lightblue">Builder and factory method patterns</span> is used to prepare different types of coffees: Latte, Cappuccino or Espresso.
+<span style="color:lightblue">Singleton pattern</span> is counting number of prepared coffees in the builder.
 <span style="color:lightblue">Prototype pattern</span> is creating prototype for double espresso coffee using existing espresso coffee class.
 
 #### Installation

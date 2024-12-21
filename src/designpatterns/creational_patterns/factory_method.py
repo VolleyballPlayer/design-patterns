@@ -105,7 +105,7 @@ class EspressoProduct(Product):
 def client_code(creator: CoffeeCreator) -> None:
     """Works with an instance of a concrete creator, albeit through its base interface.
 
-    As long as the client keeps working with the creator via the base interface, you can pass it any creator's subclass. 
+    As long as the client keeps working with the creator via base interface, you can pass it any creator's subclass.
     Client: I'm not aware of the creator's class, but it still works.
     """
     creator.prepare()
