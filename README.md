@@ -74,6 +74,9 @@ Ubuntu approach is being used. Version numbers are defined as the year and the m
 
 Explanations taken from https://refactoring.guru/design-patterns/
 
+https://medium.com/@amirm.lavasani/design-patterns-in-python-factory-method-1882d9a06cb4
+
 ##### UML
 https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 https://plantuml.com/class-diagram
+https://stackoverflow.com/questions/27660499/open-arrow-with-solid-line-in-uml
