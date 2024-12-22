@@ -23,7 +23,7 @@ class CoffeeCreator(ABC):
         type of product from it.
         """
         product = self.select_coffee().get_receipt()
-        product.get_coffee()
+        Receipt.get_coffee(receipt=product)
 
 
 class LatteCreator(CoffeeCreator):

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from designpatterns.logger import logger
@@ -22,11 +24,13 @@ class Receipt:
                 fields.append(value)
         return fields
 
-    def get_coffee(self, ingredients: list[str] = None) -> str:
+    @staticmethod
+    def get_coffee(receipt: Receipt, ingredients: list[str] = None) -> str:
         """Get which coffee is made with which ingredients."""
         if ingredients is None:
-            ingredients = self.get_ingredients()
-        msg = f"Your {self.name} is made of {', '.join(ingredients)}."
+            ingredients = receipt.get_ingredients()
+        ingredients = [ingredient for ingredient in ingredients if ingredient is not None]
+        msg = f"Your {receipt.name} is made of {', '.join(ingredients)}."
         logger.info(msg)
         return msg
 
