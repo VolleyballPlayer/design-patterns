@@ -92,8 +92,651 @@
 <section id="submodules">
 <h2><span class="section-number">3.1.1.1.1.1. </span>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
+<section id="module-designpatterns.creational_patterns.abstract_factory">
+<span id="designpatterns-creational-patterns-abstract-factory-module"></span><h2><span class="section-number">3.1.1.1.1.2. </span>designpatterns.creational_patterns.abstract_factory module<a class="headerlink" href="#module-designpatterns.creational_patterns.abstract_factory" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractChocolate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractChocolate</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Each distinct product of a product family should have a base interface.</p>
+<p>All variants of the product must implement this interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractChocolate.get_amount">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractCoffee">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractCoffee</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Each distinct product of a product family should have a base interface.</p>
+<p>All variants of the product must implement this interface.
+All products can interact with each other, but proper interaction is possible only between products of the same
+concrete variant.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractCoffee.get_amount">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractFactory</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Abstract Factory interface declares a set of methods that return different abstract products.</p>
+<p>These products are called a family and are related by a high-level theme or concept.
+Products of one family are usually able to collaborate among themselves.
+A family of products may have several variants, but the products of one variant are incompatible with products of
+another.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_chocolate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate" title="designpatterns.creational_patterns.abstract_factory.AbstractChocolate"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractChocolate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_coffee">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_coffee" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_coffee_receipt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_coffee_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_coffee_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get coffee receipt to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_milk">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_milk" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk" title="designpatterns.creational_patterns.abstract_factory.AbstractMilk"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilk</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_milk_foam">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory.get_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam" title="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilkFoam</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractMilk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractMilk</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Each distinct product of a product family should have a base interface.</p>
+<p>All variants of the product must implement this interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractMilk.get_amount">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractMilkFoam</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Each distinct product of a product family should have a base interface.</p>
+<p>All variants of the product must implement this interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam.get_amount">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractReceipt">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">AbstractReceipt</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Each distinct product of a product family should have a base interface.</p>
+<p>All variants of the product must implement this interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.AbstractReceipt.get_receipt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt.get_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get receipt to be used for coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">CappuccinoFactory</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory" title="designpatterns.creational_patterns.abstract_factory.AbstractFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractFactory</span></code></a></p>
+<p>Concrete Factories produce a family of products that belong to a single variant.</p>
+<p>The factory guarantees that resulting products are compatible. Note that signatures of the Concrete Factory’s
+methods return an abstract product, while inside the method a concrete product is instantiated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_chocolate">
+<span class="sig-name descname"><span class="pre">get_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate" title="designpatterns.creational_patterns.abstract_factory.AbstractChocolate"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractChocolate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_coffee">
+<span class="sig-name descname"><span class="pre">get_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_coffee" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_coffee_receipt">
+<span class="sig-name descname"><span class="pre">get_coffee_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_coffee_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get coffee receipt to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_milk">
+<span class="sig-name descname"><span class="pre">get_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_milk" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk" title="designpatterns.creational_patterns.abstract_factory.AbstractMilk"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilk</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_milk_foam">
+<span class="sig-name descname"><span class="pre">get_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CappuccinoFactory.get_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam" title="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilkFoam</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForCappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ChocolateForCappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForCappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Chocolate to be used for cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForCappuccino.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForCappuccino.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForEspresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ChocolateForEspresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForEspresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Chocolate to be used for espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForEspresso.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForEspresso.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForLatte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ChocolateForLatte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Chocolate to be used for latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ChocolateForLatte.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ChocolateForLatte.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">CoffeeForCappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Coffee to be used for cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForEspresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">CoffeeForEspresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForEspresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Coffee to be used for espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForEspresso.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForEspresso.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForLatte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">CoffeeForLatte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Coffee to be used for latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.CoffeeForLatte.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.CoffeeForLatte.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">EspressoFactory</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory" title="designpatterns.creational_patterns.abstract_factory.AbstractFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractFactory</span></code></a></p>
+<p>Concrete Factories produce a family of products that belong to a single variant.</p>
+<p>The factory guarantees that resulting products are compatible. Note that signatures of the Concrete Factory’s
+methods return an abstract product, while inside the method a concrete product is instantiated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_chocolate">
+<span class="sig-name descname"><span class="pre">get_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate" title="designpatterns.creational_patterns.abstract_factory.AbstractChocolate"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractChocolate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_coffee">
+<span class="sig-name descname"><span class="pre">get_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_coffee" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_coffee_receipt">
+<span class="sig-name descname"><span class="pre">get_coffee_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_coffee_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get coffee receipt to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_milk">
+<span class="sig-name descname"><span class="pre">get_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_milk" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk" title="designpatterns.creational_patterns.abstract_factory.AbstractMilk"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilk</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_milk_foam">
+<span class="sig-name descname"><span class="pre">get_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.EspressoFactory.get_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam" title="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilkFoam</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">LatteFactory</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory" title="designpatterns.creational_patterns.abstract_factory.AbstractFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractFactory</span></code></a></p>
+<p>Concrete Factories produce a family of products that belong to a single variant.</p>
+<p>The factory guarantees that resulting products are compatible. Note that signatures of the Concrete Factory’s
+methods return an abstract product, while inside the method a concrete product is instantiated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory.get_chocolate">
+<span class="sig-name descname"><span class="pre">get_chocolate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory.get_chocolate" title="Link to this definition"></a></dt>
+<dd><p>Get chocolate amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractChocolate" title="designpatterns.creational_patterns.abstract_factory.AbstractChocolate"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractChocolate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory.get_coffee">
+<span class="sig-name descname"><span class="pre">get_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory.get_coffee" title="Link to this definition"></a></dt>
+<dd><p>Get coffee amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory.get_coffee_receipt">
+<span class="sig-name descname"><span class="pre">get_coffee_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory.get_coffee_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get coffee receipt to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory.get_milk">
+<span class="sig-name descname"><span class="pre">get_milk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory.get_milk" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilk" title="designpatterns.creational_patterns.abstract_factory.AbstractMilk"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilk</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.LatteFactory.get_milk_foam">
+<span class="sig-name descname"><span class="pre">get_milk_foam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.LatteFactory.get_milk_foam" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam" title="designpatterns.creational_patterns.abstract_factory.AbstractMilkFoam"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMilkFoam</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForCappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkFoamForCappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForCappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk foam to be used for cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForCappuccino.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForCappuccino.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForEspresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkFoamForEspresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForEspresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk foam to be used for espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForEspresso.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForEspresso.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForLatte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkFoamForLatte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk foam to be used for latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkFoamForLatte.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkFoamForLatte.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk foam amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForCappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkForCappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForCappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk to be used for cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForCappuccino.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForCappuccino.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForEspresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkForEspresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForEspresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk to be used for espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForEspresso.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForEspresso.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForLatte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">MilkForLatte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractCoffee" title="designpatterns.creational_patterns.abstract_factory.AbstractCoffee"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractCoffee</span></code></a></p>
+<p>Milk to be used for latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.MilkForLatte.get_amount">
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.MilkForLatte.get_amount" title="Link to this definition"></a></dt>
+<dd><p>Get milk amount to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForCappuccino">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ReceiptForCappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForCappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></p>
+<p>Receipt to be used for cappuccino coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForCappuccino.get_receipt">
+<span class="sig-name descname"><span class="pre">get_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForCappuccino.get_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get receipt amount to be used for cappuccino coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForEspresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ReceiptForEspresso</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForEspresso" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></p>
+<p>Receipt to be used for espresso coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForEspresso.get_receipt">
+<span class="sig-name descname"><span class="pre">get_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForEspresso.get_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get receipt amount to be used for espresso coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForLatte">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">ReceiptForLatte</span></span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractReceipt" title="designpatterns.creational_patterns.abstract_factory.AbstractReceipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractReceipt</span></code></a></p>
+<p>Receipt to be used for latte coffee drink.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.ReceiptForLatte.get_receipt">
+<span class="sig-name descname"><span class="pre">get_receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.ReceiptForLatte.get_receipt" title="Link to this definition"></a></dt>
+<dd><p>Get receipt to be used for latte coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.creational_patterns.abstract_factory.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.abstract_factory.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">factory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.abstract_factory.client_code" title="Link to this definition"></a></dt>
+<dd><p>Works with factories and products only through abstract types:AbstractFactory and AbstractProduct.</p>
+<p>This lets you pass any factory or product subclass to the client code without breaking it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>factory</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.creational_patterns.abstract_factory.AbstractFactory" title="designpatterns.creational_patterns.abstract_factory.AbstractFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractFactory</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.creational_patterns.builder">
-<span id="designpatterns-creational-patterns-builder-module"></span><h2><span class="section-number">3.1.1.1.1.2. </span>designpatterns.creational_patterns.builder module<a class="headerlink" href="#module-designpatterns.creational_patterns.builder" title="Link to this heading"></a></h2>
+<span id="designpatterns-creational-patterns-builder-module"></span><h2><span class="section-number">3.1.1.1.1.3. </span>designpatterns.creational_patterns.builder module<a class="headerlink" href="#module-designpatterns.creational_patterns.builder" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.creational_patterns.builder.Cappuccino">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.builder.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.creational_patterns.builder.Cappuccino" title="Link to this definition"></a></dt>
@@ -482,7 +1125,7 @@
 
 </section>
 <section id="module-designpatterns.creational_patterns.factory_method">
-<span id="designpatterns-creational-patterns-factory-method-module"></span><h2><span class="section-number">3.1.1.1.1.3. </span>designpatterns.creational_patterns.factory_method module<a class="headerlink" href="#module-designpatterns.creational_patterns.factory_method" title="Link to this heading"></a></h2>
+<span id="designpatterns-creational-patterns-factory-method-module"></span><h2><span class="section-number">3.1.1.1.1.4. </span>designpatterns.creational_patterns.factory_method module<a class="headerlink" href="#module-designpatterns.creational_patterns.factory_method" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.creational_patterns.factory_method.CappuccinoCreator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.factory_method.</span></span><span class="sig-name descname"><span class="pre">CappuccinoCreator</span></span><a class="headerlink" href="#designpatterns.creational_patterns.factory_method.CappuccinoCreator" title="Link to this definition"></a></dt>
@@ -661,7 +1304,7 @@ Client: I’m not aware of the creator’s class, but it still works.</p>
 
 </section>
 <section id="module-designpatterns.creational_patterns.prototype">
-<span id="designpatterns-creational-patterns-prototype-module"></span><h2><span class="section-number">3.1.1.1.1.4. </span>designpatterns.creational_patterns.prototype module<a class="headerlink" href="#module-designpatterns.creational_patterns.prototype" title="Link to this heading"></a></h2>
+<span id="designpatterns-creational-patterns-prototype-module"></span><h2><span class="section-number">3.1.1.1.1.5. </span>designpatterns.creational_patterns.prototype module<a class="headerlink" href="#module-designpatterns.creational_patterns.prototype" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.prototype.</span></span><span class="sig-name descname"><span class="pre">DoubleEspressoBuilderPrototype</span></span><a class="headerlink" href="#designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype" title="Link to this definition"></a></dt>
@@ -682,7 +1325,7 @@ Client: I’m not aware of the creator’s class, but it still works.</p>
 
 </section>
 <section id="module-designpatterns.creational_patterns.singleton">
-<span id="designpatterns-creational-patterns-singleton-module"></span><h2><span class="section-number">3.1.1.1.1.5. </span>designpatterns.creational_patterns.singleton module<a class="headerlink" href="#module-designpatterns.creational_patterns.singleton" title="Link to this heading"></a></h2>
+<span id="designpatterns-creational-patterns-singleton-module"></span><h2><span class="section-number">3.1.1.1.1.6. </span>designpatterns.creational_patterns.singleton module<a class="headerlink" href="#module-designpatterns.creational_patterns.singleton" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.creational_patterns.singleton.CountCoffeeSingleton">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.creational_patterns.singleton.</span></span><span class="sig-name descname"><span class="pre">CountCoffeeSingleton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.creational_patterns.singleton.CountCoffeeSingleton" title="Link to this definition"></a></dt>
@@ -710,7 +1353,7 @@ Client: I’m not aware of the creator’s class, but it still works.</p>
 
 </section>
 <section id="module-designpatterns.creational_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.6. </span>Module contents<a class="headerlink" href="#module-designpatterns.creational_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.7. </span>Module contents<a class="headerlink" href="#module-designpatterns.creational_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
