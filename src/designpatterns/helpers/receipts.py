@@ -30,9 +30,10 @@ class Receipt:
         if ingredients is None:
             ingredients = receipt.get_ingredients()
         ingredients = [ingredient for ingredient in ingredients if ingredient is not None]
-        msg = f"Your {receipt.name} is made of {', '.join(ingredients)}."
+        joined_ingredients = '\n'.join(ingredients)
+        msg = f'Your {receipt.name} is made of: \n{joined_ingredients}.'
         logger.info(msg)
-        return msg
+        return joined_ingredients
 
 
 latte_receipt = Receipt(

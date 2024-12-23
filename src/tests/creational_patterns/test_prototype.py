@@ -2,6 +2,7 @@ import pytest
 
 from designpatterns.creational_patterns.builder import Director
 from designpatterns.creational_patterns.prototype import DoubleEspressoBuilderPrototype
+from designpatterns.helpers.receipts import Receipt, double_espresso_receipt
 
 
 class TestPrototype:
@@ -12,4 +13,4 @@ class TestPrototype:
         director.build_espresso()
         clone.cup.list_contents()
         assert '4. coffee is being prepared' in caplog.text
-        assert 'Your espresso is made of 2 shots coffee' in caplog.text
+        assert Receipt.get_coffee(receipt=double_espresso_receipt) in caplog.text

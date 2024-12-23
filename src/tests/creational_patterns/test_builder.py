@@ -10,7 +10,7 @@ from designpatterns.creational_patterns.builder import (
     Latte,
     LatteBuilder,
 )
-from designpatterns.helpers.receipts import cappuccino_receipt, espresso_receipt, latte_receipt
+from designpatterns.helpers.receipts import Receipt, cappuccino_receipt, espresso_receipt, latte_receipt
 
 
 class TestBuilder:
@@ -38,7 +38,7 @@ class TestBuilder:
         director.build_latte()
         builder.cup.list_contents()
 
-        assert 'Your latte is made of 1/2 cup coffee, 1/4 cup milk, 1/4 cup milk foam.' in caplog.text
+        assert Receipt.get_coffee(receipt=latte_receipt) in caplog.text
 
     def test__cappuccino_preparation__all_ingredients_used(self, caplog: pytest.LogCaptureFixture) -> None:
         director = Director()
@@ -48,10 +48,7 @@ class TestBuilder:
         director.build_cappuccino()
         builder.cup.list_contents()
 
-        assert (
-            'Your cappuccino is made of 1/2 cup coffee, 1/6 cup milk, 1/6 cup chocolate, 1/6 cup milk foam.'
-            in caplog.text
-        )
+        assert Receipt.get_coffee(receipt=cappuccino_receipt) in caplog.text
 
     def test__espresso_preparation__all_ingredients_used(self, caplog: pytest.LogCaptureFixture) -> None:
         director = Director()
@@ -61,7 +58,7 @@ class TestBuilder:
         director.build_espresso()
         builder.cup.list_contents()
 
-        assert 'Your espresso is made of 1 shot coffee.' in caplog.text
+        assert Receipt.get_coffee(receipt=espresso_receipt) in caplog.text
 
     def test__latte_builder_add_milk__no_milk(self) -> None:
         builder = TestBuilder.TestCoffeeBuilder()
