@@ -129,5 +129,6 @@ def abstract_factory() -> None:
     client_code_abstract_factory(CappuccinoFactory())
     client_code_abstract_factory(EspressoFactory())
 
+
 if __name__ == '__main__':
     cli()
