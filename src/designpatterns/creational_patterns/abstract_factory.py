@@ -296,7 +296,7 @@ class ReceiptForEspresso(AbstractReceipt):
         return espresso_receipt
 
 
-def client_code(factory: AbstractFactory) -> None:
+def client_code_abstract_factory(factory: AbstractFactory) -> None:
     """Works with factories and products only through abstract types:AbstractFactory and AbstractProduct.
 
     This lets you pass any factory or product subclass to the client code without breaking it.
@@ -309,9 +309,3 @@ def client_code(factory: AbstractFactory) -> None:
 
     ingredients = [coffee.get_amount(), milk.get_amount(), milk_foam.get_amount(), chocolate.get_amount()]
     Receipt.get_coffee(receipt=receipt.get_receipt(), ingredients=ingredients)
-
-
-if __name__ == '__main__':
-    client_code(LatteFactory())
-    client_code(CappuccinoFactory())
-    client_code(EspressoFactory())

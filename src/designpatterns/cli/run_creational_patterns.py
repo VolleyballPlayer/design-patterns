@@ -1,11 +1,17 @@
 import click
 
+from designpatterns.creational_patterns.abstract_factory import (
+    CappuccinoFactory,
+    EspressoFactory,
+    LatteFactory,
+    client_code_abstract_factory,
+)
 from designpatterns.creational_patterns.builder import CappuccinoBuilder, Director, EspressoBuilder, LatteBuilder
 from designpatterns.creational_patterns.factory_method import (
     CappuccinoCreator,
     EspressoCreator,
     LatteCreator,
-    client_code,
+    client_code_factory_method,
 )
 from designpatterns.creational_patterns.prototype import DoubleEspressoBuilderPrototype
 from designpatterns.creational_patterns.singleton import CountCoffeeSingleton
@@ -106,10 +112,22 @@ def factory_method() -> None:
     """
     logger.info('Starting factory method pattern run: your ordered coffees are about to be prepared.')
 
-    client_code(LatteCreator())
-    client_code(CappuccinoCreator())
-    client_code(EspressoCreator())
+    client_code_factory_method(LatteCreator())
+    client_code_factory_method(CappuccinoCreator())
+    client_code_factory_method(EspressoCreator())
 
+
+@cli.command()
+def abstract_factory() -> None:
+    """Run abstract factory example.
+
+    This function calls abstract factory module to run an example of creational design pattern called abstract factory.
+    """
+    logger.info('Starting abstract factory pattern run: your ordered coffees are about to be prepared.')
+
+    client_code_abstract_factory(LatteFactory())
+    client_code_abstract_factory(CappuccinoFactory())
+    client_code_abstract_factory(EspressoFactory())
 
 if __name__ == '__main__':
     cli()

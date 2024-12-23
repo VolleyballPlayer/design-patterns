@@ -97,7 +97,7 @@ class EspressoProduct(Product):
         return espresso_receipt
 
 
-def client_code(creator: CoffeeCreator) -> None:
+def client_code_factory_method(creator: CoffeeCreator) -> None:
     """Works with an instance of a concrete creator, albeit through its base interface.
 
     As long as the client keeps working with the creator via base interface, you can pass it any creator's subclass.
