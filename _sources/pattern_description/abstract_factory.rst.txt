@@ -71,3 +71,171 @@ There’s one more thing left to clarify: if the client is only exposed to the a
 * Scan through the code and find all direct calls to product constructors. Replace them with calls to the appropriate creation method on the factory object.
 
 **UML of the example implemented in this repository**
+
+.. uml:: 
+   
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        left to right direction
+
+        AbstractCoffee <.. AbstractFactory
+        AbstractMilk <.. AbstractFactory
+        AbstractMilkFoam <.. AbstractFactory
+        AbstractChocolate <.. AbstractFactory
+        AbstractReceipt <.. AbstractFactory
+
+        AbstractFactory <.. client
+
+        AbstractFactory <|-- LatteFactory
+        AbstractFactory <|-- CappuccinoFactory
+        AbstractFactory <|-- EspressoFactory
+
+        LatteFactory <.. CoffeeForLatte
+        LatteFactory <.. MilkForLatte
+        LatteFactory <.. MilkFoamForLatte
+        LatteFactory <.. ChocolateForLatte
+        LatteFactory <.. ReceiptForLatte
+        CappuccinoFactory <.. CoffeeForCappuccino
+        CappuccinoFactory <.. MilkForCappuccino
+        CappuccinoFactory <.. MilkFoamForCappuccino
+        CappuccinoFactory <.. ChocolateForCappuccino
+        CappuccinoFactory <.. ReceiptForCappuccino
+        EspressoFactory <.. CoffeeForEspresso
+        EspressoFactory <.. MilkForEspresso
+        EspressoFactory <.. MilkFoamForEspresso
+        EspressoFactory <.. ChocolateForEspresso
+        EspressoFactory <.. ReceiptForEspresso
+
+        AbstractCoffee <|-- CoffeeForLatte
+        AbstractMilk <|-- MilkForLatte
+        AbstractMilkFoam <|-- MilkFoamForLatte
+        AbstractChocolate <|-- ChocolateForLatte
+        AbstractReceipt <|-- ReceiptForLatte
+        AbstractCoffee <|-- CoffeeForCappuccino
+        AbstractMilk <|-- MilkForCappuccino
+        AbstractMilkFoam <|-- MilkFoamForCappuccino
+        AbstractChocolate <|-- ChocolateForCappuccino
+        AbstractReceipt <|-- ReceiptForCappuccino
+        AbstractCoffee <|-- CoffeeForEspresso
+        AbstractMilk <|-- MilkForEspresso
+        AbstractMilkFoam <|-- MilkFoamForEspresso
+        AbstractChocolate <|-- ChocolateForEspresso
+        AbstractReceipt <|-- ReceiptForEspresso
+
+        abstract class AbstractFactory {
+        + get_coffee()
+        + get_milk()
+        + get_milk_foam()
+        + get_chocolate()
+        + get_coffee_receipt()
+        }
+
+        class LatteFactory {
+        + get_coffee()
+        + get_milk()
+        + get_milk_foam()
+        + get_chocolate()
+        + get_coffee_receipt()
+        }
+
+        class CappuccinoFactory {
+        + get_coffee()
+        + get_milk()
+        + get_milk_foam()
+        + get_chocolate()
+        + get_coffee_receipt()
+        }
+
+        class EspressoFactory {
+        + get_coffee()
+        + get_milk()
+        + get_milk_foam()
+        + get_chocolate()
+        + get_coffee_receipt()
+        }
+
+        abstract class AbstractCoffee {
+        + get_amount()
+        }
+
+        class CoffeeForLatte {
+        + get_amount()
+        }
+
+        class CoffeeForCappuccino {
+        + get_amount()
+        }
+
+        class CoffeeForEspresso {
+        + get_amount()
+        }
+
+        abstract class AbstractMilk {
+        + get_amount()
+        }
+
+        class MilkForLatte {
+        + get_amount()
+        }
+
+        class MilkForCappuccino {
+        + get_amount()
+        }
+
+        class MilkForEspresso {
+        + get_amount()
+        }
+
+        abstract class AbstractMilkFoam {
+        + get_amount()
+        }
+
+        class MilkFoamForLatte {
+        + get_amount()
+        }
+
+        class MilkFoamForCappuccino {
+        + get_amount()
+        }
+
+        class MilkFoamForEspresso {
+        + get_amount()
+        }
+
+        abstract class AbstractChocolate {
+        + get_amount()
+        }
+
+        class ChocolateForLatte {
+        + get_amount()
+        }
+
+        class ChocolateForCappuccino {
+        + get_amount()
+        }
+
+        class ChocolateForEspresso {
+        + get_amount()
+        }
+        
+        abstract class AbstractReceipt {
+        + get_receipt()
+        }
+
+        class ChocolateForLatte {
+        + get_receipt()
+        }
+
+        class ChocolateForCappuccino {
+        + get_receipt()
+        }
+
+        class ChocolateForEspresso {
+        + get_receipt()
+        }
+
+        hide client circle
+
+    @enduml
