@@ -4,6 +4,14 @@ designpatterns.creational\_patterns package
 Submodules
 ----------
 
+designpatterns.creational\_patterns.abstract\_factory module
+------------------------------------------------------------
+
+.. automodule:: designpatterns.creational_patterns.abstract_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.creational\_patterns.builder module
 --------------------------------------------------
 
