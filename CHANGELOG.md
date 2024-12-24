@@ -3,7 +3,7 @@
 
 Initial release
 
-##### Features 
+##### Features
 - src python package layout
 - command line interface
 - documentation

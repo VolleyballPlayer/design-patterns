@@ -88,8 +88,8 @@ For instance, imagine that you have the following hierarchy of classes: the base
 
 **UML of the example implemented in this repository**
 
-.. uml:: 
-   
+.. uml::
+
     @startuml
 
         skinparam classAttributeIconSize 0

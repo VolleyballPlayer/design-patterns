@@ -21,7 +21,8 @@ run-behavioral-pattern = "designpatterns.cli.run_behavioral_patterns:cli"
 
 [project.optional-dependencies]
 dev = ["toml",
-    "ruff"
+    "ruff",
+    "pre-commit"
 ]
 docs = ["Sphinx",
     "sphinx-click",
@@ -101,8 +102,8 @@ select = [
     # refurb
     "FURB"
 ]
-ignore = [ 
-    # undocumented-public-module 
+ignore = [
+    # undocumented-public-module
     "D100",
     # Missing docstring in public package
     "D104",

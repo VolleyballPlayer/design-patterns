@@ -130,7 +130,7 @@
                 "panel": "shared",
                 "clear": false
                 },
-            "dependsOn": [ "Clear Sphinx-ApiDoc Output" ]    
+            "dependsOn": [ "Clear Sphinx-ApiDoc Output" ]
         },
         {
             "label": "Clear Sphinx-ApiDoc Output",
@@ -181,6 +181,57 @@
             "type": "shell",
             "command": "ruff",
             "args": [ "format"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
+        },
+        {
+            "label": "Install pre-commit (when cloning repo for the first time)",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [ "install"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
+        },
+        {
+            "label": "Update pre-commit hooks to latest version",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [ "autoupdate"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
+        },
+        {
+            "label": "Run pre-commit hooks manually",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [ "run", "--all-files" ],
             "group": {
                 "kind": "build",
                 "isDefault": false

@@ -1,6 +1,6 @@
 name: Documentation
 
-on: 
+on:
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -12,12 +12,12 @@ on:
 
 jobs:
   build:
-    runs-on: 
+    runs-on:
       ubuntu-latest
     permissions:
       contents: write
 
-    steps:      
+    steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
@@ -28,7 +28,7 @@ jobs:
         docker build -t volleyballplayer/design-patterns:1.0 . --progress=plain --no-cache
         docker run --name design-patterns volleyballplayer/design-patterns:1.0
         docker cp design-patterns:design-patterns/docs/html/ ./docs/html
-      
+
     - name: Install package and dependencies for building the documentation
       shell: bash
       run: |
@@ -54,6 +54,3 @@ jobs:
     - name: Stop container
       if: always()
       run: docker container rm $(docker container ls -aq)
-
-
-    

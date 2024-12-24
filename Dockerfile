@@ -10,7 +10,7 @@ RUN apt-get -y update; \
     apt-get -y install curl; \
     curl -L https://sourceforge.net/projects/plantuml/files/1.2023.7/plantuml.1.2023.7.jar > ${PLANTUML_JAR}; \
     apt-get -y install python3; \
-    apt-get -y install python3-pip; \ 
+    apt-get -y install python3-pip; \
     apt-get -y install pipx; \
     apt-get -y install git; \
     git clone https://github.com/VolleyballPlayer/design-patterns.git && cd design-patterns; \

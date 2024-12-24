@@ -1,6 +1,6 @@
 name: Wheels
 
-on: 
+on:
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -11,19 +11,19 @@ on:
 jobs:
   build_sdist:
     name: Build SDist
-    runs-on: 
+    runs-on:
       ubuntu-latest
     container:
       image: python:latest
 
-    steps:      
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Add $HOME/.local/bin to PATH
         run: echo "$HOME/.local/bin" >> $GITHUB_PATH
-      
+
       - name: Install pipx
         run: pip install pipx
 
@@ -32,7 +32,7 @@ jobs:
 
       - name: Check metadata
         run: pipx run twine check dist/*
-        
+
       - name: Upload SDist
         uses: actions/upload-artifact@v3
         with:
@@ -40,7 +40,7 @@ jobs:
 
   build_wheels:
     name: Build wheel
-    runs-on: 
+    runs-on:
       ubuntu-latest
     container:
       image: python:latest
@@ -52,18 +52,18 @@ jobs:
 
       - name: Add $HOME/.local/bin to PATH
         run: echo "$HOME/.local/bin" >> $GITHUB_PATH
-      
+
       - name: Install pipx
         run: pip install pipx
 
       - name: Build wheel
         run: pipx run build --wheel
-      
+
       - name: Upload wheel
         uses: actions/upload-artifact@v3
         with:
           path: dist/*.whl
-        
+
   check_distribution_builds:
     if: always()
     runs-on: ubuntu-latest
@@ -72,4 +72,3 @@ jobs:
     steps:
       - run: exit 1
         if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
-    
