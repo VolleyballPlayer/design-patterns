@@ -243,6 +243,40 @@
                 "panel": "shared",
                 "clear": false
                 }
+        },
+        {
+            "label": "Run pre-commit clean (periodically)",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [ "clean" ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
+        },
+        {
+            "label": "Run pre-commit garbage collector (periodically)",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [ "gc" ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "clear": false
+                }
         }
     ]
 }
