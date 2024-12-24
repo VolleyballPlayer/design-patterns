@@ -8,3 +8,25 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
+-   repo: local
+    hooks:
+    -   id: ruff
+        name: ruff
+        description: "Run 'ruff' for extremely fast Python linting"
+        entry: ruff check --force-exclude
+        language: python
+        types_or: [python, pyi, jupyter]
+        args: []
+        require_serial: true
+        additional_dependencies: []
+        minimum_pre_commit_version: "2.9.2"
+    -   id: ruff-format
+        name: ruff-format
+        description: "Run 'ruff format' for extremely fast Python formatting"
+        entry: ruff format --force-exclude
+        language: python
+        types_or: [python, pyi, jupyter]
+        args: []
+        require_serial: true
+        additional_dependencies: []
+        minimum_pre_commit_version: "2.9.2"

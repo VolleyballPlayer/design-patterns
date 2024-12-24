@@ -231,7 +231,7 @@
             "label": "Run pre-commit hooks manually",
             "type": "shell",
             "command": "pre-commit",
-            "args": [ "run", "--all-files" ],
+            "args": [ "run", "--all-files", "--verbose" ],
             "group": {
                 "kind": "build",
                 "isDefault": false
