@@ -4,7 +4,7 @@ User Guide
 All about coffees
 +++++++++++++++++
 
-Implementation of design patterns will be based on the coffee related examples. Picture below shows different types of 
+Implementation of design patterns will be based on the coffee related examples. Picture below shows different types of
 coffees that could be prepared in one or another pattern.
 
 .. image:: types_of_coffee.png

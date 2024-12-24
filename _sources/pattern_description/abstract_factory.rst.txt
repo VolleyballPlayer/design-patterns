@@ -72,8 +72,8 @@ There’s one more thing left to clarify: if the client is only exposed to the a
 
 **UML of the example implemented in this repository**
 
-.. uml:: 
-   
+.. uml::
+
     @startuml
 
         skinparam classAttributeIconSize 0
@@ -219,7 +219,7 @@ There’s one more thing left to clarify: if the client is only exposed to the a
         class ChocolateForEspresso {
         + get_amount()
         }
-        
+
         abstract class AbstractReceipt {
         + get_receipt()
         }

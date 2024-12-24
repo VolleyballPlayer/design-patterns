@@ -68,8 +68,8 @@ Analogy is the process of mitotic cell division (biology, remember?). After mito
 
 **UML of the example implemented in this repository**
 
-.. uml:: 
-   
+.. uml::
+
     @startuml
 
         skinparam classAttributeIconSize 0
