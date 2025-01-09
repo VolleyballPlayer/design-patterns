@@ -22,7 +22,10 @@ run-behavioral-pattern = "designpatterns.cli.run_behavioral_patterns:cli"
 [project.optional-dependencies]
 dev = ["toml",
     "ruff",
-    "pre-commit"
+    "pre-commit",
+    "sqlalchemy",
+    "sqlalchemy-utils",
+    "pandas",
 ]
 docs = ["Sphinx",
     "sphinx-click",
