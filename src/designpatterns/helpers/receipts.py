@@ -2,6 +2,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from sqlalchemy.engine.base import Engine
+
+from designpatterns.database.chocolateamount import ChocolateAmount
+from designpatterns.database.coffeeamount import CoffeeAmount
+from designpatterns.database.milkamount import MilkAmount
+from designpatterns.database.milkfoamamount import MilkFoamAmount
+from designpatterns.database.receiptname import ReceiptName
 from designpatterns.logger import logger
 
 
@@ -14,6 +21,19 @@ class Receipt:
     milk: str = None
     milk_foam: str = None
     chocolate: str = None
+
+    @classmethod
+    def get_from_db(cls: type[Receipt], name: str, session: Engine) -> dict:
+        """Create Receipt instance from database entries."""
+        id = session.query(ReceiptName.id).filter(ReceiptName.name == name).one()[0]
+
+        cls.name = name
+        cls.coffee = session.query(CoffeeAmount.amount).filter(CoffeeAmount.id == id).one()[0]
+        cls.milk = session.query(MilkAmount.amount).filter(MilkAmount.id == id).one()[0]
+        cls.milk_foam = session.query(MilkFoamAmount.amount).filter(MilkFoamAmount.id == id).one()[0]
+        cls.chocolate = session.query(ChocolateAmount.amount).filter(ChocolateAmount.id == id).one()[0]
+
+        return cls
 
     def get_ingredients(self) -> list[str]:
         """Get all data class fields but name with a value different than None."""
@@ -55,5 +75,5 @@ double_espresso_receipt = Receipt(
 )
 
 triple_espresso_receipt = Receipt(
-    name='double_espresso', coffee='3 shots coffee', milk=None, milk_foam=None, chocolate=None
+    name='triple_espresso', coffee='3 shots coffee', milk=None, milk_foam=None, chocolate=None
 )

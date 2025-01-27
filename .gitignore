@@ -26,3 +26,4 @@ output.log
 
 # Database
 database.ini
+*receipt.db
