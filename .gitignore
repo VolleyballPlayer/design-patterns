@@ -25,5 +25,4 @@ output.log
 .DS_Store
 
 # Database
-database.ini
 *receipt.db
