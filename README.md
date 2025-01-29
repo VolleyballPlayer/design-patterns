@@ -37,6 +37,21 @@ ruff check
 ruff format
 ```
 
+#### PostgreSQL database
+
+If postgreSQL is not installed, install prior installing. E.g. for MacOS:
+``` shell
+brew install postgresql
+pg_ctl -D /opt/homebrew/var/postgresql@14 start
+pg_ctl -D /opt/homebrew/var/postgresql@14 stop
+```
+
+Commmand that can be used to access database while postgres server is running
+``` shell
+psql -U oliverajanic postgres
+psql -U oliverajanic -l
+```
+
 #### Tests
 
 ##### Install required dependencies for testing
@@ -78,6 +93,7 @@ Explanations taken from https://refactoring.guru/design-patterns/
 https://medium.com/@amirm.lavasani/design-patterns-in-python-factory-method-1882d9a06cb4
 
 ##### UML
+
 https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 
 https://plantuml.com/class-diagram
