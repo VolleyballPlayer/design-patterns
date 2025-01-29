@@ -36,7 +36,7 @@ jobs:
       - name: Install package and dependencies for testing
         shell: bash
         run: |
-          pip install .[test]
+          pip install .[test,dev]
 
       - name: Run tests
         shell: bash
