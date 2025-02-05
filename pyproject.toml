@@ -26,6 +26,7 @@ dev = ["toml",
     "sqlalchemy",
     "sqlalchemy-utils",
     "pandas",
+    "tabulate"
 ]
 docs = ["Sphinx",
     "sphinx-click",
