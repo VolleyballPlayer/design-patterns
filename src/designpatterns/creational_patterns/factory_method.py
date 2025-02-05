@@ -66,7 +66,6 @@ class LatteProduct(Product):
 
     def __init__(self) -> None:
         self.contents = []
-        self._receipt = None
 
     def get_receipt(self) -> Receipt:
         """Get latte coffee drink receipt."""
@@ -78,7 +77,6 @@ class CappuccinoProduct(Product):
 
     def __init__(self) -> None:
         self.contents = []
-        self._receipt = None
 
     def get_receipt(self) -> Receipt:
         """Get cappuccino coffee drink receipt."""
@@ -90,7 +88,6 @@ class EspressoProduct(Product):
 
     def __init__(self) -> None:
         self.contents = []
-        self._receipt = None
 
     def get_receipt(self) -> Receipt:
         """Get espresso coffee drink receipt."""
