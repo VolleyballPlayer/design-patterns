@@ -1,4 +1,4 @@
-name: Wheels
+name: SDist
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ on:
     - published
 
 jobs:
-  build_wheels:
-    name: Build wheel
+  build_sdist:
+    name: Build SDist
     runs-on:
       ubuntu-latest
     container:
@@ -27,19 +27,31 @@ jobs:
       - name: Install pipx
         run: pip install pipx
 
-      - name: Build wheel
-        run: pipx run build --wheel
+      - name: Build SDist
+        run: pipx run build --sdist
 
-      - name: Upload wheel
+      - name: Check metadata
+        run: pipx run twine check dist/*
+
+      - name: Upload SDist
         uses: actions/upload-artifact@v4
         with:
-          path: dist/*.whl
+          path: dist/*.tar.gz
+      - name: Delete Artifact
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.actions.deleteArtifact({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            artifact_id: ${{ steps.artifact-upload.outputs.artifact-id }}
+            });
 
   check_distribution_builds:
     if: always()
     runs-on: ubuntu-latest
     name: Check distribution building process
-    needs: [build_wheels]
+    needs: [build_sdist]
     steps:
       - run: exit 1
         if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
