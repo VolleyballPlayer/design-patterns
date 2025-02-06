@@ -6,6 +6,7 @@
 [![Lint](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linter.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/linter.yml)
 [![Documentation](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/gh-pages.yml)
 [![Wheels](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml)
+[![SDist](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 #### Documentation
