@@ -77,6 +77,8 @@ Explanations taken from https://refactoring.guru/design-patterns/
 
 https://medium.com/@amirm.lavasani/design-patterns-in-python-factory-method-1882d9a06cb4
 
+https://medium.com/@amirm.lavasani/design-patterns-in-python-adapter-58eb7cc11474
+
 ##### UML
 https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 
