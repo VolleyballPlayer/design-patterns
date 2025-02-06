@@ -47,3 +47,11 @@ jobs:
           run-creational-pattern --help
           run-structural-pattern --help
           run-behavioral-pattern --help
+
+          run-creational-pattern factory_method --help
+          run-creational-pattern builder --help
+          run-creational-pattern abstract_factory --help
+          run-creational-pattern singleton --help
+          run-creational-pattern prototype --help
+
+          run-structural-pattern adapter --help
