@@ -16,6 +16,12 @@ RUN apt-get -y update; \
     git clone https://github.com/VolleyballPlayer/design-patterns.git && cd design-patterns; \
     python3 -m venv .venv && chmod +x .venv/bin/activate && . .venv/bin/activate && pip install -e .[dev,docs,test]; \
     . ./docs/source/call_sphinx_apidoc.sh; \
-    cd docs; sphinx-build -b html -E source html
+    cd docs; sphinx-build -b html -E source html; \
+    run-creational-pattern factory-method; \
+    run-creational-pattern builder; \
+    run-creational-pattern abstract-factory; \
+    run-creational-pattern prototype; \
+    run-creational-pattern singleton; \
+    run-structural-pattern adapter
 
 ENTRYPOINT [ "/bin/bash" ]

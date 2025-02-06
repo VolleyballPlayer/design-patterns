@@ -8,7 +8,6 @@
 [![Wheels](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml)
 [![SDist](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-[![Container](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/container.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/container.yml)
 
 #### Documentation
 
