@@ -27,6 +27,7 @@ jobs:
       run: |
         docker build -t volleyballplayer/design-patterns:1.0 . --progress=plain --no-cache
         docker run --name design-patterns volleyballplayer/design-patterns:1.0
+        source /design-patterns/.venv/bin/activate
 
     - name: Run patterns
       shell: bash

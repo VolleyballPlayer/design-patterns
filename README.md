@@ -8,6 +8,7 @@
 [![Wheels](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/wheels.yml)
 [![SDist](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/sdist.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Container](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/container.yml/badge.svg)](https://github.com/VolleyballPlayer/design-patterns/actions/workflows/container.yml)
 
 #### Documentation
 
@@ -20,6 +21,9 @@ This project was created to document knowledge on design patterns, create exampl
 <span style="color:lightblue">Builder, factory method and abstract factory patterns</span> are used to prepare different types of coffees: Latte, Cappuccino or Espresso.
 <span style="color:lightblue">Singleton pattern</span> is counting number of prepared coffees in the builder.
 <span style="color:lightblue">Prototype pattern</span> is creating prototype for double espresso coffee using existing espresso coffee class.
+
+<span style="color:lightblue">Adapter pattern</span> is providing same interface for printing in tabular form for 2 different classes.
+
 
 #### Installation
 
