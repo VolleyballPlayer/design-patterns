@@ -82,3 +82,34 @@ The much more elegant solution would be to put the missing functionality into an
 * Clients should use the adapter via the client interface. This will let you change or extend the adapters without affecting the client code.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Adapter <|.. client
+        Target <-- client
+
+        Adapter <|.. Target
+        Adaptee  <-- Adapter
+
+
+        class Target {
+            + print()
+        }
+
+        class Adaptee {
+        + receipt
+        + get_coffee()
+        }
+
+        class Adapter {
+        + adaptee: Adaptee
+        + print()
+        }
+
+        hide client circle
+
+    @enduml
