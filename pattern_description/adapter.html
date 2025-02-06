@@ -156,6 +156,36 @@ The Adapter acts as a wrapper between two objects. It catches calls for one obje
 <li><p>Clients should use the adapter via the client interface. This will let you change or extend the adapters without affecting the client code.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-f9d5824091ad972900c29b705eeb779817976b53.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Adapter &lt;|.. client
+    Target &lt;-- client
+
+    Adapter &lt;|.. Target
+    Adaptee  &lt;-- Adapter
+
+
+    class Target {
+        + print()
+    }
+
+    class Adaptee {
+    + receipt
+    + get_coffee()
+    }
+
+    class Adapter {
+    + adaptee: Adaptee
+    + print()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
