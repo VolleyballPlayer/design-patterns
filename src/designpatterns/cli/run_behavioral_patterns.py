@@ -1,5 +1,13 @@
 import click
 
+from designpatterns.behavioral_patterns.strategy import (
+    Context,
+    StrategyCappuccino,
+    StrategyDoubleEspresso,
+    StrategyEspresso,
+    StrategyLatte,
+    StrategyTripleEspresso,
+)
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
 
@@ -11,12 +19,27 @@ def cli() -> None:
 
 
 @cli.command()
-def command() -> None:
-    """Run command example.
+def strategy() -> None:
+    """Run strategy example.
 
-    This function calls command module to run an example of behavioral design pattern called command.
+    This function calls strategy module to run an example of behavioral design pattern called strategy.
     """
-    logger.info('This is command pattern')
+    logger.info('Starting strategy pattern run')
+
+    context = Context(StrategyLatte())
+    context.prepare_coffee()
+
+    context.strategy = StrategyCappuccino()
+    context.prepare_coffee()
+
+    context.strategy = StrategyEspresso()
+    context.prepare_coffee()
+
+    context.strategy = StrategyDoubleEspresso()
+    context.prepare_coffee()
+
+    context.strategy = StrategyTripleEspresso()
+    context.prepare_coffee()
 
 
 if __name__ == '__main__':
