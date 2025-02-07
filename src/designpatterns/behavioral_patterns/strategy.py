@@ -2,14 +2,15 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
+from tabulate import tabulate
+
 from designpatterns.helpers.receipts import (
     Receipt,
     cappuccino_receipt,
-    double_espresso_receipt,
     espresso_receipt,
     latte_receipt,
-    triple_espresso_receipt,
 )
+from designpatterns.logger import logger
 
 
 class Context:
@@ -60,7 +61,13 @@ class StrategyLatte(Strategy):
 
     def make_coffee(self) -> None:
         """Prepare latte coffee drink."""
-        Receipt.get_coffee(latte_receipt)
+        logger.info('Preparing latte:')
+        print(
+            tabulate(
+                [[latte_receipt.name, latte_receipt.coffee, latte_receipt.milk, latte_receipt.milk_foam]],
+                tablefmt='psql',
+            )
+        )
 
 
 class StrategyCappuccino(Strategy):
@@ -68,7 +75,10 @@ class StrategyCappuccino(Strategy):
 
     def make_coffee(self) -> None:
         """Prepare cappuccino coffee drink."""
-        Receipt.get_coffee(cappuccino_receipt)
+        logger.info(
+            f'Your {cappuccino_receipt.name} will be prepared using following ingredients: \n\
+{cappuccino_receipt.coffee}\n{cappuccino_receipt.milk}\n{cappuccino_receipt.milk_foam}\n{cappuccino_receipt.chocolate}'
+        )
 
 
 class StrategyEspresso(Strategy):
@@ -77,19 +87,3 @@ class StrategyEspresso(Strategy):
     def make_coffee(self) -> None:
         """Prepare espresso coffee drink."""
         Receipt.get_coffee(espresso_receipt)
-
-
-class StrategyDoubleEspresso(Strategy):
-    """Get prepared double espresso coffee drink."""
-
-    def make_coffee(self) -> None:
-        """Prepare double espresso coffee drink."""
-        Receipt.get_coffee(double_espresso_receipt)
-
-
-class StrategyTripleEspresso(Strategy):
-    """Get prepared triple espresso coffee drink."""
-
-    def make_coffee(self) -> None:
-        """Prepare triple espresso coffee drink."""
-        Receipt.get_coffee(triple_espresso_receipt)

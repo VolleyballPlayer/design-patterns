@@ -3,10 +3,8 @@ import click
 from designpatterns.behavioral_patterns.strategy import (
     Context,
     StrategyCappuccino,
-    StrategyDoubleEspresso,
     StrategyEspresso,
     StrategyLatte,
-    StrategyTripleEspresso,
 )
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
@@ -33,12 +31,6 @@ def strategy() -> None:
     context.prepare_coffee()
 
     context.strategy = StrategyEspresso()
-    context.prepare_coffee()
-
-    context.strategy = StrategyDoubleEspresso()
-    context.prepare_coffee()
-
-    context.strategy = StrategyTripleEspresso()
     context.prepare_coffee()
 
 
