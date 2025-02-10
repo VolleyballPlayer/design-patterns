@@ -1,5 +1,10 @@
 import click
 
+from designpatterns.behavioral_patterns.observer import (
+    DiscountSubject,
+    ObserverWeekendDiscounts,
+    ObserverWorkDayDiscounts,
+)
 from designpatterns.behavioral_patterns.strategy import (
     Context,
     StrategyCappuccino,
@@ -32,6 +37,31 @@ def strategy() -> None:
 
     context.strategy = StrategyEspresso()
     context.prepare_coffee()
+
+
+@cli.command()
+def observer() -> None:
+    """Run observer example.
+
+    This function calls observer module to run an example of behavioral design pattern called observer.
+    """
+    logger.info('Starting observer pattern run')
+
+    subject = DiscountSubject()
+
+    observer_a = ObserverWorkDayDiscounts()
+    subject.attach(observer_a)
+    observer_b = ObserverWorkDayDiscounts()
+    subject.attach(observer_b)
+
+    observer_c = ObserverWeekendDiscounts()
+    subject.attach(observer_c)
+
+    subject.send_discounts()
+
+    subject.detach(observer_a)
+
+    subject.send_discounts()
 
 
 if __name__ == '__main__':
