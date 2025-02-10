@@ -92,8 +92,185 @@
 <section id="submodules">
 <h2><span class="section-number">3.1.1.1.1.1. </span>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
+<section id="module-designpatterns.behavioral_patterns.observer">
+<span id="designpatterns-behavioral-patterns-observer-module"></span><h2><span class="section-number">3.1.1.1.1.2. </span>designpatterns.behavioral_patterns.observer module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.observer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">DiscountSubject</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Subject" title="designpatterns.behavioral_patterns.observer.Subject"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subject</span></code></a></p>
+<p>The Subject owns some important state and notifies observers when the state changes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject.attach">
+<span class="sig-name descname"><span class="pre">attach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject.attach" title="Link to this definition"></a></dt>
+<dd><p>Attach observers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>observer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject.detach">
+<span class="sig-name descname"><span class="pre">detach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject.detach" title="Link to this definition"></a></dt>
+<dd><p>Detach observers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>observer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject.notify">
+<span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject.notify" title="Link to this definition"></a></dt>
+<dd><p>Trigger an update in each subscriber.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject.send_discounts">
+<span class="sig-name descname"><span class="pre">send_discounts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject.send_discounts" title="Link to this definition"></a></dt>
+<dd><p>Usually, the subscription logic is only a fraction of what a Subject can really do.</p>
+<p>Subjects commonly hold some important business logic, that triggers a notification method whenever something
+important is about to happen (or after it).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountSubject.state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountSubject.state" title="Link to this definition"></a></dt>
+<dd><p>Get state property.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Observer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">Observer</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Observer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Observer interface declares the update method, used by subjects.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Observer.update">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Observer.update" title="Link to this definition"></a></dt>
+<dd><p>Receive update from subject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>subject</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Subject" title="designpatterns.behavioral_patterns.observer.Subject"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subject</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">ObserverWeekendDiscounts</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></p>
+<p>Update subscribed customers on weekend discount.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts.update" title="Link to this definition"></a></dt>
+<dd><p>Inform observer about discounts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>subject</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Subject" title="designpatterns.behavioral_patterns.observer.Subject"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subject</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">ObserverWorkDayDiscounts</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></p>
+<p>Update subscribed customer on work day discounts.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts.update" title="Link to this definition"></a></dt>
+<dd><p>Inform observer about discounts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>subject</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Subject" title="designpatterns.behavioral_patterns.observer.Subject"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subject</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Subject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">Subject</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Subject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Subject interface declares a set of methods for managing subscribers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Subject.attach">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Subject.attach" title="Link to this definition"></a></dt>
+<dd><p>Attach an observer to the subject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>observer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Subject.detach">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">detach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Subject.detach" title="Link to this definition"></a></dt>
+<dd><p>Detach an observer from the subject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>observer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.observer.Observer" title="designpatterns.behavioral_patterns.observer.Observer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observer</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.Subject.notify">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.Subject.notify" title="Link to this definition"></a></dt>
+<dd><p>Notify all observers about an event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.behavioral_patterns.strategy">
-<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.2. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.3. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.strategy.Context">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.strategy.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.strategy.Context" title="Link to this definition"></a></dt>
@@ -201,7 +378,7 @@ It should work with all strategies via the Strategy interface.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.3. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.4. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
