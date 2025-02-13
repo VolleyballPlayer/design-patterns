@@ -95,3 +95,52 @@ But there’s another option. Upon receiving a notification, the subscriber can 
 * The client must create all necessary subscribers and register them with proper publishers.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        ObserverWorkDayDiscounts <.. client
+        ObserverWeekendDiscounts <.. client
+
+        Publisher <-- client
+
+        Publisher <|.. DiscountPublisher
+
+        Observer <|.. ObserverWorkDayDiscounts
+        Observer <|.. ObserverWeekendDiscounts
+
+        Observer o-- Publisher
+
+        class Observer {
+        + update()
+        }
+
+        class ObserverWorkDayDiscounts {
+        + update()
+        }
+
+        class ObserverWeekendDiscounts {
+        + update()
+        }
+
+        class Publisher {
+        + attach()
+        + detach()
+        + notify()
+        }
+
+        class DiscountPublisher {
+        + state
+        - observers
+        + attach()
+        + detach()
+        + notify()
+        + send_discounts()
+        }
+
+        hide client circle
+
+    @enduml
