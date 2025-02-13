@@ -23,6 +23,9 @@ This project was created to document knowledge on design patterns, create exampl
 
 <span style="color:lightblue">Adapter pattern</span> is providing same interface for printing in tabular form for 2 different classes.
 
+<span style="color:lightblue">Strategy pattern</span> is preparing coffees using same method for
+different ways of preparations per coffee type.
+
 
 #### Installation
 
