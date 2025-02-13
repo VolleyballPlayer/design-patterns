@@ -97,3 +97,46 @@ The Strategy pattern lets you do away with such a conditional by extracting all 
 * Clients of the context must associate it with a suitable strategy that matches the way they expect the context to perform its primary job.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        StrategyLatte <.. client
+        StrategyCappuccino <.. client
+        StrategyEspresso <.. client
+
+        Context <-- client
+
+        Strategy <|.. StrategyLatte
+        Strategy <|.. StrategyCappuccino
+        Strategy <|.. StrategyEspresso
+
+        Strategy o-- Context
+
+        class Strategy {
+        + make_coffee()
+        }
+
+        class StrategyLatte {
+        + make_coffee()
+        }
+
+        class StrategyCappuccino {
+        + make_coffee()
+        }
+
+        class StrategyEspresso {
+        + make_coffee()
+        }
+
+        class Context {
+        + strategy
+        + prepare_coffee()
+        }
+
+        hide client circle
+
+    @enduml

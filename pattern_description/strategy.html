@@ -170,6 +170,48 @@
 <li><p>Clients of the context must associate it with a suitable strategy that matches the way they expect the context to perform its primary job.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-30c2e0b96fee277bc6e6d7b3f0db65304e4fed96.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    StrategyLatte &lt;.. client
+    StrategyCappuccino &lt;.. client
+    StrategyEspresso &lt;.. client
+
+    Context &lt;-- client
+
+    Strategy &lt;|.. StrategyLatte
+    Strategy &lt;|.. StrategyCappuccino
+    Strategy &lt;|.. StrategyEspresso
+
+    Strategy o-- Context
+
+    class Strategy {
+    + make_coffee()
+    }
+
+    class StrategyLatte {
+    + make_coffee()
+    }
+
+    class StrategyCappuccino {
+    + make_coffee()
+    }
+
+    class StrategyEspresso {
+    + make_coffee()
+    }
+
+    class Context {
+    + strategy
+    + prepare_coffee()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
