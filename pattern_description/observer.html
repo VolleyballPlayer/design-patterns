@@ -168,6 +168,54 @@
 <li><p>The client must create all necessary subscribers and register them with proper publishers.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-905a01d745cd08f6349473f5e9371db8d6f84725.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    ObserverWorkDayDiscounts &lt;.. client
+    ObserverWeekendDiscounts &lt;.. client
+
+    Publisher &lt;-- client
+
+    Publisher &lt;|.. DiscountPublisher
+
+    Observer &lt;|.. ObserverWorkDayDiscounts
+    Observer &lt;|.. ObserverWeekendDiscounts
+
+    Observer o-- Publisher
+
+    class Observer {
+    + update()
+    }
+
+    class ObserverWorkDayDiscounts {
+    + update()
+    }
+
+    class ObserverWeekendDiscounts {
+    + update()
+    }
+
+    class Publisher {
+    + attach()
+    + detach()
+    + notify()
+    }
+
+    class DiscountPublisher {
+    + state
+    - observers
+    + attach()
+    + detach()
+    + notify()
+    + send_discounts()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
