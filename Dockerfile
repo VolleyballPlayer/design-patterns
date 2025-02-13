@@ -22,6 +22,7 @@ RUN apt-get -y update; \
     run-creational-pattern abstract-factory; \
     run-creational-pattern prototype; \
     run-creational-pattern singleton; \
-    run-structural-pattern adapter
+    run-structural-pattern adapter; \
+    run-behavioral-pattern strategy
 
 ENTRYPOINT [ "/bin/bash" ]
