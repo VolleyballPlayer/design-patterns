@@ -4,7 +4,7 @@ import pytest
 import pytz
 
 from designpatterns.behavioral_patterns.observer import (
-    DiscountSubject,
+    DiscountPublisher,
     ObserverWeekendDiscounts,
     ObserverWorkDayDiscounts,
 )
@@ -12,7 +12,7 @@ from designpatterns.behavioral_patterns.observer import (
 
 class TestObserver:
     def test__run_observer__get_notifications_on_workdays(self, caplog: pytest.LogCaptureFixture) -> None:
-        subject = DiscountSubject()
+        subject = DiscountPublisher()
         observer_workday = ObserverWorkDayDiscounts()
         subject.attach(observer_workday)
         observer_weekend = ObserverWeekendDiscounts()
@@ -27,7 +27,7 @@ class TestObserver:
             assert r'This weekend cappuccino coffee has 30% discount' in caplog.text
 
     def test__detach_observer__info_no_observers(self, caplog: pytest.LogCaptureFixture) -> None:
-        subject = DiscountSubject()
+        subject = DiscountPublisher()
         observer = ObserverWorkDayDiscounts()
         subject.attach(observer)
         subject.detach(observer)

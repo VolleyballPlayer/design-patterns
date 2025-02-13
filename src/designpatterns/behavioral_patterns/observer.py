@@ -8,27 +8,27 @@ import pytz
 from designpatterns.logger import logger
 
 
-class Subject(ABC):
-    """The Subject interface declares a set of methods for managing subscribers."""
+class Publisher(ABC):
+    """The Publisher interface declares a set of methods for managing subscribers."""
 
     @abstractmethod
     def attach(self, observer: Observer) -> None:
-        """Attach an observer to the subject."""
+        """Attach an observer to the publisher."""
 
     @abstractmethod
     def detach(self, observer: Observer) -> None:
-        """Detach an observer from the subject."""
+        """Detach an observer from the publisher."""
 
     @abstractmethod
     def notify(self) -> None:
         """Notify all observers about an event."""
 
 
-class DiscountSubject(Subject):
-    """The Subject owns some important state and notifies observers when the state changes."""
+class DiscountPublisher(Publisher):
+    """The Publisher owns some important state and notifies observers when the state changes."""
 
     _state: str = None
-    """For the sake of simplicity, the Subject's state, essential to all subscribers, is stored in this variable."""
+    """For the sake of simplicity, the Publisher's state, essential to all subscribers, is stored in this variable."""
 
     _observers: list[Observer] = []
     """List of subscribers. In real life, the list of subscribers can be stored more comprehensively
@@ -42,7 +42,7 @@ class DiscountSubject(Subject):
 
     def attach(self, observer: Observer) -> None:
         """Attach observers."""
-        logger.info('Subject: Attached an observer.')
+        logger.info('Publisher: Attached an observer.')
         self._observers.append(observer)
 
     def detach(self, observer: Observer) -> None:
@@ -53,7 +53,7 @@ class DiscountSubject(Subject):
 
     def notify(self) -> None:
         """Trigger an update in each subscriber."""
-        logger.info('Subject: Notifying observers...')
+        logger.info('Publisher: Notifying observers...')
         if self._observers:
             for observer in self._observers:
                 observer.update(self)
@@ -61,42 +61,42 @@ class DiscountSubject(Subject):
             logger.info('No subscribed observers.')
 
     def send_discounts(self) -> None:
-        """Usually, the subscription logic is only a fraction of what a Subject can really do.
+        """Usually, the subscription logic is only a fraction of what a Publisher can really do.
 
-        Subjects commonly hold some important business logic, that triggers a notification method whenever something
+        Publishers commonly hold some important business logic, that triggers a notification method whenever something
         important is about to happen (or after it).
         """
-        logger.info("Subject: I'm checking available discounts.")
+        logger.info("Publisher: I'm checking available discounts.")
         week_day_number = datetime.now(tz=pytz.timezone('Europe/Vienna')).weekday()
         self._state = 'workday' if week_day_number < 5 else 'weekend'
-        logger.info(f'Subject: My state has just changed to: {self._state}')
+        logger.info(f'Publisher: My state has just changed to: {self._state}')
         self.notify()
 
 
 class Observer(ABC):
-    """The Observer interface declares the update method, used by subjects."""
+    """The Observer interface declares the update method, used by publishers."""
 
     @abstractmethod
-    def update(self, subject: Subject) -> None:
-        """Receive update from subject."""
+    def update(self, publisher: Publisher) -> None:
+        """Receive update from publisher."""
 
 
-"""Concrete Observers react to the updates issued by the Subject they had been attached to."""
+"""Concrete Observers react to the updates issued by the Publisher they had been attached to."""
 
 
 class ObserverWorkDayDiscounts(Observer):
     """Update subscribed customer on work day discounts."""
 
-    def update(self, subject: Subject) -> None:
+    def update(self, publisher: Publisher) -> None:
         """Inform observer about discounts."""
-        if subject.state == 'workday':
+        if publisher.state == 'workday':
             logger.info(r'This week latte coffee has 50% discount')
 
 
 class ObserverWeekendDiscounts(Observer):
     """Update subscribed customers on weekend discount."""
 
-    def update(self, subject: Subject) -> None:
+    def update(self, publisher: Publisher) -> None:
         """Inform observer about discounts."""
-        if subject.state == 'weekend':
+        if publisher.state == 'weekend':
             logger.info(r'This weekend cappuccino coffee has 30% discount')

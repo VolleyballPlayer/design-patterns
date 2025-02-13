@@ -1,7 +1,7 @@
 import click
 
 from designpatterns.behavioral_patterns.observer import (
-    DiscountSubject,
+    DiscountPublisher,
     ObserverWeekendDiscounts,
     ObserverWorkDayDiscounts,
 )
@@ -47,7 +47,7 @@ def observer() -> None:
     """
     logger.info('Starting observer pattern run')
 
-    subject = DiscountSubject()
+    subject = DiscountPublisher()
 
     observer_a = ObserverWorkDayDiscounts()
     subject.attach(observer_a)
