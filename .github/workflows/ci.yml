@@ -57,3 +57,4 @@ jobs:
           run-structural-pattern adapter --help
 
           run-behavioral-pattern strategy --help
+          run-behavioral-pattern observer --help

@@ -54,8 +54,11 @@ class DiscountSubject(Subject):
     def notify(self) -> None:
         """Trigger an update in each subscriber."""
         logger.info('Subject: Notifying observers...')
-        for observer in self._observers:
-            observer.update(self)
+        if self._observers:
+            for observer in self._observers:
+                observer.update(self)
+        else:
+            logger.info('No subscribed observers.')
 
     def send_discounts(self) -> None:
         """Usually, the subscription logic is only a fraction of what a Subject can really do.
