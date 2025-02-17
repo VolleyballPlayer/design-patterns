@@ -24,6 +24,7 @@ RUN apt-get -y update; \
     run-creational-pattern singleton; \
     run-structural-pattern adapter; \
     run-behavioral-pattern strategy; \
-    run-behavioral-pattern observer
+    run-behavioral-pattern observer; \
+    run-behavioral-pattern command
 
 ENTRYPOINT [ "/bin/bash" ]
