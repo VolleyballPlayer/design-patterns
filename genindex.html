@@ -78,6 +78,7 @@
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
@@ -192,10 +193,10 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype.clone">clone() (designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CoffeeBuilder">CoffeeBuilder (class in designpatterns.creational_patterns.builder)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.CoffeeCreator">CoffeeCreator (class in designpatterns.creational_patterns.factory_method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino">CoffeeForCappuccino (class in designpatterns.creational_patterns.abstract_factory)</a>
@@ -203,6 +204,8 @@
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.CoffeeForEspresso">CoffeeForEspresso (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.CoffeeForLatte">CoffeeForLatte (class in designpatterns.creational_patterns.abstract_factory)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Command">Command (class in designpatterns.behavioral_patterns.command)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.Context">Context (class in designpatterns.behavioral_patterns.strategy)</a>
 </li>
@@ -240,6 +243,13 @@
 
       <ul>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns">module</a>
+</li>
+      </ul></li>
+      <li>
+    designpatterns.behavioral_patterns.command
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.command">module</a>
 </li>
       </ul></li>
       <li>
@@ -291,6 +301,8 @@
         <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#module-designpatterns.creational_patterns.prototype">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     designpatterns.creational_patterns.singleton
 
@@ -298,8 +310,6 @@
         <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#module-designpatterns.creational_patterns.singleton">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     designpatterns.helpers
 
@@ -371,13 +381,23 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.EspressoBuilder">EspressoBuilder (class in designpatterns.creational_patterns.builder)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.EspressoCreator">EspressoCreator (class in designpatterns.creational_patterns.factory_method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.EspressoFactory">EspressoFactory (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.EspressoProduct">EspressoProduct (class in designpatterns.creational_patterns.factory_method)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Command.execute">execute() (designpatterns.behavioral_patterns.command.Command method)</a>
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand.execute">(designpatterns.behavioral_patterns.command.OrderCommand method)</a>
+</li>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.PrepareCoffeeCommand.execute">(designpatterns.behavioral_patterns.command.PrepareCoffeeCommand method)</a>
+</li>
+      </ul></li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker.execute_commands_in_order">execute_commands_in_order() (designpatterns.behavioral_patterns.command.Invoker method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -504,6 +524,18 @@
   </ul></td>
 </tr></table>
 
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver.inform_buyer">inform_buyer() (designpatterns.behavioral_patterns.command.Receiver method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker">Invoker (class in designpatterns.behavioral_patterns.command)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -563,6 +595,8 @@
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns">designpatterns.behavioral_patterns</a>
 </li>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.command">designpatterns.behavioral_patterns.command</a>
+</li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.observer">designpatterns.behavioral_patterns.observer</a>
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.strategy">designpatterns.behavioral_patterns.strategy</a>
@@ -614,11 +648,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.Observer">Observer (class in designpatterns.behavioral_patterns.observer)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts">ObserverWeekendDiscounts (class in designpatterns.behavioral_patterns.observer)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts">ObserverWorkDayDiscounts (class in designpatterns.behavioral_patterns.observer)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand">OrderCommand (class in designpatterns.behavioral_patterns.command)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -630,10 +666,16 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.CoffeeCreator.prepare">prepare() (designpatterns.creational_patterns.factory_method.CoffeeCreator method)</a>
 </li>
-      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.Context.prepare_coffee">prepare_coffee() (designpatterns.behavioral_patterns.strategy.Context method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver.prepare_coffee">prepare_coffee() (designpatterns.behavioral_patterns.command.Receiver method)</a>
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.Context.prepare_coffee">(designpatterns.behavioral_patterns.strategy.Context method)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.PrepareCoffeeCommand">PrepareCoffeeCommand (class in designpatterns.behavioral_patterns.command)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.adapter.Adapter.print">print() (designpatterns.structural_patterns.adapter.Adapter method)</a>
 
       <ul>
@@ -672,6 +714,8 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.ReceiptForLatte">ReceiptForLatte (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver">Receiver (class in designpatterns.behavioral_patterns.command)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CappuccinoBuilder.reset">reset() (designpatterns.creational_patterns.builder.CappuccinoBuilder method)</a>
 
       <ul>
@@ -706,9 +750,13 @@
         <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.LatteBuilder.select_coffee_amount">(designpatterns.creational_patterns.builder.LatteBuilder method)</a>
 </li>
       </ul></li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.DiscountPublisher.send_discounts">send_discounts() (designpatterns.behavioral_patterns.observer.DiscountPublisher method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.DiscountPublisher.send_discounts">send_discounts() (designpatterns.behavioral_patterns.observer.DiscountPublisher method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker.set_on_finish">set_on_finish() (designpatterns.behavioral_patterns.command.Invoker method)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker.set_on_start">set_on_start() (designpatterns.behavioral_patterns.command.Invoker method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.singleton.SingletonMeta">SingletonMeta (class in designpatterns.creational_patterns.singleton)</a>
 </li>
