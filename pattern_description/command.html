@@ -183,14 +183,56 @@ As a result, commands become a convenient middle layer that reduces coupling bet
 <li><p>Change the senders so they execute the command instead of sending a request to the receiver directly.</p></li>
 <li><p>The client should initialize objects in the following order:</p></li>
 </ul>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Create receivers.</p></li>
 <li><p>Create commands, and associate them with receivers if needed.</p></li>
 <li><p>Create senders, and associate them with specific commands.</p></li>
 </ul>
-</div></blockquote>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-6c0e961a24407e14450460ba4a44121ce2bde5c3.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    OrderCommand &lt;.. client
+    PrepareCoffeeCommand &lt;.. client
+
+    Receiver &lt;-- client
+
+    Command &lt;|.. OrderCommand
+    Command &lt;|.. PrepareCoffeeCommand
+
+    Command &lt;-- Invoker
+
+    class Command {
+    + execute()
+    }
+
+    class OrderCommand {
+    + execute()
+    }
+
+    class PrepareCoffeeCommand {
+    + execute()
+    }
+
+    class Invoker {
+    - on_start
+    - on_finish
+    + set_on_start()
+    + set_on_finish()
+    + execute_commands_in_order()
+    }
+
+    class Receiver {
+    + prepare_coffee()
+    + inform_buyer()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
