@@ -26,6 +26,7 @@ This project was created to document knowledge on design patterns, create exampl
 <span style="color:lightblue">Strategy pattern</span> is preparing coffees using same method for
 different ways of preparations per coffee type.
 <span style="color:lightblue">Observer pattern</span> is informing subscribed customer about workday or weekend discounts.
+<span style="color:lightblue">Command pattern</span> is executing steps like receiving order, preparing coffee etc.
 
 
 #### Installation
