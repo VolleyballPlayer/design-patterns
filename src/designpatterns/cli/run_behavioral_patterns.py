@@ -1,5 +1,6 @@
 import click
 
+from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
 from designpatterns.behavioral_patterns.observer import (
     DiscountPublisher,
     ObserverWeekendDiscounts,
@@ -11,6 +12,7 @@ from designpatterns.behavioral_patterns.strategy import (
     StrategyEspresso,
     StrategyLatte,
 )
+from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
 
@@ -62,6 +64,21 @@ def observer() -> None:
     subject.detach(observer_a)
 
     subject.send_discounts()
+
+
+@cli.command()
+def command() -> None:
+    """Run command example.
+
+    This function calls command module to run an example of behavioral design pattern called command.
+    """
+    logger.info('Starting command pattern run')
+
+    invoker = Invoker()
+    invoker.set_on_start(OrderCommand(latte_receipt))
+    receiver = Receiver()
+    invoker.set_on_finish(PrepareCoffeeCommand(receiver, latte_receipt, 'John Smith'))
+    invoker.execute_commands_in_order()
 
 
 if __name__ == '__main__':
