@@ -101,8 +101,53 @@ However, there’s another approach, where the request itself is a Command objec
 
 * The client should initialize objects in the following order:
 
- - Create receivers.
- - Create commands, and associate them with receivers if needed.
- - Create senders, and associate them with specific commands.
+- Create receivers.
+- Create commands, and associate them with receivers if needed.
+- Create senders, and associate them with specific commands.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        OrderCommand <.. client
+        PrepareCoffeeCommand <.. client
+
+        Receiver <-- client
+
+        Command <|.. OrderCommand
+        Command <|.. PrepareCoffeeCommand
+
+        Command <-- Invoker
+
+        class Command {
+        + execute()
+        }
+
+        class OrderCommand {
+        + execute()
+        }
+
+        class PrepareCoffeeCommand {
+        + execute()
+        }
+
+        class Invoker {
+        - on_start
+        - on_finish
+        + set_on_start()
+        + set_on_finish()
+        + execute_commands_in_order()
+        }
+
+        class Receiver {
+        + prepare_coffee()
+        + inform_buyer()
+        }
+
+        hide client circle
+
+    @enduml

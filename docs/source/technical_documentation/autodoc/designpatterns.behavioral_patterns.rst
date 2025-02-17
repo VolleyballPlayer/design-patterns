@@ -4,6 +4,14 @@ designpatterns.behavioral\_patterns package
 Submodules
 ----------
 
+designpatterns.behavioral\_patterns.command module
+--------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.command
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.observer module
 ---------------------------------------------------
 
