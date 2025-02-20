@@ -100,6 +100,10 @@
   <section id="mediator">
 <h1><span class="section-number">1.16. </span>Mediator<a class="headerlink" href="#mediator" title="Link to this heading"></a></h1>
 <p>Mediator is a behavioral design pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.</p>
+<p>Components talk to each other but are independent.
+* Components are classes containing business logic, linked to a mediator for reusability without knowing its specific class.
+* Mediator Interface declares communication methods, allowing components to interact without directly coupling.
+* Concrete Mediators manage relationships between components, holding references to and coordinating their actions without their explicit awareness.</p>
 <p><strong>:( Problem</strong></p>
 <p>Say you have a dialog for creating and editing customer profiles. It consists of various form controls such as text fields, checkboxes, buttons, etc.</p>
 <p>Some of the form elements may interact with others. For instance, selecting the “I have a dog” checkbox may reveal a hidden text field for entering the dog’s name. Another example is the submit button that has to validate values of all fields before saving the data.</p>
@@ -173,6 +177,58 @@
 <li><p>Change the components’ code so that they call the mediator’s notification method instead of methods on other components. Extract the code that involves calling other components into the mediator class. Execute this code whenever the mediator receives notifications from that component.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-3c0e7ef304045f27d75ad1a4b47f33675e369eb6.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+
+    Mediator &lt;|.. ConcreteMediator
+
+    Mediator &lt;-- Order
+    Mediator &lt;-- Coffee
+    Mediator &lt;-- Payment
+
+    ConcreteMediator *-- Order
+    ConcreteMediator *-- Coffee
+    ConcreteMediator *-- Payment
+
+    BaseComponent &lt;|.. Order
+    BaseComponent &lt;|.. Coffee
+    BaseComponent &lt;|.. Payment
+
+    class Mediator {
+    + notify()
+    }
+
+    class ConcreteMediator {
+    - components
+    + status
+    + add_components
+    + notify()
+    }
+
+    class BaseComponent {
+    - mediator
+    }
+
+    class Coffee {
+    + prepare()
+    + inform()
+    }
+
+    class Order {
+    + process()
+    + inform()
+    }
+
+    class Payment {
+    + receive()
+    + inform()
+    }
+
+&#64;enduml"/>
+</p>
 </section>
 
 

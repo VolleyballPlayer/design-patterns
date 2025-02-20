@@ -3,6 +3,11 @@ Mediator
 
 Mediator is a behavioral design pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
 
+Components talk to each other but are independent.
+* Components are classes containing business logic, linked to a mediator for reusability without knowing its specific class.
+* Mediator Interface declares communication methods, allowing components to interact without directly coupling.
+* Concrete Mediators manage relationships between components, holding references to and coordinating their actions without their explicit awareness.
+
 **:( Problem**
 
 Say you have a dialog for creating and editing customer profiles. It consists of various form controls such as text fields, checkboxes, buttons, etc.
@@ -93,3 +98,56 @@ This interface is crucial when you want to reuse component classes in different 
 * Change the components’ code so that they call the mediator’s notification method instead of methods on other components. Extract the code that involves calling other components into the mediator class. Execute this code whenever the mediator receives notifications from that component.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+
+        Mediator <|.. ConcreteMediator
+
+        Mediator <-- Order
+        Mediator <-- Coffee
+        Mediator <-- Payment
+
+        ConcreteMediator *-- Order
+        ConcreteMediator *-- Coffee
+        ConcreteMediator *-- Payment
+
+        BaseComponent <|.. Order
+        BaseComponent <|.. Coffee
+        BaseComponent <|.. Payment
+
+        class Mediator {
+        + notify()
+        }
+
+        class ConcreteMediator {
+        - components
+        + status
+        + add_components
+        + notify()
+        }
+
+        class BaseComponent {
+        - mediator
+        }
+
+        class Coffee {
+        + prepare()
+        + inform()
+        }
+
+        class Order {
+        + process()
+        + inform()
+        }
+
+        class Payment {
+        + receive()
+        + inform()
+        }
+
+    @enduml
