@@ -1,6 +1,7 @@
 import click
 
 from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
+from designpatterns.behavioral_patterns.mediator import Coffee, ConcreteMediator, Order, Payment
 from designpatterns.behavioral_patterns.observer import (
     DiscountPublisher,
     ObserverWeekendDiscounts,
@@ -79,6 +80,29 @@ def command() -> None:
     receiver = Receiver()
     invoker.set_on_finish(PrepareCoffeeCommand(receiver, latte_receipt, 'John Smith'))
     invoker.execute_commands_in_order()
+
+
+@cli.command()
+def mediator() -> None:
+    """Run mediator example.
+
+    This function calls mediator module to run an example of behavioral design pattern called mediator.
+    """
+    logger.info('Starting mediator pattern run')
+
+    mediator = ConcreteMediator()
+
+    order = Order(mediator)
+    coffee = Coffee(mediator)
+    payment = Payment(mediator)
+
+    mediator.add_component(order)
+    mediator.add_component(coffee)
+    mediator.add_component(payment)
+
+    order.process(coffee=latte_receipt.name)
+    coffee.prepare(coffee=latte_receipt.name)
+    payment.receive(coffee=latte_receipt.name)
 
 
 if __name__ == '__main__':

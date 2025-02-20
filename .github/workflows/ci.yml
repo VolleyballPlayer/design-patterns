@@ -58,3 +58,5 @@ jobs:
 
           run-behavioral-pattern strategy --help
           run-behavioral-pattern observer --help
+          run-behavioral-pattern command --help
+          run-behavioral-pattern mediator --help
