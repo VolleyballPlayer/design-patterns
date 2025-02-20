@@ -125,6 +125,8 @@
         <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CoffeeBuilder.add_chocolate">(designpatterns.creational_patterns.builder.CoffeeBuilder method)</a>
 </li>
       </ul></li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.ConcreteMediator.add_component">add_component() (designpatterns.behavioral_patterns.mediator.ConcreteMediator method)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CappuccinoBuilder.add_milk">add_milk() (designpatterns.creational_patterns.builder.CappuccinoBuilder method)</a>
 
       <ul>
@@ -153,12 +155,14 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.build_cappuccino">build_cappuccino() (designpatterns.creational_patterns.builder.Director method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.BaseComponent">BaseComponent (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
-      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.build_espresso">build_espresso() (designpatterns.creational_patterns.builder.Director method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.build_cappuccino">build_cappuccino() (designpatterns.creational_patterns.builder.Director method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.build_espresso">build_espresso() (designpatterns.creational_patterns.builder.Director method)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.build_latte">build_latte() (designpatterns.creational_patterns.builder.Director method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.Director.builder">builder (designpatterns.creational_patterns.builder.Director property)</a>
@@ -193,6 +197,8 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype.clone">clone() (designpatterns.creational_patterns.prototype.DoubleEspressoBuilderPrototype method)</a>
 </li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Coffee">Coffee (class in designpatterns.behavioral_patterns.mediator)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CoffeeBuilder">CoffeeBuilder (class in designpatterns.creational_patterns.builder)</a>
 </li>
   </ul></td>
@@ -206,6 +212,8 @@
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.CoffeeForLatte">CoffeeForLatte (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Command">Command (class in designpatterns.behavioral_patterns.command)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.ConcreteMediator">ConcreteMediator (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.Context">Context (class in designpatterns.behavioral_patterns.strategy)</a>
 </li>
@@ -250,6 +258,13 @@
 
       <ul>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.command">module</a>
+</li>
+      </ul></li>
+      <li>
+    designpatterns.behavioral_patterns.mediator
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.mediator">module</a>
 </li>
       </ul></li>
       <li>
@@ -527,10 +542,18 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver.inform_buyer">inform_buyer() (designpatterns.behavioral_patterns.command.Receiver method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Coffee.inform">inform() (designpatterns.behavioral_patterns.mediator.Coffee method)</a>
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Order.inform">(designpatterns.behavioral_patterns.mediator.Order method)</a>
 </li>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Payment.inform">(designpatterns.behavioral_patterns.mediator.Payment method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver.inform_buyer">inform_buyer() (designpatterns.behavioral_patterns.command.Receiver method)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker">Invoker (class in designpatterns.behavioral_patterns.command)</a>
 </li>
   </ul></td>
@@ -575,6 +598,10 @@
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.StrategyLatte.make_coffee">(designpatterns.behavioral_patterns.strategy.StrategyLatte method)</a>
 </li>
       </ul></li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Mediator">Mediator (class in designpatterns.behavioral_patterns.mediator)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.BaseComponent.mediator">mediator (designpatterns.behavioral_patterns.mediator.BaseComponent property)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.MilkFoamForCappuccino">MilkFoamForCappuccino (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.MilkFoamForEspresso">MilkFoamForEspresso (class in designpatterns.creational_patterns.abstract_factory)</a>
@@ -596,6 +623,8 @@
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns">designpatterns.behavioral_patterns</a>
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.command">designpatterns.behavioral_patterns.command</a>
+</li>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.mediator">designpatterns.behavioral_patterns.mediator</a>
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#module-designpatterns.behavioral_patterns.observer">designpatterns.behavioral_patterns.observer</a>
 </li>
@@ -634,9 +663,13 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.DiscountPublisher.notify">notify() (designpatterns.behavioral_patterns.observer.DiscountPublisher method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.ConcreteMediator.notify">notify() (designpatterns.behavioral_patterns.mediator.ConcreteMediator method)</a>
 
       <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Mediator.notify">(designpatterns.behavioral_patterns.mediator.Mediator method)</a>
+</li>
+        <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.DiscountPublisher.notify">(designpatterns.behavioral_patterns.observer.DiscountPublisher method)</a>
+</li>
         <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.Publisher.notify">(designpatterns.behavioral_patterns.observer.Publisher method)</a>
 </li>
       </ul></li>
@@ -650,11 +683,15 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.ObserverWeekendDiscounts">ObserverWeekendDiscounts (class in designpatterns.behavioral_patterns.observer)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.ObserverWorkDayDiscounts">ObserverWorkDayDiscounts (class in designpatterns.behavioral_patterns.observer)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Order">Order (class in designpatterns.behavioral_patterns.mediator)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand">OrderCommand (class in designpatterns.behavioral_patterns.command)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.OrderStatus">OrderStatus (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -664,8 +701,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.utilities.html#designpatterns.utilities.package_resources.PackageResources">PackageResources (class in designpatterns.utilities.package_resources)</a>
 </li>
-      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.CoffeeCreator.prepare">prepare() (designpatterns.creational_patterns.factory_method.CoffeeCreator method)</a>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Payment">Payment (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Coffee.prepare">prepare() (designpatterns.behavioral_patterns.mediator.Coffee method)</a>
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.CoffeeCreator.prepare">(designpatterns.creational_patterns.factory_method.CoffeeCreator method)</a>
+</li>
+      </ul></li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver.prepare_coffee">prepare_coffee() (designpatterns.behavioral_patterns.command.Receiver method)</a>
 
       <ul>
@@ -682,6 +725,8 @@
         <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.adapter.Target.print">(designpatterns.structural_patterns.adapter.Target method)</a>
 </li>
       </ul></li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Order.process">process() (designpatterns.behavioral_patterns.mediator.Order method)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.Product">Product (class in designpatterns.creational_patterns.factory_method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.Publisher">Publisher (class in designpatterns.behavioral_patterns.observer)</a>
@@ -706,13 +751,15 @@
         <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.adapter.Adaptee.receipt">(designpatterns.structural_patterns.adapter.Adaptee property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.ReceiptForCappuccino">ReceiptForCappuccino (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.ReceiptForEspresso">ReceiptForEspresso (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.ReceiptForLatte">ReceiptForLatte (class in designpatterns.creational_patterns.abstract_factory)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Payment.receive">receive() (designpatterns.behavioral_patterns.mediator.Payment method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver">Receiver (class in designpatterns.behavioral_patterns.command)</a>
 </li>
@@ -761,6 +808,8 @@
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.singleton.SingletonMeta">SingletonMeta (class in designpatterns.creational_patterns.singleton)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.observer.DiscountPublisher.state">state (designpatterns.behavioral_patterns.observer.DiscountPublisher property)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.ConcreteMediator.status">status (designpatterns.behavioral_patterns.mediator.ConcreteMediator property)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.strategy.Strategy">Strategy (class in designpatterns.behavioral_patterns.strategy)</a>
 </li>
