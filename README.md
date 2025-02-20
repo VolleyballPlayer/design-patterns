@@ -27,7 +27,7 @@ This project was created to document knowledge on design patterns, create exampl
 different ways of preparations per coffee type.
 <span style="color:lightblue">Observer pattern</span> is informing subscribed customer about workday or weekend discounts.
 <span style="color:lightblue">Command pattern</span> is executing steps like receiving order, preparing coffee etc.
-
+<span style="color:lightblue">Mediator pattern</span> is establishing independent order, preparation and payment classes and providing them with notifications about state of each.
 
 #### Installation
 
