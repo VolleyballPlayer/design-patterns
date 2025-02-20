@@ -27,16 +27,6 @@ class BaseComponent:
     def __init__(self, mediator: Mediator = None) -> None:
         self._mediator = mediator
 
-    @property
-    def mediator(self) -> Mediator:
-        """Get mediator."""
-        return self._mediator
-
-    @mediator.setter
-    def mediator(self, mediator: Mediator) -> None:
-        """Set mediator."""
-        self._mediator = mediator
-
 
 class ConcreteMediator(Mediator):
     """Concrete Mediator manages communication between components."""
