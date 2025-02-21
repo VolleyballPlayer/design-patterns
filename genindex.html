@@ -77,6 +77,7 @@
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -190,7 +191,11 @@
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.ChocolateForLatte">ChocolateForLatte (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.adapter.client_code">client_code() (in module designpatterns.structural_patterns.adapter)</a>
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.client_code">(in module designpatterns.structural_patterns.facade)</a>
 </li>
+      </ul></li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.client_code_abstract_factory">client_code_abstract_factory() (in module designpatterns.creational_patterns.abstract_factory)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.client_code_factory_method">client_code_factory_method() (in module designpatterns.creational_patterns.factory_method)</a>
@@ -199,10 +204,10 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Coffee">Coffee (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
-      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CoffeeBuilder">CoffeeBuilder (class in designpatterns.creational_patterns.builder)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.builder.CoffeeBuilder">CoffeeBuilder (class in designpatterns.creational_patterns.builder)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.CoffeeCreator">CoffeeCreator (class in designpatterns.creational_patterns.factory_method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.CoffeeForCappuccino">CoffeeForCappuccino (class in designpatterns.creational_patterns.abstract_factory)</a>
@@ -361,6 +366,13 @@
 </li>
       </ul></li>
       <li>
+    designpatterns.structural_patterns.facade
+
+      <ul>
+        <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#module-designpatterns.structural_patterns.facade">module</a>
+</li>
+      </ul></li>
+      <li>
     designpatterns.utilities
 
       <ul>
@@ -400,10 +412,10 @@
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.abstract_factory.EspressoFactory">EspressoFactory (class in designpatterns.creational_patterns.abstract_factory)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.creational_patterns.html#designpatterns.creational_patterns.factory_method.EspressoProduct">EspressoProduct (class in designpatterns.creational_patterns.factory_method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Command.execute">execute() (designpatterns.behavioral_patterns.command.Command method)</a>
 
       <ul>
@@ -413,6 +425,22 @@
 </li>
       </ul></li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Invoker.execute_commands_in_order">execute_commands_in_order() (designpatterns.behavioral_patterns.command.Invoker method)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.ExtendedOrderCommand">ExtendedOrderCommand (class in designpatterns.structural_patterns.facade)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand">ExtendedPrepareCoffeeCommand (class in designpatterns.structural_patterns.facade)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.Facade">Facade (class in designpatterns.structural_patterns.facade)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.ExtendedOrderCommand.forward_order_details">forward_order_details() (designpatterns.structural_patterns.facade.ExtendedOrderCommand method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -515,6 +543,8 @@
 </li>
       </ul></li>
       <li><a href="technical_documentation/autodoc/designpatterns.utilities.html#designpatterns.utilities.package_resources.PackageResources.get_package_version">get_package_version() (designpatterns.utilities.package_resources.PackageResources static method)</a>
+</li>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand.get_payment">get_payment() (designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand method)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.utilities.html#designpatterns.utilities.package_resources.PackageResources.get_project_root">get_project_root() (designpatterns.utilities.package_resources.PackageResources static method)</a>
 </li>
@@ -650,6 +680,8 @@
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#module-designpatterns.structural_patterns.adapter">designpatterns.structural_patterns.adapter</a>
 </li>
+        <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#module-designpatterns.structural_patterns.facade">designpatterns.structural_patterns.facade</a>
+</li>
         <li><a href="technical_documentation/autodoc/designpatterns.utilities.html#module-designpatterns.utilities">designpatterns.utilities</a>
 </li>
         <li><a href="technical_documentation/autodoc/designpatterns.utilities.html#module-designpatterns.utilities.package_resources">designpatterns.utilities.package_resources</a>
@@ -685,6 +717,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="technical_documentation/autodoc/designpatterns.structural_patterns.html#designpatterns.structural_patterns.facade.Facade.operation">operation() (designpatterns.structural_patterns.facade.Facade method)</a>
+</li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.mediator.Order">Order (class in designpatterns.behavioral_patterns.mediator)</a>
 </li>
       <li><a href="technical_documentation/autodoc/designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand">OrderCommand (class in designpatterns.behavioral_patterns.command)</a>

@@ -183,8 +183,108 @@
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.structural_patterns.facade">
+<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.3. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedOrderCommand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">ExtendedOrderCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receipt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedOrderCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand" title="designpatterns.behavioral_patterns.command.OrderCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderCommand</span></code></a></p>
+<p>The Subsystem can accept requests either from the facade or client directly.</p>
+<p>In any case, to the Subsystem, the Facade is yet another client, and it’s not a part of the Subsystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>receipt</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedOrderCommand.forward_order_details">
+<span class="sig-name descname"><span class="pre">forward_order_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedOrderCommand.forward_order_details" title="Link to this definition"></a></dt>
+<dd><p>Forward order details to restaurant stuff.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">ExtendedPrepareCoffeeCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receiver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receipt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.PrepareCoffeeCommand" title="designpatterns.behavioral_patterns.command.PrepareCoffeeCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrepareCoffeeCommand</span></code></a></p>
+<p>Some facades can work with multiple subsystems at the same time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>receiver</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.Receiver" title="designpatterns.behavioral_patterns.command.Receiver"><code class="xref py py-class docutils literal notranslate"><span class="pre">Receiver</span></code></a></span>)</p></li>
+<li><p><strong>receipt</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="designpatterns.helpers.html#designpatterns.helpers.receipts.Receipt" title="designpatterns.helpers.receipts.Receipt"><code class="xref py py-class docutils literal notranslate"><span class="pre">Receipt</span></code></a></span>)</p></li>
+<li><p><strong>customer</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand.get_payment">
+<span class="sig-name descname"><span class="pre">get_payment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedPrepareCoffeeCommand.get_payment" title="Link to this definition"></a></dt>
+<dd><p>Get payment from customer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.Facade">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">Facade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subsystem1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsystem2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.Facade" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Facade class provides a simple interface to the complex logic of one or several subsystems.</p>
+<p>The Facade delegates the client requests to the appropriate objects within the subsystem.
+The Facade is also responsible for managing their lifecycle.
+All of this shields the client from the undesired complexity of the subsystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subsystem1</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.OrderCommand" title="designpatterns.behavioral_patterns.command.OrderCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">OrderCommand</span></code></a></span>)</p></li>
+<li><p><strong>subsystem2</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="designpatterns.behavioral_patterns.html#designpatterns.behavioral_patterns.command.PrepareCoffeeCommand" title="designpatterns.behavioral_patterns.command.PrepareCoffeeCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrepareCoffeeCommand</span></code></a></span>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.Facade.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.Facade.operation" title="Link to this definition"></a></dt>
+<dd><p>Be convenient shortcut to the sophisticated functionality of the subsystems.</p>
+<p>However, clients get only to a fraction of a subsystem’s capabilities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facade</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.client_code" title="Link to this definition"></a></dt>
+<dd><p>Works with complex subsystems through a simple interface provided by the Facade.</p>
+<p>When a facade manages the lifecycle of the subsystem, the client might not even know about the existence of the
+subsystem. This approach lets you keep the complexity under control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>facade</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.facade.Facade" title="designpatterns.structural_patterns.facade.Facade"><code class="xref py py-class docutils literal notranslate"><span class="pre">Facade</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.structural_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.3. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.4. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
