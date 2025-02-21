@@ -3,8 +3,18 @@ import click
 from designpatterns.behavioral_patterns.command import Receiver
 from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
-from designpatterns.structural_patterns.adapter import Adaptee, Adapter, Target, client_code
-from designpatterns.structural_patterns.facade import ExtendedOrderCommand, ExtendedPrepareCoffeeCommand, Facade
+from designpatterns.structural_patterns.adapter import (
+    Adaptee,
+    Adapter,
+    Target,
+    client_code as client_code_adapter,
+)
+from designpatterns.structural_patterns.facade import (
+    ExtendedOrderCommand,
+    ExtendedPrepareCoffeeCommand,
+    Facade,
+    client_code as client_code_facade,
+)
 from designpatterns.utilities.package_resources import PackageResources
 
 
@@ -22,7 +32,7 @@ def adapter() -> None:
     """
     logger.info('Client: I can work just fine with the Target objects:')
     target = Target()
-    client_code(target)
+    client_code_adapter(target)
     print('\n')
 
     adaptee = Adaptee(latte_receipt)
@@ -32,7 +42,7 @@ def adapter() -> None:
 
     logger.info('Client: But I can work with it via the Adapter:')
     adapter = Adapter(adaptee)
-    client_code(adapter)
+    client_code_adapter(adapter)
 
 
 @cli.command()
@@ -50,7 +60,7 @@ def facade() -> None:
     subsystem1 = ExtendedOrderCommand(latte_receipt)
     subsystem2 = ExtendedPrepareCoffeeCommand(Receiver(), latte_receipt, 'John Smith')
     facade = Facade(subsystem1, subsystem2)
-    client_code(facade)
+    client_code_facade(facade)
 
 
 if __name__ == '__main__':
