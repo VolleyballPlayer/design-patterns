@@ -88,6 +88,8 @@ https://medium.com/@amirm.lavasani/design-patterns-in-python-factory-method-1882
 
 https://medium.com/@amirm.lavasani/design-patterns-in-python-adapter-58eb7cc11474
 
+https://medium.com/@amirm.lavasani/design-patterns-in-python-mediator-ca42c2caca52
+
 ##### UML
 https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 
