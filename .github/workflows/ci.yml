@@ -55,6 +55,7 @@ jobs:
           run-creational-pattern prototype --help
 
           run-structural-pattern adapter --help
+          run-structural-pattern facade --help
 
           run-behavioral-pattern strategy --help
           run-behavioral-pattern observer --help

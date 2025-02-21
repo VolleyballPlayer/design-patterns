@@ -1,8 +1,10 @@
 import click
 
+from designpatterns.behavioral_patterns.command import Receiver
 from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
 from designpatterns.structural_patterns.adapter import Adaptee, Adapter, Target, client_code
+from designpatterns.structural_patterns.facade import ExtendedOrderCommand, ExtendedPrepareCoffeeCommand, Facade
 from designpatterns.utilities.package_resources import PackageResources
 
 
@@ -31,6 +33,24 @@ def adapter() -> None:
     logger.info('Client: But I can work with it via the Adapter:')
     adapter = Adapter(adaptee)
     client_code(adapter)
+
+
+@cli.command()
+def facade() -> None:
+    """Run facade example.
+
+    This function calls facade module to run an example of structural design pattern called facade.
+    """
+    logger.info('Starting facade pattern run')
+
+    # The client code may have some of the subsystem's objects already created.
+    # In this case, it might be worthwhile to initialize the Facade with these
+    # objects instead of letting the Facade create new instances.
+
+    subsystem1 = ExtendedOrderCommand(latte_receipt)
+    subsystem2 = ExtendedPrepareCoffeeCommand(Receiver(), latte_receipt, 'John Smith')
+    facade = Facade(subsystem1, subsystem2)
+    client_code(facade)
 
 
 if __name__ == '__main__':
