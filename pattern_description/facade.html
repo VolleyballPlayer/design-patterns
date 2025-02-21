@@ -147,6 +147,32 @@
 <li><p>If the facade becomes too big, consider extracting part of its behavior to a new, refined facade class.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-902d88b6454bf635eb4aed2c89de8a17c81ceba4.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    ExtendedOrderCommand &lt;.. Facade
+    ExtendedPrepareCoffeeCommand &lt;.. Facade
+
+    Facade &lt;-- client
+
+    class Facade {
+    + operation()
+    }
+
+    class ExtendedOrderCommand {
+    + forward_order_details()
+    }
+
+    class ExtendedPrepareCoffeeCommand {
+    + get_payment()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 

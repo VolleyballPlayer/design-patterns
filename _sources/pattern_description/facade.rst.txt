@@ -72,3 +72,30 @@ A facade can become a god object coupled to all classes of an app.
 * If the facade becomes too big, consider extracting part of its behavior to a new, refined facade class.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        ExtendedOrderCommand <.. Facade
+        ExtendedPrepareCoffeeCommand <.. Facade
+
+        Facade <-- client
+
+        class Facade {
+        + operation()
+        }
+
+        class ExtendedOrderCommand {
+        + forward_order_details()
+        }
+
+        class ExtendedPrepareCoffeeCommand {
+        + get_payment()
+        }
+
+        hide client circle
+
+    @enduml
