@@ -22,6 +22,7 @@ This project was created to document knowledge on design patterns, create exampl
 <span style="color:lightblue">Prototype pattern</span> is creating prototype for double espresso coffee using existing espresso coffee class.
 
 <span style="color:lightblue">Adapter pattern</span> is providing same interface for printing in tabular form for 2 different classes.
+<span style="color:lightblue">Facade pattern</span> is creating one interface for two command design patterns.
 
 <span style="color:lightblue">Strategy pattern</span> is preparing coffees using same method for
 different ways of preparations per coffee type.
