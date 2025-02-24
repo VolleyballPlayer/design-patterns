@@ -36,6 +36,14 @@ designpatterns.behavioral\_patterns.strategy module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.template\_method module
+-----------------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.template_method
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

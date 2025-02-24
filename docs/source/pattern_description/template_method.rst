@@ -27,7 +27,8 @@ As you can see, we’ve got two types of steps:
 
 * abstract steps must be implemented by every subclass
 * optional steps already have some default implementation, but still can be overridden if needed
-There’s another type of step, called hooks. A hook is an optional step with an empty body. A template method would work even if a hook isn’t overridden. Usually, hooks are placed before and after crucial steps of algorithms, providing subclasses with additional extension points for an algorithm.
+
+There is another type of step, called hooks. A hook is an optional step with an empty body. A template method would work even if a hook is not overridden. Usually, hooks are placed before and after crucial steps of algorithms, providing subclasses with additional extension points for an algorithm.
 
 **Real-World Analogy**
 
@@ -75,3 +76,36 @@ When you turn such an algorithm into a template method, you can also pull up the
 * For each variation of the algorithm, create a new concrete subclass. It must implement all of the abstract steps, but may also override some of the optional ones.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        AbstractClass <|-- Latte
+        AbstractClass <|-- Cappuccino
+
+        abstract class AbstractClass {
+        + template_method()
+        + get_coffee_order()
+        + process_coffee_order()
+        + assign_order_to_employee()
+        + hook1()
+        + prepare_coffee()
+        + finalize_order()
+        + hook2()
+        }
+
+        class Cappuccino {
+        + process_coffee_order()
+        + hook1()
+        + prepare_coffee()
+        }
+
+        class Latte {
+        + process_coffee_order()
+        + prepare_coffee()
+        }
+
+    @enduml
