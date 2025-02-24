@@ -13,6 +13,7 @@ from designpatterns.behavioral_patterns.strategy import (
     StrategyEspresso,
     StrategyLatte,
 )
+from designpatterns.behavioral_patterns.template_method import Cappuccino, Latte, client_code
 from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
@@ -103,6 +104,18 @@ def mediator() -> None:
     order.process(coffee=latte_receipt.name)
     coffee.prepare(coffee=latte_receipt.name)
     payment.receive(coffee=latte_receipt.name)
+
+
+@cli.command()
+def template_method() -> None:
+    """Run template method example.
+
+    This function calls template_method module to run an example of behavioral design pattern called template method.
+    """
+    logger.info('Starting template method pattern run')
+
+    client_code(Latte())
+    client_code(Cappuccino())
 
 
 if __name__ == '__main__':

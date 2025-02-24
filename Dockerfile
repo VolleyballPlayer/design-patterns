@@ -27,6 +27,7 @@ RUN apt-get -y update; \
     run-behavioral-pattern strategy; \
     run-behavioral-pattern observer; \
     run-behavioral-pattern command; \
-    run-behavioral-pattern mediator
+    run-behavioral-pattern mediator; \
+    run-behavioral-pattern template-method
 
 ENTRYPOINT [ "/bin/bash" ]
