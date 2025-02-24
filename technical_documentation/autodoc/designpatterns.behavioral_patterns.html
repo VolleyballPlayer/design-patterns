@@ -730,8 +730,194 @@ It should work with all strategies via the Strategy interface.</p>
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.behavioral_patterns.template_method">
+<span id="designpatterns-behavioral-patterns-template-method-module"></span><h2><span class="section-number">3.1.1.1.1.6. </span>designpatterns.behavioral_patterns.template_method module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.template_method" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">AbstractClass</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Abstract Class defines a template method that contains a skeleton of some algorithm.</p>
+<p>Skeleton is composed of calls to (usually) abstract primitive operations.
+Concrete subclasses should implement these operations, but leave the template method itself intact.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.assign_order_to_employee">
+<span class="sig-name descname"><span class="pre">assign_order_to_employee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.assign_order_to_employee" title="Link to this definition"></a></dt>
+<dd><p>Assign order to an employee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.finalize_order">
+<span class="sig-name descname"><span class="pre">finalize_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.finalize_order" title="Link to this definition"></a></dt>
+<dd><p>Provide information about completion to a client.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.get_coffee_order">
+<span class="sig-name descname"><span class="pre">get_coffee_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.get_coffee_order" title="Link to this definition"></a></dt>
+<dd><p>Get coffee order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.hook1">
+<span class="sig-name descname"><span class="pre">hook1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.hook1" title="Link to this definition"></a></dt>
+<dd><p>Set additional extension point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.hook2">
+<span class="sig-name descname"><span class="pre">hook2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.hook2" title="Link to this definition"></a></dt>
+<dd><p>Set additional extension point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.prepare_coffee">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare specific coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.process_coffee_order">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_coffee_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.process_coffee_order" title="Link to this definition"></a></dt>
+<dd><p>Specify which coffee is being ordered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass.template_method">
+<span class="sig-name descname"><span class="pre">template_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass.template_method" title="Link to this definition"></a></dt>
+<dd><p>Define the skeleton of an algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Cappuccino">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Cappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="designpatterns.behavioral_patterns.template_method.AbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractClass</span></code></a></p>
+<p>Usually, concrete classes override only a fraction of base class operations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Cappuccino.hook1">
+<span class="sig-name descname"><span class="pre">hook1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Cappuccino.hook1" title="Link to this definition"></a></dt>
+<dd><p>Implement additional steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Cappuccino.prepare_coffee">
+<span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Cappuccino.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare specific coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Cappuccino.process_coffee_order">
+<span class="sig-name descname"><span class="pre">process_coffee_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Cappuccino.process_coffee_order" title="Link to this definition"></a></dt>
+<dd><p>Specify which coffee is being ordered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Latte">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">Latte</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Latte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="designpatterns.behavioral_patterns.template_method.AbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractClass</span></code></a></p>
+<p>Concrete classes have to implement all abstract operations of the base class.</p>
+<p>They can also override some operations with a default implementation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Latte.prepare_coffee">
+<span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Latte.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare specific coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.Latte.process_coffee_order">
+<span class="sig-name descname"><span class="pre">process_coffee_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.Latte.process_coffee_order" title="Link to this definition"></a></dt>
+<dd><p>Specify which coffee is being ordered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abstract_class</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.client_code" title="Link to this definition"></a></dt>
+<dd><p>Call the template method to execute the algorithm.</p>
+<p>Client code does not have to know the concrete class of an object it works with, as long as it works with objects
+through the interface of their base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>abstract_class</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="designpatterns.behavioral_patterns.template_method.AbstractClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractClass</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.behavioral_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.6. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.7. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
