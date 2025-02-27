@@ -17,21 +17,22 @@ Documentation can be found here: https://volleyballplayer.github.io/design-patte
 
 This project was created to document knowledge on design patterns, create examples and go back to summaries when using design patterns in other projects. This repository is work in progress also related to different topics with the goal of enriching and demonstrating the know-how related to Python packages, tests, documentation, git workflows, Docker etc.
 
-$${\color{lightblue}Builder, factory method and abstract factory patterns}$$ are used to prepare different types of coffees: Latte, Cappuccino or Espresso.
-<span style="color:lightblue">Singleton pattern</span> is counting number of prepared coffees in the builder.
-<span style="color:lightblue">Prototype pattern</span> is creating prototype for double espresso coffee using existing espresso coffee class.
+$${\color{lightblue}Builder}$$, $${\color{lightblue}factory method}$$ and $${\color{lightblue}abstract factory patterns}$$ are used to prepare
+different types of coffees: Latte, Cappuccino or Espresso.
+$${\color{lightblue}Singleton pattern}$$ is counting number of prepared coffees in the builder.
+$${\color{lightblue}Prototype pattern}$$ is creating prototype for double espresso coffee using existing espresso coffee class.
 
-<span style="color:lightblue">Adapter pattern</span> is providing same interface for printing in tabular form for 2 different classes.
-<span style="color:lightblue">Facade pattern</span> is creating one interface for two command design patterns.
-<span style="color:lightblue">Brigde pattern</span> implements separates coffee class from specific coffee types classes and enables easy extension
+$${\color{lightblue}Adapter pattern}$$ is providing same interface for printing in tabular form for 2 different classes.
+$${\color{lightblue}Facade pattern}$$ is creating one interface for two command design patterns.
+$${\color{lightblue}Brigde pattern}$$ implements separates coffee class from specific coffee types classes and enables easy extension
 for futures types and combinations.
 
-<span style="color:lightblue">Strategy pattern</span> is preparing coffees using same method for
+$${\color{lightblue}Strategy pattern}$$ is preparing coffees using same method for
 different ways of preparations per coffee type.
-<span style="color:lightblue">Observer pattern</span> is informing subscribed customer about workday or weekend discounts.
-<span style="color:lightblue">Command pattern</span> is executing steps like receiving order, preparing coffee etc.
-<span style="color:lightblue">Mediator pattern</span> is establishing independent order, preparation and payment classes and providing them with notifications about state of each.
-<span style="color:lightblue">Template method pattern</span> provides full process around ordering latte and cappuccino by reusing steps that
+$${\color{lightblue}Observer pattern}$$ is informing subscribed customer about workday or weekend discounts.
+$${\color{lightblue}Command pattern}$$ is executing steps like receiving order, preparing coffee etc.
+$${\color{lightblue}Mediator pattern}$$ is establishing independent order, preparation and payment classes and providing them with notifications about state of each.
+$${\color{lightblue}Template method pattern}$$ provides full process around ordering latte and cappuccino by reusing steps that
 are common for each order with specifying them in the base class. Specific steps concerning each coffee receipt are implemented in subclasses.
 
 #### Installation
