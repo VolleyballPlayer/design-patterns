@@ -42,7 +42,6 @@ class Implementation(ABC):
     @abstractmethod
     def prepare(self) -> str:
         """Prepare coffee drink."""
-        pass
 
 
 """
