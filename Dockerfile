@@ -24,6 +24,7 @@ RUN apt-get -y update; \
     run-creational-pattern singleton; \
     run-structural-pattern adapter; \
     run-structural-pattern facade; \
+    run-structural-pattern bridge; \
     run-behavioral-pattern strategy; \
     run-behavioral-pattern observer; \
     run-behavioral-pattern command; \

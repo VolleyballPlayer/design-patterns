@@ -9,6 +9,13 @@ from designpatterns.structural_patterns.adapter import (
     Target,
     client_code as client_code_adapter,
 )
+from designpatterns.structural_patterns.bridge import (
+    Abstraction,
+    Cappuccino,
+    Coffee,
+    Latte,
+    client_code as client_code_bridge,
+)
 from designpatterns.structural_patterns.facade import (
     ExtendedOrderCommand,
     ExtendedPrepareCoffeeCommand,
@@ -61,6 +68,29 @@ def facade() -> None:
     subsystem2 = ExtendedPrepareCoffeeCommand(Receiver(), latte_receipt, 'John Smith')
     facade = Facade(subsystem1, subsystem2)
     client_code_facade(facade)
+
+
+@cli.command()
+def bridge() -> None:
+    """Run bridge example.
+
+    This function calls bridge module to run an example of structural design pattern called bridge.
+    """
+    logger.info('Starting bridge pattern run')
+
+    """
+    The client code should be able to work with any pre-configured abstraction-
+    implementation combination.
+    """
+    implementation = Latte()
+    abstraction = Abstraction(implementation)
+    client_code_bridge(abstraction)
+
+    print('\n')
+
+    implementation = Cappuccino()
+    abstraction = Coffee(implementation)
+    client_code_bridge(abstraction)
 
 
 if __name__ == '__main__':
