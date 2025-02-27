@@ -26,14 +26,16 @@ Following this approach, we can extract the color-related code into its own clas
 **Applicability**
 
 * Use the Bridge pattern when you want to divide and organize a monolithic class that has several variants of some functionality (for example, if the class can work with various database servers).
-The bigger a class becomes, the harder it is to figure out how it works, and the longer it takes to make a change. The changes made to one of the variations of functionality may require making changes across the whole class, which often results in making errors or not addressing some critical side effects.
 
+The bigger a class becomes, the harder it is to figure out how it works, and the longer it takes to make a change. The changes made to one of the variations of functionality may require making changes across the whole class, which often results in making errors or not addressing some critical side effects.
 The Bridge pattern lets you split the monolithic class into several class hierarchies. After this, you can change the classes in each hierarchy independently of the classes in the others. This approach simplifies code maintenance and minimizes the risk of breaking existing code.
 
 * Use the pattern when you need to extend a class in several orthogonal (independent) dimensions.
+
 The Bridge suggests that you extract a separate class hierarchy for each of the dimensions. The original class delegates the related work to the objects belonging to those hierarchies instead of doing everything on its own.
 
 * Use the Bridge if you need to be able to switch implementations at runtime.
+
 Although it’s optional, the Bridge pattern lets you replace the implementation object inside the abstraction. It’s as easy as assigning a new value to a field.
 
 By the way, this last item is the main reason why so many people confuse the Bridge with the Strategy pattern. Remember that a pattern is more than just a certain way to structure your classes. It may also communicate intent and a problem being addressed.
@@ -67,3 +69,36 @@ You might make the code more complicated by applying the pattern to a highly coh
 * The client code should pass an implementation object to the abstraction’s constructor to associate one with the other. After that, the client can forget about the implementation and work only with the abstraction object.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Abstraction <|-- Coffee
+        Latte <|.. Implementation
+        Cappuccino <|.. Implementation
+        Abstraction o-- Implementation
+
+        abstract class Abstraction {
+        + prepare()
+        }
+
+        class Coffee {
+        + prepare()
+        }
+
+        abstract class Implementation {
+        + prepare()
+        }
+
+        class Cappuccino {
+        + prepare()
+        }
+
+        class Latte {
+        + prepare()
+        }
+
+    @enduml

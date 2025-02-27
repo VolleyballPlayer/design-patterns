@@ -12,6 +12,14 @@ designpatterns.structural\_patterns.adapter module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.bridge module
+-------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.bridge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.structural\_patterns.facade module
 -------------------------------------------------
 
