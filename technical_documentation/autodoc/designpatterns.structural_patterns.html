@@ -183,8 +183,133 @@
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.structural_patterns.bridge">
+<span id="designpatterns-structural-patterns-bridge-module"></span><h2><span class="section-number">3.1.1.1.4.3. </span>designpatterns.structural_patterns.bridge module<a class="headerlink" href="#module-designpatterns.structural_patterns.bridge" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Abstraction">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">Abstraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implementation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Abstraction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Abstraction defines the interface for the “control” part of the two class hierarchies.</p>
+<p>It maintains a reference to an object of the Implementation hierarchy and delegates all of the real work to this
+object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>implementation</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.bridge.Implementation" title="designpatterns.structural_patterns.bridge.Implementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Implementation</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Abstraction.prepare">
+<span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Abstraction.prepare" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Cappuccino">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Cappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.bridge.Implementation" title="designpatterns.structural_patterns.bridge.Implementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Implementation</span></code></a></p>
+<p>Implement cappuccino preparation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Cappuccino.prepare">
+<span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Cappuccino.prepare" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Coffee">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">Coffee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">implementation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Coffee" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.bridge.Abstraction" title="designpatterns.structural_patterns.bridge.Abstraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Abstraction</span></code></a></p>
+<p>You can extend the Abstraction without changing the Implementation classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>implementation</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.bridge.Implementation" title="designpatterns.structural_patterns.bridge.Implementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Implementation</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Coffee.prepare">
+<span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Coffee.prepare" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Implementation">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">Implementation</span></span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Implementation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Implementation defines the interface for all implementation classes.</p>
+<p>It doesn’t have to match the Abstraction’s interface. In fact, the two interfaces can be entirely different.
+Typically the Implementation interface provides only primitive operations, while the Abstraction defines
+higher-level operations based on those primitives.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Implementation.prepare">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Implementation.prepare" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Latte">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">Latte</span></span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Latte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.bridge.Implementation" title="designpatterns.structural_patterns.bridge.Implementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Implementation</span></code></a></p>
+<p>Implement latte preparation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.Latte.prepare">
+<span class="sig-name descname"><span class="pre">prepare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.Latte.prepare" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee drink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.bridge.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.bridge.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abstraction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.bridge.client_code" title="Link to this definition"></a></dt>
+<dd><p>Implement client code.</p>
+<p>Except for the initialization phase, where an Abstraction object gets linked with a specific Implementation object,
+the client code should only depend on the Abstraction class.
+This way the client code can support any abstraction-implementation combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>abstraction</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.bridge.Abstraction" title="designpatterns.structural_patterns.bridge.Abstraction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Abstraction</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.structural_patterns.facade">
-<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.3. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
+<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.4. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedOrderCommand">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">ExtendedOrderCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receipt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedOrderCommand" title="Link to this definition"></a></dt>
@@ -284,7 +409,7 @@ subsystem. This approach lets you keep the complexity under control.</p>
 
 </section>
 <section id="module-designpatterns.structural_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.4. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.5. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
