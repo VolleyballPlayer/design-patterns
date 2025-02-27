@@ -114,8 +114,8 @@
 <ul class="simple">
 <li><p>Use the Bridge pattern when you want to divide and organize a monolithic class that has several variants of some functionality (for example, if the class can work with various database servers).</p></li>
 </ul>
-<p>The bigger a class becomes, the harder it is to figure out how it works, and the longer it takes to make a change. The changes made to one of the variations of functionality may require making changes across the whole class, which often results in making errors or not addressing some critical side effects.</p>
-<p>The Bridge pattern lets you split the monolithic class into several class hierarchies. After this, you can change the classes in each hierarchy independently of the classes in the others. This approach simplifies code maintenance and minimizes the risk of breaking existing code.</p>
+<p>The bigger a class becomes, the harder it is to figure out how it works, and the longer it takes to make a change. The changes made to one of the variations of functionality may require making changes across the whole class, which often results in making errors or not addressing some critical side effects.
+The Bridge pattern lets you split the monolithic class into several class hierarchies. After this, you can change the classes in each hierarchy independently of the classes in the others. This approach simplifies code maintenance and minimizes the risk of breaking existing code.</p>
 <ul class="simple">
 <li><p>Use the pattern when you need to extend a class in several orthogonal (independent) dimensions.</p></li>
 </ul>
@@ -152,6 +152,38 @@
 <li><p>The client code should pass an implementation object to the abstraction’s constructor to associate one with the other. After that, the client can forget about the implementation and work only with the abstraction object.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-e57b511d8f3fba2d7ab55a45ff66f8fc3c207fc8.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Abstraction &lt;|-- Coffee
+    Latte &lt;|.. Implementation
+    Cappuccino &lt;|.. Implementation
+    Abstraction o-- Implementation
+
+    abstract class Abstraction {
+    + prepare()
+    }
+
+    class Coffee {
+    + prepare()
+    }
+
+    abstract class Implementation {
+    + prepare()
+    }
+
+    class Cappuccino {
+    + prepare()
+    }
+
+    class Latte {
+    + prepare()
+    }
+
+&#64;enduml"/>
+</p>
 </section>
 
 
