@@ -26,6 +26,7 @@ $${\color{lightblue}Adapter}$$ pattern is providing same interface for printing 
 $${\color{lightblue}Facade}$$ pattern is creating one interface for two command design patterns.
 $${\color{lightblue}Brigde}$$ pattern implements separates coffee class from specific coffee types classes and enables easy extension
 for futures types and combinations.
+$${\color{lightblue}Composite}$$ pattern implements menu with prices structuring drinks by size and type.
 
 $${\color{lightblue}Strategy}$$ pattern is preparing coffees using same method for
 different ways of preparations per coffee type.
