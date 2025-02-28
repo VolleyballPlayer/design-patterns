@@ -27,11 +27,9 @@ class Component(ABC):
 
     def add(self, component: Component) -> None:  # noqa: B027
         """Add component."""
-        pass
 
     def remove(self, component: Component) -> None:  # noqa: B027
         """Remove component."""
-        pass
 
     def is_composite(self) -> bool:
         """You can provide a method that lets the client code figure out whether a component can bear children."""
@@ -43,7 +41,6 @@ class Component(ABC):
 
         It does it by declaring the method containing the behavior as "abstract").
         """
-        pass
 
 
 class Leaf(Component):
