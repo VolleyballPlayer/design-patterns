@@ -20,6 +20,14 @@ designpatterns.structural\_patterns.bridge module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.composite module
+----------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.composite
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.structural\_patterns.facade module
 -------------------------------------------------
 

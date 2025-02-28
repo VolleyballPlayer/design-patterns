@@ -82,3 +82,39 @@ While implementing the methods of the component interface, remember that a conta
 Keep in mind that these operations can be declared in the component interface. This would violate the Interface Segregation Principle because the methods will be empty in the leaf class. However, the client will be able to treat all the elements equally, even when composing the tree.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Component <-- client
+
+        Component <|.. Leaf
+        Component <|.. Composite
+
+        Composite o-- Component
+
+        abstract class Component {
+        + parent
+        + add()
+        + remove()
+        + is_composite()
+        + operation()
+        }
+
+        class Leaf {
+        + operation()
+        }
+
+        class Composite {
+        + add()
+        + remove()
+        + is_composite()
+        + operation()
+        }
+
+        hide client circle
+
+    @enduml
