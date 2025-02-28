@@ -57,6 +57,7 @@ jobs:
           run-structural-pattern adapter --help
           run-structural-pattern facade --help
           run-structural-pattern bridge --help
+          run-structural-pattern composite --help
 
           run-behavioral-pattern strategy --help
           run-behavioral-pattern observer --help

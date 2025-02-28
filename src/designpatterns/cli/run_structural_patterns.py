@@ -16,6 +16,12 @@ from designpatterns.structural_patterns.bridge import (
     Latte,
     client_code as client_code_bridge,
 )
+from designpatterns.structural_patterns.composite import (
+    Composite,
+    Leaf,
+    client_code as client_code_composite,
+    client_code2 as client_code_composite2,
+)
 from designpatterns.structural_patterns.facade import (
     ExtendedOrderCommand,
     ExtendedPrepareCoffeeCommand,
@@ -91,6 +97,41 @@ def bridge() -> None:
     implementation = Cappuccino()
     abstraction = Coffee(implementation)
     client_code_bridge(abstraction)
+
+
+@cli.command()
+def composite() -> None:
+    """Run composite example.
+
+    This function calls composite module to run an example of structural design pattern called composite.
+    """
+    logger.info('Starting composite pattern run')
+
+    simple = Leaf('Water: €0')
+    print("Client: I've got a simple component:")
+    client_code_composite(simple)
+    print('\n')
+
+    tree = Composite('Coffees')
+
+    big_coffees = Composite('Big Coffees')
+    big_coffees.add(Leaf('Cappuccino: €4'))
+    big_coffees.add(Leaf('Latte: €5'))
+
+    small_coffees = Composite('Small Coffees')
+    small_coffees.add(Leaf('Espresso: €1'))
+    small_coffees.add(Leaf('Double Espresso: €2'))
+    small_coffees.add(Leaf('Triple Espresso: €3'))
+
+    tree.add(big_coffees)
+    tree.add(small_coffees)
+
+    print("Client: Now I've got a composite tree:")
+    client_code_composite(tree)
+    print('\n')
+
+    print("Client: I don't need to check the components classes even when managing the tree:")
+    client_code_composite2(tree, simple)
 
 
 if __name__ == '__main__':
