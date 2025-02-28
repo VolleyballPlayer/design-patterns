@@ -18,6 +18,13 @@ designpatterns.structural\_patterns.bridge module
    :members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.composite module
+----------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.composite
+   :members:
+   :show-inheritance:
+
 designpatterns.structural\_patterns.facade module
 -------------------------------------------------
 

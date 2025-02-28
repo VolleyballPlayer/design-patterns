@@ -308,8 +308,198 @@ This way the client code can support any abstraction-implementation combination.
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.structural_patterns.composite">
+<span id="designpatterns-structural-patterns-composite-module"></span><h2><span class="section-number">3.1.1.1.4.4. </span>designpatterns.structural_patterns.composite module<a class="headerlink" href="#module-designpatterns.structural_patterns.composite" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.composite.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The base Component class declares common operations for both simple and complex objects of a composition.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component.add" title="Link to this definition"></a></dt>
+<dd><p>Add component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component.is_composite">
+<span class="sig-name descname"><span class="pre">is_composite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component.is_composite" title="Link to this definition"></a></dt>
+<dd><p>You can provide a method that lets the client code figure out whether a component can bear children.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component.operation">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component.operation" title="Link to this definition"></a></dt>
+<dd><p>Implement some default behavior or leave it to concrete classes.</p>
+<p>It does it by declaring the method containing the behavior as “abstract”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component.parent">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><span class="pre">Component</span></a></em><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component.parent" title="Link to this definition"></a></dt>
+<dd><p>Parent getter.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Component.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Component.remove" title="Link to this definition"></a></dt>
+<dd><p>Remove component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Composite">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.composite.</span></span><span class="sig-name descname"><span class="pre">Composite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Composite" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>The Composite class represents the complex components that may have children.</p>
+<p>Usually, the Composite objects delegate the actual work to their children and then “sum-up” the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>type_</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Composite.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Composite.add" title="Link to this definition"></a></dt>
+<dd><p>Add children components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Composite.is_composite">
+<span class="sig-name descname"><span class="pre">is_composite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Composite.is_composite" title="Link to this definition"></a></dt>
+<dd><p>Check whether a component can bear children.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Composite.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Composite.operation" title="Link to this definition"></a></dt>
+<dd><p>Execute its primary logic in a particular way.</p>
+<p>It traverses recursively through all its children, collecting and summing their results. Since the composite’s
+children pass these calls to their children and so forth, the whole object tree is traversed as a result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Composite.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Composite.remove" title="Link to this definition"></a></dt>
+<dd><p>Remove children components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Leaf">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.composite.</span></span><span class="sig-name descname"><span class="pre">Leaf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Leaf" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>The Leaf class represents the end objects of a composition. A leaf can’t have any children.</p>
+<p>Usually, it’s the Leaf objects that do the actual work, whereas Composite objects only delegate to their
+sub-components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>type_</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.Leaf.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.Leaf.operation" title="Link to this definition"></a></dt>
+<dd><p>Implement behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.composite.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.client_code" title="Link to this definition"></a></dt>
+<dd><p>Works with all of the components via the base interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.composite.client_code2">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.composite.</span></span><span class="sig-name descname"><span class="pre">client_code2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">component2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.composite.client_code2" title="Link to this definition"></a></dt>
+<dd><p>Work with any component, simple or complex.</p>
+<p>…thanks to the fact that the child-management operations are declared in the base Component class,
+without depending on their concrete classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component1</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p></li>
+<li><p><strong>component2</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.composite.Component" title="designpatterns.structural_patterns.composite.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.structural_patterns.facade">
-<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.4. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
+<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.5. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedOrderCommand">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">ExtendedOrderCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receipt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedOrderCommand" title="Link to this definition"></a></dt>
@@ -409,7 +599,7 @@ subsystem. This approach lets you keep the complexity under control.</p>
 
 </section>
 <section id="module-designpatterns.structural_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.5. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.6. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
