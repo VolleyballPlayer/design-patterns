@@ -11,6 +11,13 @@ designpatterns.behavioral\_patterns.command module
    :members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.iterator module
+---------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.iterator
+   :members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.mediator module
 ---------------------------------------------------
 
