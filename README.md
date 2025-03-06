@@ -35,6 +35,7 @@ $${\color{lightblue}Command}$$ pattern is executing steps like receiving order, 
 $${\color{lightblue}Mediator}$$ pattern is establishing independent order, preparation and payment classes and providing them with notifications about state of each.
 $${\color{lightblue}Template method}$$ pattern provides full process around ordering latte and cappuccino by reusing steps that
 are common for each order with specifying them in the base class. Specific steps concerning each coffee receipt are implemented in subclasses.
+$${\color{lightblue}Iterator}$$ pattern iterates over increasing or decreasing coffee prices in the menu.
 
 #### Installation
 
