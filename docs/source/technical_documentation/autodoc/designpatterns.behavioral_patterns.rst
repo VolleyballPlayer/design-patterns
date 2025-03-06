@@ -12,6 +12,14 @@ designpatterns.behavioral\_patterns.command module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.iterator module
+---------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.iterator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.mediator module
 ---------------------------------------------------
 
