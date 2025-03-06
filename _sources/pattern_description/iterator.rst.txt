@@ -79,3 +79,29 @@ The pattern provides a couple of generic interfaces for both collections and ite
 * Go over the client code to replace all of the collection traversal code with the use of iterators. The client fetches a new iterator object each time it needs to iterate over the collection elements.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        PriceCollection <-- client
+        PriceCollection <.. ExpenseOrderIterator
+
+        Iterable <|..PriceCollection
+        Iterator <|..ExpenseOrderIterator
+
+        class ExpenseOrderIterator {
+        - position
+        - reverse
+        }
+
+        class PriceCollection {
+        + get_reverse_iterator()
+        + add_item()
+        }
+
+        hide client circle
+
+    @enduml

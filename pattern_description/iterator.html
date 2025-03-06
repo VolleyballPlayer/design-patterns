@@ -158,6 +158,31 @@
 <li><p>Go over the client code to replace all of the collection traversal code with the use of iterators. The client fetches a new iterator object each time it needs to iterate over the collection elements.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-ef8f393adfd977e98cc2f77de9a2c2fe927eaf3f.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    PriceCollection &lt;-- client
+    PriceCollection &lt;.. ExpenseOrderIterator
+
+    Iterable &lt;|..PriceCollection
+    Iterator &lt;|..ExpenseOrderIterator
+
+    class ExpenseOrderIterator {
+    - position
+    - reverse
+    }
+
+    class PriceCollection {
+    + get_reverse_iterator()
+    + add_item()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
