@@ -36,6 +36,7 @@ $${\color{lightblue}Mediator}$$ pattern is establishing independent order, prepa
 $${\color{lightblue}Template method}$$ pattern provides full process around ordering latte and cappuccino by reusing steps that
 are common for each order with specifying them in the base class. Specific steps concerning each coffee receipt are implemented in subclasses.
 $${\color{lightblue}Iterator}$$ pattern iterates over increasing or decreasing coffee prices in the menu.
+$${\color{lightblue}Chain of responsibility}$$ pattern takes an ingredient and adds it to first corresponding product which requires it.
 
 #### Installation
 
