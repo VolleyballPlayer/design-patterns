@@ -4,7 +4,7 @@ from designpatterns.behavioral_patterns.chain_of_responsibility import (
     CakeHandler,
     CoffeeHandler,
     TeaHandler,
-    client_code as client_code_chain_of_responsbility,
+    client_code as client_code_chain_of_responsibility,
 )
 from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
 from designpatterns.behavioral_patterns.iterator import PriceCollection
@@ -173,11 +173,10 @@ def chain_of_responsibility() -> None:
     # The client should be able to send a request to any handler, not just the first one in the chain.
 
     logger.info('Chain: Coffee > Cake > Tea')
-    client_code_chain_of_responsbility(coffee)
+    client_code_chain_of_responsibility(coffee)
     print('\n')
     logger.info('Subchain: Tea')
-
-    client_code_chain_of_responsbility(tea)
+    client_code_chain_of_responsibility(tea)
 
 
 if __name__ == '__main__':
