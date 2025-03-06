@@ -3,8 +3,6 @@ from __future__ import annotations
 from collections.abc import Iterable, Iterator
 from typing import Any
 
-from designpatterns.logger import logger
-
 """
 To create an iterator in Python, there are two abstract classes from the built-in `collections` module - Iterable,
 Iterator. We need to implement the `__iter__()` method in the iterated object (collection), and the `__next__ ()`
@@ -73,22 +71,3 @@ class PriceCollection(Iterable):
     def add_item(self, item: Any) -> None:  # noqa: ANN401
         """Add an item to the collection."""
         self._collection.append(item)
-
-
-if __name__ == '__main__':
-    # The client code may or may not know about the Concrete Iterator or Collection classes, depending on the level of
-    # indirection you want to keep in your program.
-
-    collection = PriceCollection()
-    collection.add_item('Espresso: €1')
-    collection.add_item('Double Espresso: €2')
-    collection.add_item('Triple Espresso: €3')
-    collection.add_item('Cappuccino: €4')
-    collection.add_item('Latte: €5')
-
-    logger.info('Increasing price order:')
-    print('\n'.join(collection))
-    print('\n')
-
-    logger.info('Decreasing price order:')
-    print('\n'.join(collection.get_reverse_iterator()), end='')

@@ -1,6 +1,7 @@
 import click
 
 from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
+from designpatterns.behavioral_patterns.iterator import PriceCollection
 from designpatterns.behavioral_patterns.mediator import Coffee, ConcreteMediator, Order, Payment
 from designpatterns.behavioral_patterns.observer import (
     DiscountPublisher,
@@ -116,6 +117,32 @@ def template_method() -> None:
 
     client_code(Latte())
     client_code(Cappuccino())
+
+
+@cli.command()
+def iterator() -> None:
+    """Run iterator method example.
+
+    This function calls iterator module to run an example of behavioral design pattern called iterator.
+    """
+    logger.info('Starting iterator pattern run')
+
+    # The client code may or may not know about the Concrete Iterator or Collection classes, depending on the level of
+    # indirection you want to keep in your program.
+
+    collection = PriceCollection()
+    collection.add_item('Espresso: €1')
+    collection.add_item('Double Espresso: €2')
+    collection.add_item('Triple Espresso: €3')
+    collection.add_item('Cappuccino: €4')
+    collection.add_item('Latte: €5')
+
+    logger.info('Increasing price order:')
+    print('\n'.join(collection))
+    print('\n')
+
+    logger.info('Decreasing price order:')
+    print('\n'.join(collection.get_reverse_iterator()), end='')
 
 
 if __name__ == '__main__':

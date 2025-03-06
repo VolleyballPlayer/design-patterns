@@ -30,6 +30,7 @@ RUN apt-get -y update; \
     run-behavioral-pattern observer; \
     run-behavioral-pattern command; \
     run-behavioral-pattern mediator; \
-    run-behavioral-pattern template-method
+    run-behavioral-pattern template-method; \
+    run-behavioral-pattern iterator
 
 ENTRYPOINT [ "/bin/bash" ]

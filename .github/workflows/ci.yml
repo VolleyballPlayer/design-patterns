@@ -64,3 +64,4 @@ jobs:
           run-behavioral-pattern command --help
           run-behavioral-pattern mediator --help
           run-behavioral-pattern template-method --help
+          run-behavioral-pattern iterator --help
