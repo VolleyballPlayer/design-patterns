@@ -63,12 +63,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-behavioral-pattern">2.2.3. run-behavioral-pattern</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-command">2.2.3.1. command</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-iterator">2.2.3.2. iterator</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-mediator">2.2.3.3. mediator</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-observer">2.2.3.4. observer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-strategy">2.2.3.5. strategy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-template-method">2.2.3.6. template-method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-chain-of-responsibility">2.2.3.1. chain-of-responsibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-command">2.2.3.2. command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-iterator">2.2.3.3. iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-mediator">2.2.3.4. mediator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-observer">2.2.3.5. observer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-strategy">2.2.3.6. strategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-behavioral-pattern-template-method">2.2.3.7. template-method</a></li>
 </ul>
 </li>
 </ul>
@@ -204,8 +205,17 @@ coffees that could be prepared in one or another pattern.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
 </pre></div>
 </div>
+<section id="run-behavioral-pattern-chain-of-responsibility">
+<h4><span class="section-number">2.2.3.1. </span>chain-of-responsibility<a class="headerlink" href="#run-behavioral-pattern-chain-of-responsibility" title="Link to this heading"></a></h4>
+<p>Run chain of responsibility method example.</p>
+<p>This function calls chain of responsibility module to run an example of behavioral design pattern called
+chain of responsibility.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>chain-of-responsibility<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+</section>
 <section id="run-behavioral-pattern-command">
-<h4><span class="section-number">2.2.3.1. </span>command<a class="headerlink" href="#run-behavioral-pattern-command" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.2. </span>command<a class="headerlink" href="#run-behavioral-pattern-command" title="Link to this heading"></a></h4>
 <p>Run command example.</p>
 <p>This function calls command module to run an example of behavioral design pattern called command.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
@@ -213,7 +223,7 @@ coffees that could be prepared in one or another pattern.</p>
 </div>
 </section>
 <section id="run-behavioral-pattern-iterator">
-<h4><span class="section-number">2.2.3.2. </span>iterator<a class="headerlink" href="#run-behavioral-pattern-iterator" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.3. </span>iterator<a class="headerlink" href="#run-behavioral-pattern-iterator" title="Link to this heading"></a></h4>
 <p>Run iterator method example.</p>
 <p>This function calls iterator module to run an example of behavioral design pattern called iterator.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>iterator<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
@@ -221,7 +231,7 @@ coffees that could be prepared in one or another pattern.</p>
 </div>
 </section>
 <section id="run-behavioral-pattern-mediator">
-<h4><span class="section-number">2.2.3.3. </span>mediator<a class="headerlink" href="#run-behavioral-pattern-mediator" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.4. </span>mediator<a class="headerlink" href="#run-behavioral-pattern-mediator" title="Link to this heading"></a></h4>
 <p>Run mediator example.</p>
 <p>This function calls mediator module to run an example of behavioral design pattern called mediator.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>mediator<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
@@ -229,7 +239,7 @@ coffees that could be prepared in one or another pattern.</p>
 </div>
 </section>
 <section id="run-behavioral-pattern-observer">
-<h4><span class="section-number">2.2.3.4. </span>observer<a class="headerlink" href="#run-behavioral-pattern-observer" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.5. </span>observer<a class="headerlink" href="#run-behavioral-pattern-observer" title="Link to this heading"></a></h4>
 <p>Run observer example.</p>
 <p>This function calls observer module to run an example of behavioral design pattern called observer.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>observer<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
@@ -237,7 +247,7 @@ coffees that could be prepared in one or another pattern.</p>
 </div>
 </section>
 <section id="run-behavioral-pattern-strategy">
-<h4><span class="section-number">2.2.3.5. </span>strategy<a class="headerlink" href="#run-behavioral-pattern-strategy" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.6. </span>strategy<a class="headerlink" href="#run-behavioral-pattern-strategy" title="Link to this heading"></a></h4>
 <p>Run strategy example.</p>
 <p>This function calls strategy module to run an example of behavioral design pattern called strategy.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>strategy<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
@@ -245,7 +255,7 @@ coffees that could be prepared in one or another pattern.</p>
 </div>
 </section>
 <section id="run-behavioral-pattern-template-method">
-<h4><span class="section-number">2.2.3.6. </span>template-method<a class="headerlink" href="#run-behavioral-pattern-template-method" title="Link to this heading"></a></h4>
+<h4><span class="section-number">2.2.3.7. </span>template-method<a class="headerlink" href="#run-behavioral-pattern-template-method" title="Link to this heading"></a></h4>
 <p>Run template method example.</p>
 <p>This function calls template_method module to run an example of behavioral design pattern called template method.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>run-behavioral-pattern<span class="w"> </span>template-method<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
