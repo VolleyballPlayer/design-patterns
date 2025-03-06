@@ -1,5 +1,11 @@
 import click
 
+from designpatterns.behavioral_patterns.chain_of_responsibility import (
+    CakeHandler,
+    CoffeeHandler,
+    TeaHandler,
+    client_code as client_code_chain_of_responsbility,
+)
 from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
 from designpatterns.behavioral_patterns.iterator import PriceCollection
 from designpatterns.behavioral_patterns.mediator import Coffee, ConcreteMediator, Order, Payment
@@ -14,7 +20,11 @@ from designpatterns.behavioral_patterns.strategy import (
     StrategyEspresso,
     StrategyLatte,
 )
-from designpatterns.behavioral_patterns.template_method import Cappuccino, Latte, client_code
+from designpatterns.behavioral_patterns.template_method import (
+    Cappuccino,
+    Latte,
+    client_code as client_code_template_method,
+)
 from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
@@ -115,8 +125,8 @@ def template_method() -> None:
     """
     logger.info('Starting template method pattern run')
 
-    client_code(Latte())
-    client_code(Cappuccino())
+    client_code_template_method(Latte())
+    client_code_template_method(Cappuccino())
 
 
 @cli.command()
@@ -143,6 +153,31 @@ def iterator() -> None:
 
     logger.info('Decreasing price order:')
     print('\n'.join(collection.get_reverse_iterator()), end='')
+
+
+@cli.command()
+def chain_of_responsibility() -> None:
+    """Run chain of responsibility method example.
+
+    This function calls chain of responsibility module to run an example of behavioral design pattern called
+    chain of responsibility.
+    """
+    logger.info('Starting chain of responsibility pattern run')
+
+    coffee = CoffeeHandler()
+    cake = CakeHandler()
+    tea = TeaHandler()
+
+    coffee.set_next(cake).set_next(tea)
+
+    # The client should be able to send a request to any handler, not just the first one in the chain.
+
+    logger.info('Chain: Coffee > Cake > Tea')
+    client_code_chain_of_responsbility(coffee)
+    print('\n')
+    logger.info('Subchain: Tea')
+
+    client_code_chain_of_responsbility(tea)
 
 
 if __name__ == '__main__':
