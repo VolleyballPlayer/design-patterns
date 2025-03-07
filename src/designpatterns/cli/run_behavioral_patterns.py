@@ -25,6 +25,13 @@ from designpatterns.behavioral_patterns.template_method import (
     Latte,
     client_code as client_code_template_method,
 )
+from designpatterns.behavioral_patterns.visitor import (
+    CappuccinoComponent,
+    CoffeeVisitor,
+    LatteComponent,
+    MilkVisitor,
+    client_code as client_code_visitor,
+)
 from designpatterns.helpers.receipts import latte_receipt
 from designpatterns.logger import logger
 from designpatterns.utilities.package_resources import PackageResources
@@ -177,6 +184,23 @@ def chain_of_responsibility() -> None:
     print('\n')
     logger.info('Subchain: Tea')
     client_code_chain_of_responsibility(tea)
+
+
+@cli.command()
+def visitor() -> None:
+    """Run visitor method example.
+
+    This function calls visitor module to run an example of behavioral design pattern called visitor.
+    """
+    logger.info('Starting visitor pattern run')
+
+    components = [LatteComponent(), CappuccinoComponent()]
+    logger.info('The client code works with all visitors via the base Visitor interface:')
+    coffee_visitor = CoffeeVisitor()
+    client_code_visitor(components, coffee_visitor)
+    logger.info('It allows the same client code to work with different types of visitors:')
+    milk_visitor = MilkVisitor()
+    client_code_visitor(components, milk_visitor)
 
 
 if __name__ == '__main__':
