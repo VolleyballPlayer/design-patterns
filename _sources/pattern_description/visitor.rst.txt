@@ -92,3 +92,55 @@ You might encounter a situation where the visitor will need access to some priva
 * The client must create visitor objects and pass them into elements via “acceptance” methods.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Visitor <.. Component
+        Component <|.. LatteComponent
+        Component <|.. CappuccinoComponent
+        Visitor <|.. CoffeeVisitor
+        Visitor <|.. MilkVisitor
+
+        LatteComponent <.. Visitor
+        CappuccinoComponent <.. Visitor
+
+        CoffeeVisitor <.. client
+        MilkVisitor <.. client
+        Component <.. client
+
+        abstract class Component {
+        + accept()
+        }
+
+        class LatteComponent {
+        + accept()
+        + exclusive_method_of_latte_component()
+        }
+
+        class CappuccinoComponent {
+        + accept()
+        + special_method_of_cappuccino_component()
+        }
+
+        abstract class Visitor {
+        + visit_latte_component()
+        + visit_cappuccino_component()
+        }
+
+        class CoffeeVisitor {
+        + visit_latte_component()
+        + visit_cappuccino_component()
+        }
+
+        class MilkVisitor {
+        + visit_latte_component()
+        + visit_cappuccino_component()
+        }
+
+        hide client circle
+
+    @enduml

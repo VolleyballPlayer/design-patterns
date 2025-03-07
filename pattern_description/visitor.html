@@ -164,6 +164,57 @@
 <li><p>The client must create visitor objects and pass them into elements via “acceptance” methods.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-7d08c60bc052ff90e1dfdf9627e9e16a1d65b073.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Visitor &lt;.. Component
+    Component &lt;|.. LatteComponent
+    Component &lt;|.. CappuccinoComponent
+    Visitor &lt;|.. CoffeeVisitor
+    Visitor &lt;|.. MilkVisitor
+
+    LatteComponent &lt;.. Visitor
+    CappuccinoComponent &lt;.. Visitor
+
+    CoffeeVisitor &lt;.. client
+    MilkVisitor &lt;.. client
+    Component &lt;.. client
+
+    abstract class Component {
+    + accept()
+    }
+
+    class LatteComponent {
+    + accept()
+    + exclusive_method_of_latte_component()
+    }
+
+    class CappuccinoComponent {
+    + accept()
+    + special_method_of_cappuccino_component()
+    }
+
+    abstract class Visitor {
+    + visit_latte_component()
+    + visit_cappuccino_component()
+    }
+
+    class CoffeeVisitor {
+    + visit_latte_component()
+    + visit_cappuccino_component()
+    }
+
+    class MilkVisitor {
+    + visit_latte_component()
+    + visit_cappuccino_component()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
