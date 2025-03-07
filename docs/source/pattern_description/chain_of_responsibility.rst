@@ -14,6 +14,7 @@ During the next few months, you implemented several more of those sequential che
 * One of your colleagues suggested that it’s unsafe to pass raw data straight to the ordering system. So you added an extra validation step to sanitize the data in a request.
 * Later, somebody noticed that the system is vulnerable to brute force password cracking. To negate this, you promptly added a check that filters repeated failed requests coming from the same IP address.
 * Someone else suggested that you could speed up the system by returning cached results on repeated requests containing the same data. Hence, you added another check which lets the request pass through to the system only if there’s no suitable cached response.
+
 The code of the checks, which had already looked like a mess, became more and more bloated as you added each new feature. Changing one check sometimes affected the others. Worst of all, when you tried to reuse the checks to protect other components of the system, you had to duplicate some of the code since those components required some of the checks, but not all of them.
 
 The system became very hard to comprehend and expensive to maintain. You struggled with the code for a while, until one day you decided to refactor the whole thing.
@@ -73,35 +74,93 @@ If you provide setters for a reference field inside the handler classes, you’l
 **Relations with Other Patterns**
 
 * Chain of Responsibility, Command, Mediator and Observer address various ways of connecting senders and receivers of requests:
+
 - Chain of Responsibility passes a request sequentially along a dynamic chain of potential receivers until one of them handles it.
+
 - Command establishes unidirectional connections between senders and receivers.
+
 - Mediator eliminates direct connections between senders and receivers, forcing them to communicate indirectly via a mediator object.
+
 - Observer lets receivers dynamically subscribe to and unsubscribe from receiving requests.
+
 * Chain of Responsibility is often used in conjunction with Composite. In this case, when a leaf component gets a request, it may pass it through the chain of all of the parent components down to the root of the object tree.
+
 * Handlers in Chain of Responsibility can be implemented as Commands. In this case, you can execute a lot of different operations over the same context object, represented by a request.
+
 However, there’s another approach, where the request itself is a Command object. In this case, you can execute the same operation in a series of different contexts linked into a chain.
 
 * Chain of Responsibility and Decorator have very similar class structures. Both patterns rely on recursive composition to pass the execution through a series of objects. However, there are several crucial differences.
+
 The CoR handlers can execute arbitrary operations independently of each other. They can also stop passing the request further at any point. On the other hand, various Decorators can extend the object’s behavior while keeping it consistent with the base interface. In addition, decorators aren’t allowed to break the flow of the request.
 
 **How to Implement**
 
 * Declare the handler interface and describe the signature of a method for handling requests.
+
 Decide how the client will pass the request data into the method. The most flexible way is to convert the request into an object and pass it to the handling method as an argument.
 
 * To eliminate duplicate boilerplate code in concrete handlers, it might be worth creating an abstract base handler class, derived from the handler interface.
+
 This class should have a field for storing a reference to the next handler in the chain. Consider making the class immutable. However, if you plan to modify chains at runtime, you need to define a setter for altering the value of the reference field.
 
 You can also implement the convenient default behavior for the handling method, which is to forward the request to the next object unless there’s none left. Concrete handlers will be able to use this behavior by calling the parent method.
 
 * One by one create concrete handler subclasses and implement their handling methods. Each handler should make two decisions when receiving a request:
+
 - Whether it’ll process the request.
+
 - Whether it’ll pass the request along the chain.
+
 * The client may either assemble chains on its own or receive pre-built chains from other objects. In the latter case, you must implement some factory classes to build chains according to the configuration or environment settings.
+
 * The client may trigger any handler in the chain, not just the first one. The request will be passed along the chain until some handler refuses to pass it further or until it reaches the end of the chain.
+
 * Due to the dynamic nature of the chain, the client should be ready to handle the following scenarios:
+
 - The chain may consist of a single link.
+
 - Some requests may not reach the end of the chain.
+
 - Others may reach the end of the chain unhandled.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Handler <|.. AbstractHandler
+        AbstractHandler <|-- CoffeeHandler
+        AbstractHandler <|-- CakeHandler
+        AbstractHandler <|- TeaHandler
+
+        Handler <|-- client
+
+        abstract class Handler {
+        + set_next()
+        + handle()
+        }
+
+        abstract class AbstractHandler {
+        - next_handler
+        + set_next()
+        + handle()
+        }
+
+        class CoffeeHandler {
+        + handle()
+        }
+
+        class CakeHandler {
+        + handle()
+        }
+
+        class TeaHandler {
+        + handle()
+        }
+
+        hide client circle
+
+    @enduml

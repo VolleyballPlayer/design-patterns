@@ -4,6 +4,14 @@ designpatterns.behavioral\_patterns package
 Submodules
 ----------
 
+designpatterns.behavioral\_patterns.chain\_of\_responsibility module
+--------------------------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.chain_of_responsibility
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.command module
 --------------------------------------------------
 
