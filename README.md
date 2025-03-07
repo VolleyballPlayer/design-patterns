@@ -37,6 +37,7 @@ $${\color{lightblue}Template method}$$ pattern provides full process around orde
 are common for each order with specifying them in the base class. Specific steps concerning each coffee receipt are implemented in subclasses.
 $${\color{lightblue}Iterator}$$ pattern iterates over increasing or decreasing coffee prices in the menu.
 $${\color{lightblue}Chain of responsibility}$$ pattern takes an ingredient and adds it to first corresponding product which requires it.
+$${\color{lightblue}Visitor}$$ pattern extracts different data from recipes.
 
 #### Installation
 
