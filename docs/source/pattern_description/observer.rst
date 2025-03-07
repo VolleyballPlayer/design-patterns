@@ -114,7 +114,7 @@ But there’s another option. Upon receiving a notification, the subscriber can 
 
         Observer o-- Publisher
 
-        class Observer {
+        abstract class Observer {
         + update()
         }
 
@@ -126,7 +126,7 @@ But there’s another option. Upon receiving a notification, the subscriber can 
         + update()
         }
 
-        class Publisher {
+        abstract class Publisher {
         + attach()
         + detach()
         + notify()

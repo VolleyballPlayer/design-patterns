@@ -60,6 +60,14 @@ designpatterns.behavioral\_patterns.template\_method module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.visitor module
+--------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.visitor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
