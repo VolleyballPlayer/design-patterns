@@ -120,7 +120,7 @@ This interface is crucial when you want to reuse component classes in different 
         BaseComponent <|.. Coffee
         BaseComponent <|.. Payment
 
-        class Mediator {
+        abstract class Mediator {
         + notify()
         }
 

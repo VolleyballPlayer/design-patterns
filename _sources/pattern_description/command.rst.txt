@@ -123,7 +123,7 @@ However, there’s another approach, where the request itself is a Command objec
 
         Command <-- Invoker
 
-        class Command {
+        abstract class Command {
         + execute()
         }
 

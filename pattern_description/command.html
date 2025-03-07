@@ -190,7 +190,7 @@ As a result, commands become a convenient middle layer that reduces coupling bet
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
 <p class="plantuml">
-<img src="../_images/plantuml-6c0e961a24407e14450460ba4a44121ce2bde5c3.png" alt="&#64;startuml
+<img src="../_images/plantuml-435b4d571d06ac96ea10a9166ad9b22d85fab393.png" alt="&#64;startuml
 
     skinparam classAttributeIconSize 0
 
@@ -204,7 +204,7 @@ As a result, commands become a convenient middle layer that reduces coupling bet
 
     Command &lt;-- Invoker
 
-    class Command {
+    abstract class Command {
     + execute()
     }
 

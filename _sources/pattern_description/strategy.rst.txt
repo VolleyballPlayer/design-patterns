@@ -116,7 +116,7 @@ The Strategy pattern lets you do away with such a conditional by extracting all 
 
         Strategy o-- Context
 
-        class Strategy {
+        abstract class Strategy {
         + make_coffee()
         }
 

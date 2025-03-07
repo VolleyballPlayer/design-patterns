@@ -169,7 +169,7 @@
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
 <p class="plantuml">
-<img src="../_images/plantuml-905a01d745cd08f6349473f5e9371db8d6f84725.png" alt="&#64;startuml
+<img src="../_images/plantuml-b7c002c92a5cc88119c075896dadfce1ae6ada84.png" alt="&#64;startuml
 
     skinparam classAttributeIconSize 0
 
@@ -185,7 +185,7 @@
 
     Observer o-- Publisher
 
-    class Observer {
+    abstract class Observer {
     + update()
     }
 
@@ -197,7 +197,7 @@
     + update()
     }
 
-    class Publisher {
+    abstract class Publisher {
     + attach()
     + detach()
     + notify()
