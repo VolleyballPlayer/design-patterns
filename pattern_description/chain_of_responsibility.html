@@ -194,6 +194,45 @@
 <li><p>Others may reach the end of the chain unhandled.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-ac05446ef4440a58a632675f85a76b9c260e7233.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Handler &lt;|.. AbstractHandler
+    AbstractHandler &lt;|-- CoffeeHandler
+    AbstractHandler &lt;|-- CakeHandler
+    AbstractHandler &lt;|- TeaHandler
+
+    Handler &lt;|-- client
+
+    abstract class Handler {
+    + set_next()
+    + handle()
+    }
+
+    abstract class AbstractHandler {
+    - next_handler
+    + set_next()
+    + handle()
+    }
+
+    class CoffeeHandler {
+    + handle()
+    }
+
+    class CakeHandler {
+    + handle()
+    }
+
+    class TeaHandler {
+    + handle()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
