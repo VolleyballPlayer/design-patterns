@@ -53,6 +53,13 @@ designpatterns.behavioral\_patterns.template\_method module
    :members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.visitor module
+--------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.visitor
+   :members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

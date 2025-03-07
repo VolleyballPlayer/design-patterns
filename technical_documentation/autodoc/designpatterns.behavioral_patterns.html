@@ -1125,8 +1125,224 @@ through the interface of their base class.</p>
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.behavioral_patterns.visitor">
+<span id="designpatterns-behavioral-patterns-visitor-module"></span><h2><span class="section-number">3.1.1.1.1.9. </span>designpatterns.behavioral_patterns.visitor module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.visitor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CappuccinoComponent">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">CappuccinoComponent</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Component" title="designpatterns.behavioral_patterns.visitor.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>Same here: visitConcreteComponentB =&gt; ConcreteComponentB.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CappuccinoComponent.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent.accept" title="Link to this definition"></a></dt>
+<dd><p>Take the base visitor interface as argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>visitor</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CappuccinoComponent.special_method_of_cappuccino_component">
+<span class="sig-name descname"><span class="pre">special_method_of_cappuccino_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent.special_method_of_cappuccino_component" title="Link to this definition"></a></dt>
+<dd><p>Add special method of cappuccino component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CoffeeVisitor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">CoffeeVisitor</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CoffeeVisitor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></p>
+<p>Declare a set of visiting methods that correspond to coffee component classes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CoffeeVisitor.visit_cappuccino_component">
+<span class="sig-name descname"><span class="pre">visit_cappuccino_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CoffeeVisitor.visit_cappuccino_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit cappuccino component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="designpatterns.behavioral_patterns.visitor.CappuccinoComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">CappuccinoComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CoffeeVisitor.visit_latte_component">
+<span class="sig-name descname"><span class="pre">visit_latte_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CoffeeVisitor.visit_latte_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit latte component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.LatteComponent" title="designpatterns.behavioral_patterns.visitor.LatteComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">LatteComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.Component">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.Component" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Component interface declares an <cite>accept</cite> method that should take the base visitor interface as argument.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.Component.accept">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.Component.accept" title="Link to this definition"></a></dt>
+<dd><p>Take the base visitor interface as argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>visitor</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.LatteComponent">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">LatteComponent</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.LatteComponent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Component" title="designpatterns.behavioral_patterns.visitor.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>Each Concrete Component must implement the <cite>accept</cite> method in such a way that it calls the visitor’s method.</p>
+<p>…corresponding to the component’s class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.LatteComponent.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.LatteComponent.accept" title="Link to this definition"></a></dt>
+<dd><p>Note that we’re calling <cite>visitConcreteComponentA</cite>, which matches the current class name.</p>
+<p>This way we let the visitor know the class of the component it works with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>visitor</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.LatteComponent.exclusive_method_of_latte_component">
+<span class="sig-name descname"><span class="pre">exclusive_method_of_latte_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.LatteComponent.exclusive_method_of_latte_component" title="Link to this definition"></a></dt>
+<dd><p>Concrete Components may have special methods that don’t exist in their base class or interface.</p>
+<p>The Visitor is still able to use these methods since it’s aware of the component’s concrete class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.MilkVisitor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">MilkVisitor</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.MilkVisitor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></p>
+<p>Declare a set of visiting methods that correspond to milk component classes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.MilkVisitor.visit_cappuccino_component">
+<span class="sig-name descname"><span class="pre">visit_cappuccino_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.MilkVisitor.visit_cappuccino_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit cappuccino component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="designpatterns.behavioral_patterns.visitor.CappuccinoComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">CappuccinoComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.MilkVisitor.visit_latte_component">
+<span class="sig-name descname"><span class="pre">visit_latte_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.MilkVisitor.visit_latte_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit latte component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.LatteComponent" title="designpatterns.behavioral_patterns.visitor.LatteComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">LatteComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.Visitor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">Visitor</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Visitor Interface declares a set of visiting methods that correspond to component classes.</p>
+<p>The signature of a visiting method allows the visitor to identify the exact class of the component that it’s
+dealing with.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.Visitor.visit_cappuccino_component">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visit_cappuccino_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.Visitor.visit_cappuccino_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit cappuccino component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="designpatterns.behavioral_patterns.visitor.CappuccinoComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">CappuccinoComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.Visitor.visit_latte_component">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visit_latte_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.Visitor.visit_latte_component" title="Link to this definition"></a></dt>
+<dd><p>Define visit latte component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.LatteComponent" title="designpatterns.behavioral_patterns.visitor.LatteComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">LatteComponent</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.client_code" title="Link to this definition"></a></dt>
+<dd><p>Can run visitor operations over any set of elements without figuring out their concrete classes.</p>
+<p>The accept operation directs a call to the appropriate operation in the visitor object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>components</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Component" title="designpatterns.behavioral_patterns.visitor.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a>]</span>)</p></li>
+<li><p><strong>visitor</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.visitor.Visitor" title="designpatterns.behavioral_patterns.visitor.Visitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Visitor</span></code></a></span>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.behavioral_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.9. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.10. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
