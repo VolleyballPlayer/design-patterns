@@ -158,6 +158,25 @@
 <li><p>The client must store or calculate values of the extrinsic state (context) to be able to call methods of flyweight objects. For the sake of convenience, the extrinsic state along with the flyweight-referencing field may be moved to a separate context class.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-52703b5b3ee1a0dd6c2408191942a21095ae6bdc.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    FlyweightFactory &lt;.. Flyweight
+
+    class Flyweight {
+    + operation()
+    }
+
+    class FlyweightFactory {
+    + get_key()
+    + get_flyweight()
+    + list_flyweights()
+    }
+
+&#64;enduml"/>
+</p>
 </section>
 
 

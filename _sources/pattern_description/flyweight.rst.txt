@@ -85,3 +85,23 @@ You can save lots of RAM, assuming your program has tons of similar objects.
 * The client must store or calculate values of the extrinsic state (context) to be able to call methods of flyweight objects. For the sake of convenience, the extrinsic state along with the flyweight-referencing field may be moved to a separate context class.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        FlyweightFactory <.. Flyweight
+
+        class Flyweight {
+        + operation()
+        }
+
+        class FlyweightFactory {
+        + get_key()
+        + get_flyweight()
+        + list_flyweights()
+        }
+
+    @enduml
