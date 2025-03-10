@@ -36,6 +36,14 @@ designpatterns.structural\_patterns.facade module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.flyweight module
+----------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.flyweight
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
