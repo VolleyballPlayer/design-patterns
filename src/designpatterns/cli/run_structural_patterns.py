@@ -28,6 +28,7 @@ from designpatterns.structural_patterns.facade import (
     Facade,
     client_code as client_code_facade,
 )
+from designpatterns.structural_patterns.flyweight import FlyweightFactory, add_coffee_to_order_list
 from designpatterns.utilities.package_resources import PackageResources
 
 
@@ -132,6 +133,29 @@ def composite() -> None:
 
     print("Client: I don't need to check the components classes even when managing the tree:")
     client_code_composite2(tree, simple)
+
+
+@cli.command()
+def flyweight() -> None:
+    """Run flyweight example.
+
+    This function calls flyweight module to run an example of structural design pattern called flyweight.
+    """
+    logger.info('Starting flyweight pattern run')
+
+    """The client code usually creates a bunch of pre-populated flyweights in the initialization stage of the
+    application."""
+
+    factory = FlyweightFactory([['latte'], ['cappuccino']])
+
+    factory.list_flyweights()
+    print('\n')
+
+    add_coffee_to_order_list(factory, 'latte', 'Ema')
+
+    add_coffee_to_order_list(factory, 'espresso', 'Diana')
+
+    factory.list_flyweights()
 
 
 if __name__ == '__main__':

@@ -26,6 +26,7 @@ RUN apt-get -y update; \
     run-structural-pattern facade; \
     run-structural-pattern bridge; \
     run-structural-pattern composite; \
+    run-structural-pattern flyweight; \
     run-behavioral-pattern strategy; \
     run-behavioral-pattern observer; \
     run-behavioral-pattern command; \
