@@ -112,3 +112,43 @@ However, the patterns can also cooperate: you can use Decorator to extend the be
 * The client code must be responsible for creating decorators and composing them in the way the client needs.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Component <-- client
+        Component <.. PrepareLatte
+        Component <.. Decorator
+
+        Decorator <-- Notification
+        Decorator <-- Payment
+
+        Decorator o-- Component
+
+        abstract class Component {
+        + operation()
+        }
+
+        class PrepareLatte {
+        + operation()
+        }
+
+        class Decorator {
+        + component
+        + operation()
+        }
+
+        class Notification {
+        + operation()
+        }
+
+        class Payment {
+        + operation()
+        }
+
+        hide client circle
+
+    @enduml

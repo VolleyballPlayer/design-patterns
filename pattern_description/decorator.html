@@ -173,6 +173,45 @@ One of the ways to overcome these caveats is by using Aggregation or Composition
 <li><p>The client code must be responsible for creating decorators and composing them in the way the client needs.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-0e07fdfebc32e5c3bce34ebdcdb953a441e1840f.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Component &lt;-- client
+    Component &lt;.. PrepareLatte
+    Component &lt;.. Decorator
+
+    Decorator &lt;-- Notification
+    Decorator &lt;-- Payment
+
+    Decorator o-- Component
+
+    abstract class Component {
+    + operation()
+    }
+
+    class PrepareLatte {
+    + operation()
+    }
+
+    class Decorator {
+    + component
+    + operation()
+    }
+
+    class Notification {
+    + operation()
+    }
+
+    class Payment {
+    + operation()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
