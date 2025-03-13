@@ -498,8 +498,142 @@ without depending on their concrete classes.</p>
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.structural_patterns.decorator">
+<span id="designpatterns-structural-patterns-decorator-module"></span><h2><span class="section-number">3.1.1.1.4.5. </span>designpatterns.structural_patterns.decorator module<a class="headerlink" href="#module-designpatterns.structural_patterns.decorator" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Component">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Component" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The base Component interface defines operations that can be altered by decorators.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Component.operation">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Component.operation" title="Link to this definition"></a></dt>
+<dd><p>Define get coffee method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Decorator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">Decorator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Decorator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>The base Decorator class follows the same interface as the other components.</p>
+<p>The primary purpose of this class is to define the wrapping interface for all concrete decorators.
+The default implementation of the wrapping code might include a field for storing a wrapped component and the means
+to initialize it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Decorator.component">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">component</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><span class="pre">Component</span></a></em><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Decorator.component" title="Link to this definition"></a></dt>
+<dd><p>The Decorator delegates all work to the wrapped component.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Decorator.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Decorator.operation" title="Link to this definition"></a></dt>
+<dd><p>Define get coffee method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Notification">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">Notification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Notification" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.decorator.Decorator" title="designpatterns.structural_patterns.decorator.Decorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decorator</span></code></a></p>
+<p>Concrete Decorators call the wrapped object and alter its result in some way.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Notification.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Notification.operation" title="Link to this definition"></a></dt>
+<dd><p>May call parent implementation of the operation, instead of calling the wrapped object directly.</p>
+<p>This approach simplifies extension of decorator classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Payment">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">Payment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Payment" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.decorator.Decorator" title="designpatterns.structural_patterns.decorator.Decorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decorator</span></code></a></p>
+<p>Decorators can execute their behavior either before or after the call to a wrapped object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.Payment.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.Payment.operation" title="Link to this definition"></a></dt>
+<dd><p>Request payment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.PrepareLatte">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">PrepareLatte</span></span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.PrepareLatte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></p>
+<p>Concrete Components provide default implementations of the operations.</p>
+<p>There might be several variations of these classes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.PrepareLatte.operation">
+<span class="sig-name descname"><span class="pre">operation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.PrepareLatte.operation" title="Link to this definition"></a></dt>
+<dd><p>Define get coffee method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="designpatterns.structural_patterns.decorator.client_code">
+<span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.decorator.</span></span><span class="sig-name descname"><span class="pre">client_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.decorator.client_code" title="Link to this definition"></a></dt>
+<dd><p>Work with all objects using the Component interface.</p>
+<p>This way it can stay independent of the concrete classes of components it works with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>component</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.structural_patterns.decorator.Component" title="designpatterns.structural_patterns.decorator.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.structural_patterns.facade">
-<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.5. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
+<span id="designpatterns-structural-patterns-facade-module"></span><h2><span class="section-number">3.1.1.1.4.6. </span>designpatterns.structural_patterns.facade module<a class="headerlink" href="#module-designpatterns.structural_patterns.facade" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.structural_patterns.facade.ExtendedOrderCommand">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.facade.</span></span><span class="sig-name descname"><span class="pre">ExtendedOrderCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receipt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.facade.ExtendedOrderCommand" title="Link to this definition"></a></dt>
@@ -599,7 +733,7 @@ subsystem. This approach lets you keep the complexity under control.</p>
 
 </section>
 <section id="module-designpatterns.structural_patterns.flyweight">
-<span id="designpatterns-structural-patterns-flyweight-module"></span><h2><span class="section-number">3.1.1.1.4.6. </span>designpatterns.structural_patterns.flyweight module<a class="headerlink" href="#module-designpatterns.structural_patterns.flyweight" title="Link to this heading"></a></h2>
+<span id="designpatterns-structural-patterns-flyweight-module"></span><h2><span class="section-number">3.1.1.1.4.7. </span>designpatterns.structural_patterns.flyweight module<a class="headerlink" href="#module-designpatterns.structural_patterns.flyweight" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.structural_patterns.flyweight.Flyweight">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.structural_patterns.flyweight.</span></span><span class="sig-name descname"><span class="pre">Flyweight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shared_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.structural_patterns.flyweight.Flyweight" title="Link to this definition"></a></dt>
@@ -701,7 +835,7 @@ an existing instance or creates a new one, if it doesn’t exist yet.</p>
 
 </section>
 <section id="module-designpatterns.structural_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.7. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.4.8. </span>Module contents<a class="headerlink" href="#module-designpatterns.structural_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
