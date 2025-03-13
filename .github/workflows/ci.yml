@@ -59,6 +59,7 @@ jobs:
           run-structural-pattern bridge --help
           run-structural-pattern composite --help
           run-structural-pattern flyweight --help
+          run-structural-pattern decorator --help
 
           run-behavioral-pattern strategy --help
           run-behavioral-pattern observer --help

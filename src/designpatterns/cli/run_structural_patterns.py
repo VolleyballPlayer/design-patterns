@@ -22,6 +22,12 @@ from designpatterns.structural_patterns.composite import (
     client_code as client_code_composite,
     client_code2 as client_code_composite2,
 )
+from designpatterns.structural_patterns.decorator import (
+    Notification,
+    Payment,
+    PrepareLatte,
+    client_code as client_code_decorator,
+)
 from designpatterns.structural_patterns.facade import (
     ExtendedOrderCommand,
     ExtendedPrepareCoffeeCommand,
@@ -156,6 +162,26 @@ def flyweight() -> None:
     add_coffee_to_order_list(factory, 'espresso', 'Diana')
 
     factory.list_flyweights()
+
+
+@cli.command()
+def decorator() -> None:
+    """Run decorator example.
+
+    This function calls decorator module to run an example of structural design pattern called decorator.
+    """
+    logger.info('Starting decorator pattern run')
+
+    # This way the client code can support both simple components...
+    coffee = PrepareLatte()
+    client_code_decorator(coffee)
+    # ...as well as decorated ones.
+    #
+    # Note how decorators can wrap not only simple components but the other decorators as well.
+    decorator1 = Notification(coffee)
+    client_code_decorator(decorator1)
+    decorator2 = Payment(decorator1)
+    client_code_decorator(decorator2)
 
 
 if __name__ == '__main__':
