@@ -28,6 +28,14 @@ designpatterns.structural\_patterns.composite module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.decorator module
+----------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.decorator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.structural\_patterns.facade module
 -------------------------------------------------
 
