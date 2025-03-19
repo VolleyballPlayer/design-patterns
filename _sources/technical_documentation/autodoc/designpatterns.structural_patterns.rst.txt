@@ -46,6 +46,13 @@ designpatterns.structural\_patterns.flyweight module
    :members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.proxy module
+------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.proxy
+   :members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
