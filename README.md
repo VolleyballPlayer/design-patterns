@@ -29,6 +29,7 @@ for futures types and combinations.
 $${\color{lightblue}Composite}$$ pattern implements menu with prices structuring drinks by size and type.
 $${\color{lightblue}Flyweight}$$ pattern reuses existing coffee type and adds customer name to new order.
 $${\color{lightblue}Decorator}$$ pattern adds decorators for notifications and payments around the coffee order.
+$${\color{lightblue}Proxy}$$ pattern keeps track of prepared coffees in the cache. In case the coffee was already prepared, provide to coffee to customer, else prepare the coffee.
 
 $${\color{lightblue}Strategy}$$ pattern is preparing coffees using same method for
 different ways of preparations per coffee type.
