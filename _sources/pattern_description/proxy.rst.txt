@@ -84,3 +84,33 @@ The proxy can also track whether the client had modified the service object. The
 * Consider implementing lazy initialization for the service object.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Subject <-- client
+        Subject <|.. Coffee
+        Subject <|.. Proxy
+
+        abstract class Subject {
+        + request()
+        }
+
+        class Coffee {
+        + request()
+        }
+
+        class Proxy {
+        - real_subject
+        - cache
+        + request()
+        + should_prepare_coffee()
+        + log_access()
+        }
+
+        hide client circle
+
+    @enduml

@@ -153,6 +153,35 @@
 <li><p>Consider implementing lazy initialization for the service object.</p></li>
 </ul>
 <p><strong>UML of the example implemented in this repository</strong></p>
+<p class="plantuml">
+<img src="../_images/plantuml-d75a5851d81a481440f728e6203af93eead200db.png" alt="&#64;startuml
+
+    skinparam classAttributeIconSize 0
+
+    Subject &lt;-- client
+    Subject &lt;|.. Coffee
+    Subject &lt;|.. Proxy
+
+    abstract class Subject {
+    + request()
+    }
+
+    class Coffee {
+    + request()
+    }
+
+    class Proxy {
+    - real_subject
+    - cache
+    + request()
+    + should_prepare_coffee()
+    + log_access()
+    }
+
+    hide client circle
+
+&#64;enduml"/>
+</p>
 </section>
 
 
