@@ -1,7 +1,7 @@
 import click
 
 from designpatterns.behavioral_patterns.command import Receiver
-from designpatterns.helpers.receipts import latte_receipt
+from designpatterns.helpers.receipts import cappuccino_receipt, latte_receipt
 from designpatterns.logger import logger
 from designpatterns.structural_patterns.adapter import (
     Adaptee,
@@ -35,6 +35,11 @@ from designpatterns.structural_patterns.facade import (
     client_code as client_code_facade,
 )
 from designpatterns.structural_patterns.flyweight import FlyweightFactory, add_coffee_to_order_list
+from designpatterns.structural_patterns.proxy import (
+    Coffee as CoffeeProxy,
+    Proxy,
+    client_code as client_code_proxy,
+)
 from designpatterns.utilities.package_resources import PackageResources
 
 
@@ -182,6 +187,28 @@ def decorator() -> None:
     client_code_decorator(decorator1)
     decorator2 = Payment(decorator1)
     client_code_decorator(decorator2)
+
+
+@cli.command()
+def proxy() -> None:
+    """Run proxy example.
+
+    This function calls proxy module to run an example of structural design pattern called proxy.
+    """
+    logger.info('Starting proxy pattern run')
+
+    print('Client: Executing the client code with a real subject:')
+    real_subject = CoffeeProxy()
+
+    client_code_proxy(real_subject, latte_receipt)
+
+    print('\n')
+
+    print('Client: Executing the same client code with a proxy:')
+    proxy = Proxy(real_subject)
+    client_code_proxy(proxy, latte_receipt)
+    client_code_proxy(proxy, cappuccino_receipt)
+    client_code_proxy(proxy, latte_receipt)
 
 
 if __name__ == '__main__':

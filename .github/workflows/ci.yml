@@ -60,6 +60,7 @@ jobs:
           run-structural-pattern composite --help
           run-structural-pattern flyweight --help
           run-structural-pattern decorator --help
+          run-structural-pattern proxy --help
 
           run-behavioral-pattern strategy --help
           run-behavioral-pattern observer --help

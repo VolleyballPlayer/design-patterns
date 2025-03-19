@@ -28,6 +28,7 @@ RUN apt-get -y update; \
     run-structural-pattern composite; \
     run-structural-pattern flyweight; \
     run-structural-pattern decorator; \
+    run-structural-pattern proxy; \
     run-behavioral-pattern strategy; \
     run-behavioral-pattern observer; \
     run-behavioral-pattern command; \
