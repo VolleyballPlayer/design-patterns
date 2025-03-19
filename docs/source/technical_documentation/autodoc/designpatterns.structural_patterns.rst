@@ -52,6 +52,14 @@ designpatterns.structural\_patterns.flyweight module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.structural\_patterns.proxy module
+------------------------------------------------
+
+.. automodule:: designpatterns.structural_patterns.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
