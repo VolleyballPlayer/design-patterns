@@ -55,6 +55,22 @@ class Receipt:
         logger.info(msg)
         return joined_ingredients
 
+    def __eq__(self, other: Receipt) -> bool:
+        """Define equal method."""
+        if not isinstance(other, Receipt):
+            return False
+        return (self.name, self.coffee, self.milk, self.milk_foam, self.chocolate) == (
+            other.name,
+            other.coffee,
+            other.milk,
+            other.milk_foam,
+            other.chocolate,
+        )
+
+    def __hash__(self) -> Receipt:
+        """Provide hashing for Receipt class."""
+        return hash((self.name, self.coffee, self.milk, self.milk_foam, self.chocolate))
+
 
 latte_receipt = Receipt(
     name='latte', coffee='1/2 cup coffee', milk='1/4 cup milk', milk_foam='1/4 cup milk foam', chocolate=None
