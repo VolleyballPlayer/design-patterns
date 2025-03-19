@@ -17,7 +17,6 @@ class Subject(ABC):
     @abstractmethod
     def request(self, receipt: Receipt) -> None:
         """Get coffee."""
-        pass
 
 
 class Coffee(Subject):
