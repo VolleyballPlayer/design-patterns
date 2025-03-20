@@ -41,6 +41,7 @@ are common for each order with specifying them in the base class. Specific steps
 $${\color{lightblue}Iterator}$$ pattern iterates over increasing or decreasing coffee prices in the menu.
 $${\color{lightblue}Chain of responsibility}$$ pattern takes an ingredient and adds it to first corresponding product which requires it.
 $${\color{lightblue}Visitor}$$ pattern extracts different data from recipes.
+$${\color{lightblue}State}$$ pattern check if certain coffee type was already prepared and should be sent to payment or it should be firstly made.
 
 #### Installation
 
