@@ -44,6 +44,14 @@ designpatterns.behavioral\_patterns.observer module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.state module
+------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.state
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.strategy module
 ---------------------------------------------------
 
