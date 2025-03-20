@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
+from designpatterns.logger import logger
+
 
 class State(ABC):
     """The base State class declares methods that all Concrete State should implement.
@@ -39,14 +41,14 @@ class Latte(State):
     def check_if_order_made(self, coffee: str) -> None:
         """Implement method to check if latte coffee order was already made."""
         if coffee == 'latte':
-            print('Order was made for latte.')
+            logger.info('Order was made for latte.')
         else:
-            print('Order was not made for latte. Check if it was made for cappuccino.')
+            logger.info('Order was not made for latte. Check if it was made for cappuccino.')
             self.context.transition_to(Cappuccino())
 
     def prepare_coffee(self) -> None:
         """Prepare latte coffee."""
-        print('Preparing latte.')
+        logger.info('Preparing latte.')
 
 
 class Cappuccino(State):
@@ -55,14 +57,14 @@ class Cappuccino(State):
     def check_if_order_made(self, coffee: str) -> None:
         """Implement method to check if cappuccino coffee order was already made."""
         if coffee == 'cappuccino':
-            print('Order was made for cappuccino.')
+            logger.info('Order was made for cappuccino.')
         else:
-            print('Order was not made for cappuccino. Check if it was made for latte.')
+            logger.info('Order was not made for cappuccino. Check if it was made for latte.')
             self.context.transition_to(Latte())
 
     def prepare_coffee(self) -> None:
         """Prepare cappuccino coffee."""
-        print('Preparing cappuccino')
+        logger.info('Preparing cappuccino')
 
 
 class Context:
@@ -80,7 +82,7 @@ class Context:
 
     def transition_to(self, state: State) -> None:
         """Allow changing the State object at runtime."""
-        print(f'Context: Transition to {type(state).__name__}')
+        logger.info(f'Context: Transition to {type(state).__name__}')
         self._state = state
         self._state.context = self
 
