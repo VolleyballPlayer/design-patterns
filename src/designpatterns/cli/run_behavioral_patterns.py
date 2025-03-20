@@ -14,6 +14,10 @@ from designpatterns.behavioral_patterns.observer import (
     ObserverWeekendDiscounts,
     ObserverWorkDayDiscounts,
 )
+from designpatterns.behavioral_patterns.state import (
+    Context as ContextState,
+    Latte as LatteState,
+)
 from designpatterns.behavioral_patterns.strategy import (
     Context,
     StrategyCappuccino,
@@ -201,6 +205,22 @@ def visitor() -> None:
     logger.info('It allows the same client code to work with different types of visitors:')
     milk_visitor = MilkVisitor()
     client_code_visitor(components, milk_visitor)
+
+
+@cli.command()
+def state() -> None:
+    """Run state method example.
+
+    This function calls state module to run an example of behavioral design pattern called state.
+    """
+    logger.info('Starting state pattern run')
+
+    context = ContextState(LatteState())
+    context.check_order(coffee='latte')
+    context.process_order()
+
+    context.check_order(coffee='cappuccino')
+    context.process_order()
 
 
 if __name__ == '__main__':

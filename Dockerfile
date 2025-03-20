@@ -36,6 +36,7 @@ RUN apt-get -y update; \
     run-behavioral-pattern template-method; \
     run-behavioral-pattern iterator; \
     run-behavioral-pattern chain-of-responsibility; \
-    run-behavioral-pattern visitor
+    run-behavioral-pattern visitor; \
+    run-behavioral-pattern state
 
 ENTRYPOINT [ "/bin/bash" ]
