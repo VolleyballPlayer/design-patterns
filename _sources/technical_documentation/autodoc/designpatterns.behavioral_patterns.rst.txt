@@ -39,6 +39,13 @@ designpatterns.behavioral\_patterns.observer module
    :members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.state module
+------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.state
+   :members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.strategy module
 ---------------------------------------------------
 

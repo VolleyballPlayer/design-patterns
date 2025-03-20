@@ -831,8 +831,167 @@ important is about to happen (or after it).</p>
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.behavioral_patterns.state">
+<span id="designpatterns-behavioral-patterns-state-module"></span><h2><span class="section-number">3.1.1.1.1.7. </span>designpatterns.behavioral_patterns.state module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.state" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Cappuccino">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.state.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Cappuccino" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.state.State" title="designpatterns.behavioral_patterns.state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">State</span></code></a></p>
+<p>Implement cappuccino state.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Cappuccino.check_if_order_made">
+<span class="sig-name descname"><span class="pre">check_if_order_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coffee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Cappuccino.check_if_order_made" title="Link to this definition"></a></dt>
+<dd><p>Implement method to check if cappuccino coffee order was already made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coffee</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Cappuccino.prepare_coffee">
+<span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Cappuccino.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare cappuccino coffee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Context">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.state.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Context" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Context defines the interface of interest to clients.</p>
+<p>It also maintains a reference to an instance of a State subclass, which represents the current state of the Context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.state.State" title="designpatterns.behavioral_patterns.state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">State</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Context.check_order">
+<span class="sig-name descname"><span class="pre">check_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coffee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Context.check_order" title="Link to this definition"></a></dt>
+<dd><p>Implement method to check if specific coffee order was already made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coffee</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Context.process_order">
+<span class="sig-name descname"><span class="pre">process_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Context.process_order" title="Link to this definition"></a></dt>
+<dd><p>Prepare specific coffee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Context.transition_to">
+<span class="sig-name descname"><span class="pre">transition_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Context.transition_to" title="Link to this definition"></a></dt>
+<dd><p>Allow changing the State object at runtime.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.state.State" title="designpatterns.behavioral_patterns.state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">State</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Latte">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.state.</span></span><span class="sig-name descname"><span class="pre">Latte</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Latte" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.state.State" title="designpatterns.behavioral_patterns.state.State"><code class="xref py py-class docutils literal notranslate"><span class="pre">State</span></code></a></p>
+<p>Implement latte state.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Latte.check_if_order_made">
+<span class="sig-name descname"><span class="pre">check_if_order_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coffee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Latte.check_if_order_made" title="Link to this definition"></a></dt>
+<dd><p>Implement method to check if latte coffee order was already made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coffee</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Latte.prepare_coffee">
+<span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Latte.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare latte coffee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.State">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.state.</span></span><span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.State" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The base State class declares methods that all Concrete State should implement.</p>
+<p>It also provides a backreference to the Context object, associated with the State. This backreference can be used
+by States to transition the Context to another State.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.State.check_if_order_made">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_if_order_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coffee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.State.check_if_order_made" title="Link to this definition"></a></dt>
+<dd><p>Implement method to check if specific coffee order was already made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coffee</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.State.context">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">context</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#designpatterns.behavioral_patterns.state.Context" title="designpatterns.behavioral_patterns.state.Context"><span class="pre">Context</span></a></em><a class="headerlink" href="#designpatterns.behavioral_patterns.state.State.context" title="Link to this definition"></a></dt>
+<dd><p>Get current context.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.State.prepare_coffee">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepare_coffee</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.State.prepare_coffee" title="Link to this definition"></a></dt>
+<dd><p>Prepare coffee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.behavioral_patterns.strategy">
-<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.7. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.8. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.strategy.Context">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.strategy.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.strategy.Context" title="Link to this definition"></a></dt>
@@ -940,7 +1099,7 @@ It should work with all strategies via the Strategy interface.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.template_method">
-<span id="designpatterns-behavioral-patterns-template-method-module"></span><h2><span class="section-number">3.1.1.1.1.8. </span>designpatterns.behavioral_patterns.template_method module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.template_method" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-template-method-module"></span><h2><span class="section-number">3.1.1.1.1.9. </span>designpatterns.behavioral_patterns.template_method module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.template_method" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">AbstractClass</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="Link to this definition"></a></dt>
@@ -1126,7 +1285,7 @@ through the interface of their base class.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.visitor">
-<span id="designpatterns-behavioral-patterns-visitor-module"></span><h2><span class="section-number">3.1.1.1.1.9. </span>designpatterns.behavioral_patterns.visitor module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.visitor" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-visitor-module"></span><h2><span class="section-number">3.1.1.1.1.10. </span>designpatterns.behavioral_patterns.visitor module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.visitor" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CappuccinoComponent">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">CappuccinoComponent</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="Link to this definition"></a></dt>
@@ -1342,7 +1501,7 @@ dealing with.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.10. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.11. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 
