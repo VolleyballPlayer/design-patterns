@@ -42,6 +42,7 @@ $${\color{lightblue}Iterator}$$ pattern iterates over increasing or decreasing c
 $${\color{lightblue}Chain of responsibility}$$ pattern takes an ingredient and adds it to first corresponding product which requires it.
 $${\color{lightblue}Visitor}$$ pattern extracts different data from recipes.
 $${\color{lightblue}State}$$ pattern check if certain coffee type was already prepared and should be sent to payment or it should be firstly made.
+$${\color{lightblue}Memento}$$ pattern stores timings and types of made coffees and can rollback to those states.
 
 #### Installation
 
