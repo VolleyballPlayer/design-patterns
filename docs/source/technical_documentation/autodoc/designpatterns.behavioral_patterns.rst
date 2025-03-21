@@ -36,6 +36,14 @@ designpatterns.behavioral\_patterns.mediator module
    :undoc-members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.memento module
+--------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.memento
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.observer module
 ---------------------------------------------------
 
