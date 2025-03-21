@@ -102,7 +102,7 @@ class Caretaker:
         if not len(self._mementos):
             return
         memento = self._mementos.pop()
-        logger.info(f'Caretaker: Restoring state to: {memento.get_name()}')
+        logger.info(f'Caretaker: Restoring state to: {memento.get_name()} and {memento.get_date()}')
         try:
             self._originator.restore(memento)
         except Exception:
