@@ -654,8 +654,187 @@ any class may serve as a Receiver.</p>
 </dd></dl>
 
 </section>
+<section id="module-designpatterns.behavioral_patterns.memento">
+<span id="designpatterns-behavioral-patterns-memento-module"></span><h2><span class="section-number">3.1.1.1.1.6. </span>designpatterns.behavioral_patterns.memento module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.memento" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Caretaker">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.memento.</span></span><span class="sig-name descname"><span class="pre">Caretaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">originator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Caretaker" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Caretaker doesn’t depend on the Concrete Memento class.</p>
+<p>Therefore, it doesn’t have access to the originator’s state, stored inside the memento. It works with all mementos
+via the base Memento interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>originator</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.memento.Originator" title="designpatterns.behavioral_patterns.memento.Originator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Originator</span></code></a></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Caretaker.backup">
+<span class="sig-name descname"><span class="pre">backup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Caretaker.backup" title="Link to this definition"></a></dt>
+<dd><p>Backup originator state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Caretaker.show_history">
+<span class="sig-name descname"><span class="pre">show_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Caretaker.show_history" title="Link to this definition"></a></dt>
+<dd><p>Show list of mementos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Caretaker.undo">
+<span class="sig-name descname"><span class="pre">undo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Caretaker.undo" title="Link to this definition"></a></dt>
+<dd><p>Restoring state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.ConcreteMemento">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.memento.</span></span><span class="sig-name descname"><span class="pre">ConcreteMemento</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.ConcreteMemento" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#designpatterns.behavioral_patterns.memento.Memento" title="designpatterns.behavioral_patterns.memento.Memento"><code class="xref py py-class docutils literal notranslate"><span class="pre">Memento</span></code></a></p>
+<p>Implement memento.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.ConcreteMemento.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.ConcreteMemento.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.ConcreteMemento.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.ConcreteMemento.get_name" title="Link to this definition"></a></dt>
+<dd><p>Display metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.ConcreteMemento.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.ConcreteMemento.get_state" title="Link to this definition"></a></dt>
+<dd><p>Use this method when restoring its state in originator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Memento">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.memento.</span></span><span class="sig-name descname"><span class="pre">Memento</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Memento" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>The Memento interface provides a way to retrieve the memento’s metadata, such as creation date or name.</p>
+<p>However, it doesn’t expose the Originator’s state.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Memento.get_date">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Memento.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get memento date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Memento.get_name">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Memento.get_name" title="Link to this definition"></a></dt>
+<dd><p>Get memento name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Originator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.memento.</span></span><span class="sig-name descname"><span class="pre">Originator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Originator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Originator holds some important state that may change over time.</p>
+<p>It also defines a method for saving the state inside a memento and another method for restoring the state from it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Originator.receive_order">
+<span class="sig-name descname"><span class="pre">receive_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coffee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Originator.receive_order" title="Link to this definition"></a></dt>
+<dd><p>May affect its internal state.</p>
+<p>Therefore, the client should backup the state before launching methods of the business logic via the save()
+method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coffee</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Originator.restore">
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memento</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Originator.restore" title="Link to this definition"></a></dt>
+<dd><p>Restores the Originator’s state from a memento object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>memento</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.memento.Memento" title="designpatterns.behavioral_patterns.memento.Memento"><code class="xref py py-class docutils literal notranslate"><span class="pre">Memento</span></code></a></span>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="designpatterns.behavioral_patterns.memento.Originator.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.memento.Originator.save" title="Link to this definition"></a></dt>
+<dd><p>Save the current state inside a memento.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#designpatterns.behavioral_patterns.memento.Memento" title="designpatterns.behavioral_patterns.memento.Memento"><code class="xref py py-class docutils literal notranslate"><span class="pre">Memento</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-designpatterns.behavioral_patterns.observer">
-<span id="designpatterns-behavioral-patterns-observer-module"></span><h2><span class="section-number">3.1.1.1.1.6. </span>designpatterns.behavioral_patterns.observer module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.observer" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-observer-module"></span><h2><span class="section-number">3.1.1.1.1.7. </span>designpatterns.behavioral_patterns.observer module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.observer" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.observer.DiscountPublisher">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.observer.</span></span><span class="sig-name descname"><span class="pre">DiscountPublisher</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.observer.DiscountPublisher" title="Link to this definition"></a></dt>
@@ -832,7 +1011,7 @@ important is about to happen (or after it).</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.state">
-<span id="designpatterns-behavioral-patterns-state-module"></span><h2><span class="section-number">3.1.1.1.1.7. </span>designpatterns.behavioral_patterns.state module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.state" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-state-module"></span><h2><span class="section-number">3.1.1.1.1.8. </span>designpatterns.behavioral_patterns.state module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.state" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.state.Cappuccino">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.state.</span></span><span class="sig-name descname"><span class="pre">Cappuccino</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.state.Cappuccino" title="Link to this definition"></a></dt>
@@ -991,7 +1170,7 @@ by States to transition the Context to another State.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.strategy">
-<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.8. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-strategy-module"></span><h2><span class="section-number">3.1.1.1.1.9. </span>designpatterns.behavioral_patterns.strategy module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.strategy" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.strategy.Context">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.strategy.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strategy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#designpatterns.behavioral_patterns.strategy.Context" title="Link to this definition"></a></dt>
@@ -1099,7 +1278,7 @@ It should work with all strategies via the Strategy interface.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.template_method">
-<span id="designpatterns-behavioral-patterns-template-method-module"></span><h2><span class="section-number">3.1.1.1.1.9. </span>designpatterns.behavioral_patterns.template_method module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.template_method" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-template-method-module"></span><h2><span class="section-number">3.1.1.1.1.10. </span>designpatterns.behavioral_patterns.template_method module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.template_method" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.template_method.AbstractClass">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.template_method.</span></span><span class="sig-name descname"><span class="pre">AbstractClass</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.template_method.AbstractClass" title="Link to this definition"></a></dt>
@@ -1285,7 +1464,7 @@ through the interface of their base class.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns.visitor">
-<span id="designpatterns-behavioral-patterns-visitor-module"></span><h2><span class="section-number">3.1.1.1.1.10. </span>designpatterns.behavioral_patterns.visitor module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.visitor" title="Link to this heading"></a></h2>
+<span id="designpatterns-behavioral-patterns-visitor-module"></span><h2><span class="section-number">3.1.1.1.1.11. </span>designpatterns.behavioral_patterns.visitor module<a class="headerlink" href="#module-designpatterns.behavioral_patterns.visitor" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="designpatterns.behavioral_patterns.visitor.CappuccinoComponent">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">designpatterns.behavioral_patterns.visitor.</span></span><span class="sig-name descname"><span class="pre">CappuccinoComponent</span></span><a class="headerlink" href="#designpatterns.behavioral_patterns.visitor.CappuccinoComponent" title="Link to this definition"></a></dt>
@@ -1501,7 +1680,7 @@ dealing with.</p>
 
 </section>
 <section id="module-designpatterns.behavioral_patterns">
-<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.11. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2><span class="section-number">3.1.1.1.1.12. </span>Module contents<a class="headerlink" href="#module-designpatterns.behavioral_patterns" title="Link to this heading"></a></h2>
 </section>
 </section>
 

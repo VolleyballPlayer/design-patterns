@@ -32,6 +32,13 @@ designpatterns.behavioral\_patterns.mediator module
    :members:
    :show-inheritance:
 
+designpatterns.behavioral\_patterns.memento module
+--------------------------------------------------
+
+.. automodule:: designpatterns.behavioral_patterns.memento
+   :members:
+   :show-inheritance:
+
 designpatterns.behavioral\_patterns.observer module
 ---------------------------------------------------
 
