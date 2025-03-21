@@ -9,6 +9,7 @@ from designpatterns.behavioral_patterns.chain_of_responsibility import (
 from designpatterns.behavioral_patterns.command import Invoker, OrderCommand, PrepareCoffeeCommand, Receiver
 from designpatterns.behavioral_patterns.iterator import PriceCollection
 from designpatterns.behavioral_patterns.mediator import Coffee, ConcreteMediator, Order, Payment
+from designpatterns.behavioral_patterns.memento import Caretaker, Originator
 from designpatterns.behavioral_patterns.observer import (
     DiscountPublisher,
     ObserverWeekendDiscounts,
@@ -221,6 +222,37 @@ def state() -> None:
 
     context.check_order(coffee='cappuccino')
     context.process_order()
+
+
+@cli.command()
+def memento() -> None:
+    """Run memento method example.
+
+    This function calls memento module to run an example of behavioral design pattern called memento.
+    """
+    logger.info('Starting memento pattern run')
+
+    originator = Originator('espresso')
+    caretaker = Caretaker(originator)
+    caretaker.backup()
+    originator.receive_order('latte')
+
+    caretaker.backup()
+    originator.receive_order('cappuccino')
+
+    caretaker.backup()
+    originator.receive_order('latte')
+
+    caretaker.show_history()
+
+    logger.info("Client: Now, let's rollback!")
+    caretaker.undo()
+
+    logger.info('Client: Once more!')
+    caretaker.undo()
+
+    logger.info('Client: Once more!')
+    caretaker.undo()
 
 
 if __name__ == '__main__':

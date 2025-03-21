@@ -37,6 +37,7 @@ RUN apt-get -y update; \
     run-behavioral-pattern iterator; \
     run-behavioral-pattern chain-of-responsibility; \
     run-behavioral-pattern visitor; \
-    run-behavioral-pattern state
+    run-behavioral-pattern state; \
+    run-behavioral-pattern memento
 
 ENTRYPOINT [ "/bin/bash" ]

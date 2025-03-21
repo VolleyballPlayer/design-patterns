@@ -71,3 +71,4 @@ jobs:
           run-behavioral-pattern chain-of-responsibility --help
           run-behavioral-pattern visitor --help
           run-behavioral-pattern state --help
+          run-behavioral-pattern memento --help
