@@ -69,3 +69,41 @@ The return type of the method should be of the interface you extracted in the pr
 * The link between caretakers and originators may be moved into the memento class. In this case, each memento must be connected to the originator that had created it. The restoration method would also move to the memento class. However, this would all make sense only if the memento class is nested into originator or the originator class provides sufficient setters for overriding its state.
 
 **UML of the example implemented in this repository**
+
+.. uml::
+
+    @startuml
+
+        skinparam classAttributeIconSize 0
+
+        Memento <|.. ConcreteMemento
+        ConcreteMemento <.. Originator
+        Caretaker o-- Memento
+
+        class Originator {
+        - state
+        + receive_order()
+        - get_coffee_order()
+        + save()
+        + restore()
+        }
+
+        abstract class Memento {
+        + get_name()
+        + get_date()
+        }
+
+        class ConcreteMemento {
+        + get_name()
+        + get_date()
+        + get_state()
+        }
+
+        class Caretaker {
+        + backup()
+        + undo()
+        + show_history()
+        }
+
+
+    @enduml
